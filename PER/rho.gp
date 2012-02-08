@@ -227,7 +227,7 @@ rho_p_V5(E,P,Q) = {
 		W1 = elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0));
 		tmp = func(E,W1,P,Q,a0,b0,n);		
 		W2 = tmp[1];
-		print(W1,W2,n);
+/*		print(W1,W2,n);*/
 		a1 = tmp[4]; b1 = tmp[5];
 		while(W1 != W2,
 			 
@@ -246,10 +246,10 @@ rho_p_V5(E,P,Q) = {
 			 b1 = tmp[5];
 			 i = i+1;
 		);
-		print(W1,W2,n);
+/*		print(W1,W2,n);
 		print(i);
 		print([a0,b0,a1,b1,n]);
-		if ( (b0 - b1) % n == 0 ,
+*/		if ( (b0 - b1) % n == 0 ,
 		
 			print("failled");
 		,

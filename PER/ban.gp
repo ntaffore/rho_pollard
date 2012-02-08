@@ -1,10 +1,764 @@
 /* fichier de test pour avoir les donné du temps*/
 
 /*fichier a charger */
-\r algo_rho_negation.gp
-\r initiation_courbe.gp
+\r rho.gp
+\r initiation_courbe_a_et_b.gp
 
 /* verification que la methode rho de pollard en en racine de p */
+
+print("-------------------------------------------------------------------");
+print("n = 6");
+
+/* création de la courbe elliptique */
+n = prem_n_bit(6);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+/* création de la courbe elliptique */
+n = prem_n_bit(6);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(6);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(6);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(6);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(6);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(6);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(6);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+
+print("-------------------------------------------------------------------");
+print("n = 7");
+
+/* création de la courbe elliptique */
+n = prem_n_bit(7);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(7);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(7);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(7);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(7);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(7);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(7);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+/* création de la courbe elliptique */
+n = prem_n_bit(7);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+
+print("-------------------------------------------------------------------");
+print("n = 8");
+
+/* création de la courbe elliptique */
+n = prem_n_bit(8);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+/* création de la courbe elliptique */
+n = prem_n_bit(8);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+/* création de la courbe elliptique */
+n = prem_n_bit(8);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+/* création de la courbe elliptique */
+n = prem_n_bit(8);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+/* création de la courbe elliptique */
+n = prem_n_bit(8);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+
+print("-------------------------------------------------------------------");
+print(" n = 9");
+
+/* création de la courbe elliptique */
+n = prem_n_bit(9);
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+E = courbe_ell_Fp(n);
+
+/* prise d'un point aleatoire sur E */
+P = random_point_curve(E);
+pow = random(n);
+print(P);
+print([n,pow]);
+Q = ellpow(E,P,pow);
+
+/* demarage du compteur temps */
+#
+pow_exp = rho_p_V5(E,P,Q);
+
+/* fin du temp */
+#
+
+
 
 print("-------------------------------------------------------------------");
 print(" n = 10");

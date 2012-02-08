@@ -1,7 +1,7 @@
 /* fichier de test pour avoir les donné du temps*/
 
 /*fichier a charger */
-\r rho.gp
+\r algo_pollard_multiple_group.gp
 \r initiation_courbe.gp
 
 /* verification que la methode rho de pollard en en racine de p */

@@ -69,10 +69,10 @@ il faut en moyenne tirer $\sqrt{n}$ éléments pour obtenir un élément que l'o
 Le nom de cette algorithme est dû à la forme que prend la suite aléatoire, on a d'abord un pré-cycle puis le cycle.
 % \includegraphics{image de la lettre rho}
 \section{dans un groupe du type Fp}
-Dans un groupe du type Fp, Pollard a choisit comme fonction de tirage aléatoire un fonction qui ne tient compte que de l'élément précédent.
-$ f(x) = x+P si x \in [0;p/3[$\\
-$ f(x) = x+x si x \in [p/3;2p/3[$\\
-$ f(x) = x+Q si x \in [2p/3;p[$\\
+Dans un groupe du type Fp, Pollard a choisit comme fonction de tirage aléatoire un fonction qui ne tient compte que de l'élément précédent.\\
+$ f(x) = x+P$ si $x \in [0;p/3[$\\
+$ f(x) = x+x$ si $x \in [p/3;2p/3[$\\
+$ f(x) = x+Q$ si $x \in [2p/3;p[$\\
 Ici P est un generateur du groupe et Q est l'element dont on veut connaitre le logarithme en base P.
 {
 \begin{algorithm}
@@ -108,6 +108,8 @@ donc $a_1 = 1, a_2 = 2, a_3 = 5 .....$
 sur une courbe elliptique sur Fp l'inverse de P = (x,y,z), simplifié à (x,y) est -P = (x,-y). le but de cette méthode est de reduire le groupe de moitier,
 donc de faire une recherche de log discret dans <P>/<H>. On obtient donc une relation du type $\pm[a]P \pm[b]Q = \pm[a']P \pm[b']Q$. Il nous suffit donc de retrouver exactement 
 la relation avec les bon signe pour retrouver le logarithme discret.
+
+premier probleme on retombe très rapidement sur le meme point avec les meme scalaires	
 
 \section{cycle infructueux}
 apppartition très fréquente de cycle de taille 2 n'important pas d'information sur le log discret on les elimine donc en ......
