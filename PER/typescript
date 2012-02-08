@@ -1,0 +1,3195 @@
+Le script a débuté sur dim. 05 févr. 2012 21:23:10 CET
+]0;ntaffore@trelawney: ~/Documents/PERntaffore@trelawney:~/Documents/PER$ ./gp
+Reading GPRC: /etc/gprc ...Done.
+
+                  GP/PARI CALCULATOR Version 2.5.0 (released)
+          amd64 running linux (x86-64/GMP-4.3.2 kernel) 64-bit version
+        compiled: Sep 16 2011, gcc-4.5.2 (Ubuntu/Linaro 4.5.2-8ubuntu4) 
+                 (readline v6.2 enabled, extended help enabled)
+
+                     Copyright (C) 2000-2011 The PARI Group
+
+PARI/GP is free software, covered by the GNU General Public License, and comes 
+WITHOUT ANY WARRANTY WHATSOEVER.
+
+Type ? for help, \q to quit.
+Type ?12 for how to get moral (and possibly technical) support.
+
+parisize = 8000000, primelimit = 500509
+[0;33m? [0;34mdefault()c)o)l)o)rs,)6)
+[0m? [0m\r ban_test.gp
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m-------------------------------------------------------------------
+[0m n = 10
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[809, 132]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[809, 567]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[809, 268]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[809, 600]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[787, 456]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[631, 256]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[907, 888]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[919, 545]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[839, 785]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[523, 254]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[859, 686]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[1021, 475]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[787, 288]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[829, 623]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[751, 389]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[829, 387]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[863, 534]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[929, 787]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[877, 405]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[641, 435]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[661, 218]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m------------------------------------------------------
+[0mn = 12
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[2423, 580]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[2557, 1645]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2699, 1773]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[3347, 238]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2293, 545]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[3739, 146]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2837, 1332]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2129, 1810]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2377, 970]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[4021, 902]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[3109, 3093]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[3163, 438]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2939, 2560]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[3463, 1041]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2297, 396]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2549, 1251]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2753, 1274]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[3821, 2125]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[3187, 1586]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[2719, 1370]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m -----------------------------------------------------------------
+[0mn = 14
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[9511, 4561]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[9059, 3965]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[10957, 8217]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[9629, 7728]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[12893, 6617]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[14713, 4986]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[15227, 6993]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[10247, 286]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[13757, 4878]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[12343, 2620]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[11369, 8787]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[15473, 5960]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[14207, 10139]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[15077, 9533]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[8747, 7520]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[8863, 5841]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[9551, 4550]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[13297, 9765]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[13417, 11334]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[9187, 7716]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m----------------------------------------------------------
+[0mn = 16
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[37573, 1979]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[36871, 29824]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[41269, 15475]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[45389, 39988]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[34963, 3522]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[56417, 51293]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[41539, 11736]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[51059, 5763]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[50159, 6880]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[35423, 321]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[61211, 51668]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[39733, 38286]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[32987, 14602]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[42923, 27907]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[46457, 42637]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[50741, 8286]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[33851, 16468]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[55663, 35294]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[56951, 48397]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[62459, 48556]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[40087, 36497]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m -------------------------------------------------------------
+[0m n = 18
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[150649, 15624]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[150649, 117819]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[150649, 137915]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[150649, 21288]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[189017, 103200]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[189017, 158818]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[189017, 16350]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[201451, 63734]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[201451, 126813]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[201451, 8871]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[201451, 187089]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[192791, 155572]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[192791, 61007]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[192791, 121061]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[192791, 158294]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[253567, 224566]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[253567, 247762]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[253567, 197103]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[253567, 108339]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[253567, 77742]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m-------------------------------------------------------------------------------
+[0m n = 20
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[840589, 274615]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[840589, 409340]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[840589, 445869]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[840589, 283917]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1018733, 929178]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1018733, 504286]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1018733, 517597]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1018733, 601475]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[593497, 145812]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[593497, 492108]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[593497, 170576]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[593497, 155312]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[593497, 63623]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[575473, 121418]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[575473, 65098]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[575473, 217158]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[575473, 482601]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[853759, 429453]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[853759, 744764]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[853759, 183536]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m-----------------------------------------------------------------------
+[0mn = 21
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1747951, 91939]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m70 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1747951, 1253009]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1747951, 124556]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1747951, 463362]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1747951, 1088528]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1793819, 226777]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1793819, 392022]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1793819, 1440955]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1793819, 649044]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m70 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1793819, 14047]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1645757, 1519497]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1645757, 271682]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1645757, 1055999]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1645757, 1125348]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1645757, 1469222]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1645757, 1318805]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1318987, 1104354]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1318987, 339701]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1318987, 177364]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m0 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1318987, 278024]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[1318987, 382294]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m------------------------------------------------------------------------------
+[0mn = 22
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[3437429, 1633878]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m90 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3437429, 1825170]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3437429, 976731]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3437429, 2339424]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3437429, 3007059]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[3442343, 539271]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3442343, 2524235]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3442343, 3375922]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m80 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3442343, 467205]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3442343, 1572285]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3442343, 2931595]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[3942007, 3601743]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3942007, 2336779]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3942007, 231632]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m170 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[3942007, 3465114]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[2718061, 733361]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[2718061, 844780]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[2718061, 400437]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[2718061, 2300469]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m70 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m------------------------------------------------------------------------------------------
+[0mn = 23
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[6161509, 4547325]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[6161509, 5208279]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[6161509, 1872279]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m120 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[6161509, 3007292]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[6161509, 2625024]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m140 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[6161509, 4347345]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[7738943, 4747756]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m190 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7738943, 3558957]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7738943, 464929]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[7738943, 3499117]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m90 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[7738943, 1965720]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[7738943, 5719094]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m90 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[7562111, 2965436]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[7562111, 3925826]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7562111, 3305830]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m190 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[7562111, 6739192]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7562111, 2825362]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m230 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m----------------------------------------------------------------------
+[0m n = 24
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[15801421, 13689281]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m90 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[15801421, 7143157]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[15801421, 4077755]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[15801421, 5338809]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[15801421, 2378820]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m190 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[15801421, 6250896]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[15801421, 12401248]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m170 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[13739897, 10049567]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m190 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[13739897, 893114]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m120 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[13739897, 4427656]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[13739897, 8217064]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[13739897, 10056429]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m90 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[13739897, 9627367]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[8980703, 1317215]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m90 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 3909261]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 7114194]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 8102551]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 8725520]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m230 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 5396153]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 3177134]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m70 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 563633]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[8980703, 8355819]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 5256699]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 4685860]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m70 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[8980703, 4028951]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m------------------------------------------------------------------------
+[0mn = 25
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[17218867, 9811857]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m200 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[17218867, 17112142]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[17218867, 16830742]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[17218867, 3538313]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m220 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[17218867, 15787071]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m240 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[17218867, 16229]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[17218867, 6895053]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m180 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[21830927, 1507727]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21830927, 10054411]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m90 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21830927, 16559991]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21830927, 12920471]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21830927, 3720301]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m360 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21830927, 20629261]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m180 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[32790833, 202939]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m360 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[32790833, 8903520]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m290 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[32790833, 15535042]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[32790833, 554694]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[32790833, 29033750]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m60 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[32790833, 24522785]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m90 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[32790833, 19907454]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m270 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[32790833, 24134845]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m--------------------------------------------------------------------------------
+[0mn = 26
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[53576651, 3450057]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m260 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[53576651, 8960051]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[53576651, 29628860]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m170 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[53576651, 42484165]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m280 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[53576651, 24922883]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m380 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[53576651, 49881115]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[50265493, 29977684]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m390 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[50265493, 5248020]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m330 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[50265493, 40463170]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[50265493, 12784707]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m340 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[50265493, 44962807]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m410 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[50265493, 6406897]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m190 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[48929801, 48197455]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[48929801, 27726444]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m230 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[48929801, 8074243]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m250 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[48929801, 34513436]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m120 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[48929801, 5612318]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m360 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[48929801, 8167710]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m220 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[48929801, 9451535]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m-----------------------------------------------------------------------------------------
+[0mn = 27
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[109669321, 55540162]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m380 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[109669321, 23734695]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m440 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[109669321, 66419721]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m680 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[109669321, 79781704]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m210 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[109669321, 18251036]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[109669321, 44834113]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[109669321, 49275049]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m640 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[109669321, 46139983]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,030 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[125299919, 36018671]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m330 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[125299919, 37294303]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m470 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[125299919, 45512565]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m540 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[125299919, 62892350]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m240 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[125299919, 70838212]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m520 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[125299919, 10326837]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m280 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[73050941, 37379347]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m180 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[73050941, 69003141]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m380 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[73050941, 53415634]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m700 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[73050941, 37707691]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m430 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[73050941, 64986232]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[73050941, 64752222]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m450 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m---------------------------------------------------------------------------
+[0mn = 28
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[253606019, 192761506]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m580 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[253606019, 32614518]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[253606019, 224561767]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m500 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[253606019, 115170447]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m430 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[253606019, 44316549]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[253606019, 203075937]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[253606019, 226016438]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m610 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[220729763, 159329881]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m440 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[220729763, 108316021]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m530 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[220729763, 42512267]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m230 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[220729763, 90015552]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m500 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[220729763, 115935453]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m830 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[220729763, 81183077]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m740 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[220729763, 103218528]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m320 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[220729763, 21251885]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m260 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[206391349, 77635382]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m350 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[206391349, 161434140]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[206391349, 108757165]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[206391349, 13029864]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[206391349, 140256654]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m320 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[206391349, 16659669]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m810 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[206391349, 95162126]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m390 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[206391349, 98041500]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m610 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m----------------------------------------------------------------------------------------
+[0m[0;36m[0;36m  ***   run-away string: [0mprint("n = 29);[0m
+[0;36m[0;36m  ***                                   ^-[0m
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[307096319, 266561184]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m870 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[307096319, 44937553]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m480 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[307096319, 2122999]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m710 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[307096319, 116407473]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m670 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[307096319, 214481228]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m480 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[307096319, 3853892]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,060 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[307096319, 5278137]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m230 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[307096319, 237748118]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m520 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[518540003, 278615849]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m830 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[518540003, 345510192]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m890 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[518540003, 282095061]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m600 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[518540003, 284003057]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m80 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[518540003, 416152183]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m820 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[518540003, 272614999]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[518540003, 241607512]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m540 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[518540003, 20732537]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m970 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[453300871, 366066482]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m880 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[453300871, 198237340]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[453300871, 166290803]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,350 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[453300871, 376802593]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m220 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[453300871, 401719200]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[453300871, 352834390]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,400 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[453300871, 35837804]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,030 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m-------------------------------------------------------------------------------
+[0mn = 30
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[946336487, 865269160]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m810 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[946336487, 925566184]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[946336487, 556669588]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,470 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[946336487, 792988147]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m660 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[946336487, 503594438]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m460 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[946336487, 536415955]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,600 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[946336487, 684286801]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,350 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[946336487, 95488380]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m930 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[584161271, 164426850]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m630 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[584161271, 64222856]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[584161271, 398474757]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,640 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[584161271, 577496492]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[584161271, 393462022]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m940 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[584161271, 147968982]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m270 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[584161271, 279998938]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,000 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[584161271, 270774203]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m650 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[648003211, 295205809]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m720 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[648003211, 282563344]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m350 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[648003211, 581643678]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[648003211, 627854731]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[648003211, 22549337]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m570 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[648003211, 578516370]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,080 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[648003211, 115260537]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m630 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[648003211, 302621226]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,350 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m--------------------------------------------------------------------------------------------------------
+[0mn=31
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1480663493, 1031139873]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m670 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1480663493, 337418017]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,380 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1480663493, 1175178139]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m330 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1480663493, 73868407]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m860 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1480663493, 1305074119]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1480663493, 93997855]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m220 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1480663493, 1090124103]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m880 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1480663493, 580976342]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m290 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1902882419, 1118240794]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,010 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1902882419, 352486351]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,050 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1902882419, 1466860565]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1902882419, 163545221]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m390 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1902882419, 524785596]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1902882419, 423101054]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,710 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1902882419, 1888307553]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,530 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1902882419, 1135751096]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,190 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1277987033, 1015402249]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m970 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1277987033, 828261620]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1277987033, 531005207]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,180 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1277987033, 221789263]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,520 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1277987033, 1258721697]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m400 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1277987033, 988941541]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,630 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1277987033, 1172948383]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,520 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1277987033, 1238441003]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m700 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m------------------------------------------------------------------------------------------------
+[0mn = 32
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[2919311933, 1042196485]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,210 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2919311933, 1000638832]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m490 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2919311933, 2831621071]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,040 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2919311933, 2156295379]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,460 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2919311933, 2300833006]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2919311933, 3412345]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,940 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2919311933, 415877306]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,040 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2919311933, 1870156854]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,630 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[3844984939, 1418227454]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,070 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3844984939, 806787785]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3844984939, 1443442131]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3844984939, 1155737854]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,280 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3844984939, 610719410]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3844984939, 985162148]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3844984939, 3336360334]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,240 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3844984939, 1064224079]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,400 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[3090269717, 1774719271]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,000 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3090269717, 476667007]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,720 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3090269717, 1469972395]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,390 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3090269717, 546771491]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,620 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3090269717, 727018169]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3090269717, 1039859786]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,700 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3090269717, 211036614]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,320 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3090269717, 2216056466]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,540 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m-----------------------------------------------------------------------------------------------
+[0mn = 33
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[4514735801, 2500956983]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[4514735801, 4033630178]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m540 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[4514735801, 1251075808]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,000 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[4514735801, 772886700]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,740 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[4514735801, 271368019]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,920 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[4514735801, 4180392857]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[4514735801, 4482058086]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,790 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[4514735801, 425455470]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,840 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[7369803473, 4867568749]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7369803473, 5425492297]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7369803473, 6918921806]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7369803473, 932209974]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,210 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7369803473, 3984606308]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,530 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7369803473, 1112236390]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7369803473, 2185814113]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7369803473, 1602496522]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,250 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[7518380567, 3539364463]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,820 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7518380567, 2385571801]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,550 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7518380567, 1308498078]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,020 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7518380567, 2330433664]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,870 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7518380567, 5512313229]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,930 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7518380567, 6165417345]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,850 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7518380567, 823224464]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,540 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[7518380567, 6313601071]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,230 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m-------------------------------------------------------------------------------------
+[0mn = 34 
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[15372542503, 7120613121]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[15372542503, 6559908045]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,840 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[15372542503, 2763127083]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[15372542503, 13574060]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,710 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[15372542503, 4196552093]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[15372542503, 14118805993]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m13,160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[15372542503, 1317859231]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[15372542503, 6505119901]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[12818204111, 3260040836]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,980 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[12818204111, 11309952358]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,250 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[12818204111, 8882905271]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,980 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[12818204111, 7363682832]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,330 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[12818204111, 10051215584]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,050 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[12818204111, 844599382]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,550 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[12818204111, 6312870166]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,640 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[12818204111, 9433292848]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,760 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[13684845149, 8620557594]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,060 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[13684845149, 3747403776]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[13684845149, 13574756545]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,770 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[13684845149, 11471533665]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,610 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[13684845149, 1905875871]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,250 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[13684845149, 1686317486]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m11,230 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[13684845149, 5647280604]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,070 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[13684845149, 10343207202]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,930 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m------------------------------------------------------------------------------------------------------------
+[0mn = 35
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[27695319317, 10074908946]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[27695319317, 18182502381]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,670 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[27695319317, 12680504114]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,670 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[27695319317, 7803600185]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,530 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[27695319317, 26120279087]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,290 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[27695319317, 11328104779]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[27695319317, 22888730781]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,680 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[27695319317, 18557943673]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,400 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[31440653863, 22213645563]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,250 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[31440653863, 29217905381]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,080 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[31440653863, 14514339728]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,540 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[31440653863, 27303233346]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,280 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[31440653863, 28001333752]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,550 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[31440653863, 15058820150]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,400 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[31440653863, 29579916066]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[31440653863, 446880421]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,270 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[21957479413, 7338835970]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,470 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21957479413, 15853982183]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,180 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21957479413, 538697978]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,850 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21957479413, 14371115114]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,500 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21957479413, 14864715435]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,600 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21957479413, 12303291998]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m11,620 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21957479413, 21917157105]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,690 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[21957479413, 2933760335]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,500 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m----------------------------------------------------------------------------------------
+[0mn = 36
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[68175148621, 30490793970]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,660 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[68175148621, 63015554684]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,790 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[68175148621, 51182638038]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,120 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[68175148621, 64093377222]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,060 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[68175148621, 2830981529]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,790 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[68175148621, 51199827984]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m17,160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[68175148621, 55360026551]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m11,500 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[68175148621, 64616341151]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m15,000 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[43637806307, 26939924617]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,070 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[43637806307, 12364277585]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,860 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[43637806307, 17432530124]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[43637806307, 21214446844]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,980 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[43637806307, 19559436002]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[43637806307, 37555917102]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m13,000 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[43637806307, 10663946681]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,920 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[43637806307, 41753404673]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m%1845 = [0m47936042593[0m
+[0m[0m[0m[0m[0m[0m[47936042593, 275996913]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,400 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[47936042593, 14447045020]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m17,630 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[47936042593, 26127284295]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[47936042593, 41338565615]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m11,200 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[47936042593, 40960517538]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m13,820 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[47936042593, 7070591874]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,620 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[47936042593, 3776813410]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,050 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[47936042593, 29383670940]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m-------------------------------------------------------------------------------------------------
+[0mn = 37
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[115215222589, 48637923878]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m16,630 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[115215222589, 15457845492]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m24,610 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[115215222589, 39637072573]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,940 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[115215222589, 94901123907]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,190 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[115215222589, 25676818166]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,780 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[115215222589, 50334861939]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2,040 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[115215222589, 72025710258]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m14,030 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[115215222589, 22644164039]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,080 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[95890059409, 25904965154]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,330 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[95890059409, 20010972926]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m14,220 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[95890059409, 29652683170]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m16,140 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[95890059409, 44643652625]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,240 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[95890059409, 91135559503]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m27,760 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[95890059409, 31829819057]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,740 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[95890059409, 84652734400]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,280 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[95890059409, 95809389896]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m6,090 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m%1926 = [0m78952455863[0m
+[0m[0m[0m[0m[0m[0m[78952455863, 54925328739]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m12,990 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[78952455863, 17668077598]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,210 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[78952455863, 49238470194]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,230 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[78952455863, 32258466114]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m21,310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[78952455863, 12797502145]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m21,890 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[78952455863, 23737358663]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[78952455863, 74962712034]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m12,320 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[78952455863, 50214220095]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,070 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m---------------------------------------------------------------------------------------------------
+[0mn = 38
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[258390956539, 123941264342]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m13,950 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[258390956539, 217364289993]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,680 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[258390956539, 61866214770]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m12,190 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[258390956539, 95723477166]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,490 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[258390956539, 236691108182]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1,690 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[258390956539, 13576417309]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m16,510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[258390956539, 5583240062]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m32,830 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[258390956539, 192025807836]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,840 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[144708750601, 87337895176]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,410 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[144708750601, 15261143125]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,740 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[144708750601, 79774148705]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3,730 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[144708750601, 24246327308]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m11,120 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[144708750601, 31399152160]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m22,800 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[144708750601, 26795770634]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m15,910 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[144708750601, 27107228837]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m21,210 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[144708750601, 101059950660]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,800 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[238665108107, 25515507509]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,420 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[238665108107, 111954910410]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m13,300 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[238665108107, 77864655186]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m24,000 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[238665108107, 100779647475]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m12,340 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[238665108107, 149515241515]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m32,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[238665108107, 185945969667]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m28,050 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[238665108107, 201899814465]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20,970 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[238665108107, 62666907782]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,670 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m------------------------------------------------------------------------------------
+[0mn = 39
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[406914589639, 201299003448]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m21,220 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[406914589639, 83566611855]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,850 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[406914589639, 2215238186]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m42,130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[406914589639, 81167887713]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m22,490 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[406914589639, 363916419854]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m21,410 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[406914589639, 339271498722]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m24,920 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[406914589639, 214158015880]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m28,830 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[406914589639, 36982571344]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m29,150 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[318465229969, 242336195366]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m4,950 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[318465229969, 53759625471]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m13,680 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[318465229969, 252512099813]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m5,920 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[318465229969, 92999017482]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m44,470 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[318465229969, 207975199914]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m18,080 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[318465229969, 299362917306]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m12,770 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[318465229969, 316813513273]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m20,750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[318465229969, 175701488]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m39,800 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[531454008131, 259098625770]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,430 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[531454008131, 400901382979]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 7,130 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[531454008131, 508109080370]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m30,750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[531454008131, 329741787253]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m22,640 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[531454008131, 212551867696]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m7,180 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[531454008131, 162402662579]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m11,510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[531454008131, 186996093738]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m10,750 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[531454008131, 50444337868]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m32,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m-------------------------------------------------------------------------------------------------
+[0mn = 40
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[613549965893, 273691696609]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m11,580 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[613549965893, 345121810229]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50,450 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[613549965893, 450334453542]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m34,510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[613549965893, 299987646206]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m12,960 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[613549965893, 285254604015]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m41,960 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[613549965893, 535637443001]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m42,450 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[613549965893, 5730827320]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m28,180 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[613549965893, 512006122427]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m27,340 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[883426438721, 64325137050]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m24,370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[883426438721, 313857882574]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m29,270 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[883426438721, 348816031149]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m43,840 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[883426438721, 307295403329]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m19,710 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[883426438721, 316835477418]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 28,450 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[883426438721, 712008552225]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m44,510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[883426438721, 296298419588]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m38,700 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[883426438721, 858791356988]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m35,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[593125065571, 351477795406]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m8,810 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[593125065571, 553815810385]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m13,950 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[593125065571, 300022527826]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m9,780 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[593125065571, 46240456505]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m36,360 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[593125065571, 470400306861]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m48,410 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[593125065571, 364504647441]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m38,380 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[593125065571, 307964239867]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m23,030 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[593125065571, 243277298091]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40,610 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m------------------------------------------------------------------------------------------------------
+[0mn = 41
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1772348447893, 370527136067]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 21,790 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1772348447893, 669216400089]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 7,650 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1772348447893, 1421624852446]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m29,790 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1772348447893, 1709364173055]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m33,650 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1772348447893, 169020040762]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 24,590 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1772348447893, 372347404112]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m25,170 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1772348447893, 1057987275180]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m21,940 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1772348447893, 1751571241761]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m28,630 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[1849562597209, 1797961545997]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 2,550 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1849562597209, 1028380408000]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m49,360 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1849562597209, 383491283821]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 11,100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1849562597209, 1740503260101]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m19,270 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1849562597209, 1746964848584]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 20,990 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1849562597209, 587206457696]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 17,660 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1849562597209, 1131396174617]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 22,310 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1849562597209, 306866997348]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50,980 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[1801726564021, 255146127403]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m47,090 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1801726564021, 1679506871163]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m28,540 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1801726564021, 246433574259]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m54,070 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1801726564021, 1379517430741]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 37,100 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1801726564021, 1591627323904]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m57,540 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1801726564021, 1464040070093]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m52,650 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1801726564021, 48490385530]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m45,210 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[1801726564021, 283363113652]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 4,980 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m------------------------------------------------------------------------------------------------
+[0mn = 42
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[2551825211629, 873067876516]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2min, 36,390 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2551825211629, 1210079422144]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m50,730 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2551825211629, 2187497049788]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 4,320 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2551825211629, 2364226288283]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40,730 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2551825211629, 2363001342748]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m38,650 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2551825211629, 1209403412061]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m51,610 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2551825211629, 1070496794475]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m36,790 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2551825211629, 1902958339903]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m18,760 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[2492490293933, 469111207504]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m38,180 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2492490293933, 696554502223]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40,470 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2492490293933, 1989204396507]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m40,470 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2492490293933, 861831945408]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m3min, 20,430 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2492490293933, 2082846542609]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 46,370 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2492490293933, 1444966501697]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m22,710 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2492490293933, 2210720515640]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2min, 48,160 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[2492490293933, 1749909877357]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 30,740 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[0m[0m[0m[0m[0m[0m[0m[0m[3796237606411, 2049521501075]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2min, 8,210 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3796237606411, 1160324852215]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m54,020 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3796237606411, 1733838118598]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 32,530 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3796237606411, 2101288628918]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 26,730 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3796237606411, 2618022061826]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m39,630 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3796237606411, 3002055436745]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m34,510 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3796237606411, 1490753937593]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m2min, 22,030 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m[0m[3796237606411, 1991957868447]
+[0m[0m[0m[0m   timer = 1 (on)
+[0mreussit i = 
+time = [0m1min, 11,110 ms[0m.
+[0m[0m[0m   timer = 0 (off)
+[0m? [0m
+[0m[0mGoodbye!
+]0;ntaffore@trelawney: ~/Documents/PERntaffore@trelawney:~/Documents/PER$ exit
+exit
+
+Script complété sur dim. 05 févr. 2012 23:01:48 CET

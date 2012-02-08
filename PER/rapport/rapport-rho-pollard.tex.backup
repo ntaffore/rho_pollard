@@ -1,0 +1,131 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage{algorithm,algorithmic}
+
+
+%%% francisation des algorithmes
+\renewcommand{\algorithmicrequire} {\textbf{\textsc{Entrées:}}}
+\renewcommand{\algorithmicensure}  {\textbf{\textsc{Sorties:}}}
+\renewcommand{\algorithmicwhile}   {\textbf{tantque}}
+\renewcommand{\algorithmicdo}      {\textbf{faire}}
+\renewcommand{\algorithmicendwhile}{\textbf{fin tantque}}
+\renewcommand{\algorithmicend}     {\textbf{fin}}
+\renewcommand{\algorithmicif}      {\textbf{si}}
+\renewcommand{\algorithmicendif}   {\textbf{finsi}}
+\renewcommand{\algorithmicelse}    {\textbf{sinon}}
+\renewcommand{\algorithmicthen}    {\textbf{alors}}
+\renewcommand{\algorithmicfor}     {\textbf{pour}}
+\renewcommand{\algorithmicforall}  {\textbf{pour tout}}
+\renewcommand{\algorithmicdo}      {\textbf{faire}}
+\renewcommand{\algorithmicendfor}  {\textbf{fin pour}}
+\renewcommand{\algorithmicloop}    {\textbf{boucler}}
+\renewcommand{\algorithmicendloop} {\textbf{fin boucle}}
+\renewcommand{\algorithmicrepeat}  {\textbf{répéter}}
+\renewcommand{\algorithmicuntil}   {\textbf{jusqu'à}}
+
+
+% Title Page
+\title{Algorithme rho de pollard}
+\author{TAFFOREAU Nicolas}
+
+
+% -----------------------------------------
+% organisation a revoir 
+% -----------------------------------------
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Rapel sur les courbes elliptique}
+\begin{description}
+  \item[définition]
+
+    Soit un un corp Fp (p premier) de caractéristique différente de 2 ou 3, soit a, b app Fp. Un courbe elliptique est définit par
+    le point à l'infini et l'ensemble des points (x,y) tel que soit satifait l'equation suivante :
+  \begin{center}
+    $y^2 = x^3 + a*x + b$.   
+  \end{center}
+  Ces points forme un groupe abélien avec comme zero le point à l'infini et un loi de groupe.
+  Soit P, Q app F, $ P = (x_1,y_1)$, $Q = (x_2,y_2)$ alors $P+Q = (x_3,y_3)$ tel que 
+    \begin{center}
+      $x_3 = \mu^2 -x_1 - x_2$, $y_3 = \mu(x_1-x_3)$
+      \newline
+      $\mu = \frac{y_2 - y_1}{x_2 - x_1}$ si $P <> Q$
+      \newline
+      $\mu = \frac{3*x_1^2 + a}{2*y_1}$ si $P = Q$
+    \end{center}
+
+\end{description}
+
+propriété importante pour les inverse pour la loi d'addition sur Fp. Si $P = (x_1,y_1)$ alors $-P = (x_1,-y_1)$.
+(sur Fq) ?
+\chapter{Algorithme rho de Pollard}
+L'algorithme rho de pollard est basé sur le paradoxe des anniversaire. Dans un groupe finit si on prend des éléments de façon aléatoire,
+il faut en moyenne tirer $\sqrt{n}$ éléments pour obtenir un élément que l'on à déjà tiré, ou n est le nombre d'élément de notre ensemble.
+Le nom de cette algorithme est dû à la forme que prend la suite aléatoire, on a d'abord un pré-cycle puis le cycle.
+% \includegraphics{image de la lettre rho}
+\section{dans un groupe du type Fp}
+Dans un groupe du type Fp, Pollard a choisit comme fonction de tirage aléatoire un fonction qui ne tient compte que de l'élément précédent.
+$ f(x) = x+P si x \in [0;p/3[$\\
+$ f(x) = x+x si x \in [p/3;2p/3[$\\
+$ f(x) = x+Q si x \in [2p/3;p[$\\
+Ici P est un generateur du groupe et Q est l'element dont on veut connaitre le logarithme en base P.
+{
+\begin{algorithm}
+\caption{rho pollard}
+\begin{algorithmic}
+ \REQUIRE n,P,Q
+ \ENSURE x tel que $Q = P^x mod n$
+\end{algorithmic}
+\end{algorithm}
+
+
+\section{sur les courbe elliptique}
+L'algorithme rho de pollard est identique sur les courbes elliptiques sauf que l'on se place dans un cas plus générale
+avec en utilisant l'addition et des scalaires.
+
+// ecriture de l'algo sur les courbe elliptique.
+
+\section{algorithme de floyd}
+Il existe différent moyen pour trouver une collision dans un cycle, le meilleur algorithme pour en trouver
+une est l'agorithme de floyd qui permet de calculer de façon très rapide la longueur d'un cycle en se basant sur des collisions.
+La propriété qu'il a énoncé est que dans un groupe cyclyque si on a une marche aléatoire cyclique, alors au lieu de stocké chaque 
+éléments et de vérifier si il n'est pas dans la liste. il calcule l'élément i et 2i de cette marche aléatoire juqu'à avoir une 
+collision.
+
+exemple sur le groupe Z/17Z, avec la mache aléatoire $f(x) = x^x + 1 mod 17$.
+si x = 1 -> 2 -> 5 -> 9 -> 13 -> 16 -> 0 -> 1
+donc $a_1 = 1, a_2 = 2, a_3 = 5 .....$
+// mauvais choix puissance de 2
+
+
+
+
+\chapter{Negation map}
+\section{methode general}
+sur une courbe elliptique sur Fp l'inverse de P = (x,y,z), simplifié à (x,y) est -P = (x,-y). le but de cette méthode est de reduire le groupe de moitier,
+donc de faire une recherche de log discret dans <P>/<H>. On obtient donc une relation du type $\pm[a]P \pm[b]Q = \pm[a']P \pm[b']Q$. Il nous suffit donc de retrouver exactement 
+la relation avec les bon signe pour retrouver le logarithme discret.
+
+\section{cycle infructueux}
+apppartition très fréquente de cycle de taille 2 n'important pas d'information sur le log discret on les elimine donc en ......
+
+\chapter{nombre de groupe r}
+
+\chapter{additive walk}
+
+point important : plus trop une marche alléatoire pour 3 groupes donc plus pour r groupes r > 19.
+
+\chapter{endomorphisme}
+
+\chapter{parrallelisation}
+pour parralelisé le log discret on definie une règle pour avoir des point remarquable (tel que ....) 
+a chaque fois que l'on a après une marche un point remarquable on le transmet a un serveur central ainsi que les donné de départ
+quand on  a deux intersection de point remarquable on a une collision.
+
+\chapter{bibliograpie}
+\end{document}          
