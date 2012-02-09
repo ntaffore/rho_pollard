@@ -1,0 +1,104 @@
+<!-- received="Tue Aug 31 16:47:31 1999 PDT" -->
+<!-- sent="Tue, 31 Aug 1999 11:21:39 +0200 (MET DST)" -->
+<!-- name="Robert Harley" -->
+<!-- email="Robert.Harley@inria.fr" -->
+<!-- subject="Big calculations" -->
+<!-- id="199908310921.LAA16357@pauillac.inria.fr" -->
+<!-- inreplyto="" -->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>FoRK Archive: Big calculations</title>
+</head><body><h1>Big calculations</h1>
+<b>Robert Harley</b> (<a href="mailto:Robert.Harley@inria.fr"><i>Robert.Harley@inria.fr</i></a>)<br>
+<i>Tue, 31 Aug 1999 11:21:39 +0200 (MET DST)</i>
+<p>
+</p><ul>
+<li> <b>Messages sorted by:</b> <a href="http://www.xent.com/FoRK-archive/sept99/date.html#0">[ date ]</a><a href="http://www.xent.com/FoRK-archive/sept99/index.html#0">[ thread ]</a><a href="http://www.xent.com/FoRK-archive/sept99/subject.html#0">[ subject ]</a><a href="http://www.xent.com/FoRK-archive/sept99/author.html#0">[ author ]</a>
+<!-- next="start" -->
+</li><li> <b>Next message:</b> <a href="http://www.xent.com/FoRK-archive/sept99/0001.html">Lana Lou: "(no subject)"</a>
+<!-- nextthread="start" -->
+</li><li> <b>Next in thread:</b> <a href="http://www.xent.com/FoRK-archive/sept99/0007.html">Robert Harley: "Re: Big calculations"</a>
+</li></ul>
+<hr>
+<!--beginad--><div style="float: right"><script>google_ad_client = 'pub-4972454464538707';google_ad_width = 160; google_ad_height = 600; google_ad_format = '160x600_as'; google_ad_type = 'text_image'; google_ad_channel ='';google_color_bg=google_color_border='FFFFFF';google_color_link='0000FF';google_color_url='666666';google_color_text='000000';</script> <script src="%5B17%5Dmail_fichiers/show_ads.js"></script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_0" name="aswift_0" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="600" scrolling="no" width="160"></iframe></ins></ins></div><!--begintrack--><script src="%5B17%5Dmail_fichiers/urchin.js"></script><script>_uacct = 'UA-128892-1';urchinTracker();</script> <!-- google_ad_section_start --><!-- body="start" -->
+Keith Dawson wrote:<br>
+<i>&gt;Researchers factor RSA-155</i><br>
+<i>&gt;A "hard" 512-bit number falls after 8000 MIPS-years</i><br>
+<p>
+Aw, but 8000 is easy-peasy.  Now 40000 is another matter altogether.  =:-)<br>
+</p><p>
+ObRelevantPlug: <a href="http://pauillac.inria.fr/%7Eharley/ecdl6/readMe.html">http://pauillac.inria.fr/~harley/ecdl6/readMe.html</a><br>
+</p><p>
+</p><p>
+Eugene Leitl wrote:<br>
+<i>&gt;Brute-force is walking through search space vs. a</i><br>
+<i>&gt;cryptoanalysis. There is no point in brute-force, period.</i><br>
+</p><p>
+I tend to agree with this.  Exhaustive search of DES is long but<br>
+relatively uninteresting, requiring no mathematics and no algorithm<br>
+other than "try all possibilities".<br>
+</p><p>
+However this elliptic curve thingie is a really interesting<br>
+mathematical problem.  If it was used as a code then the key-length<br>
+would be 97-bits so brute force is out of the question.  There is a<br>
+smart algorithm in there.<br>
+</p><p>
+Also coordination of all the workers is essential.  Unlike brute force<br>
+no individual will find the solution, although two individuals will<br>
+find the first match between two 'distinguished points' which will<br>
+allow the solution to be computed.  There is a slightly strange effect<br>
+that if we leave the calculation running a bit longer, then the<br>
+solution will be found over and over, faster and faster by other pairs<br>
+of people.<br>
+</p><p>
+</p><p>
+Rohit Khare wrote:<br>
+<i>&gt;Just like the DES Cracker proving once and for all that DES-56 is </i><br>
+<i>&gt;inadequate, Rob's work will have repurcussions.</i><br>
+</p><p>
+I like to think so.  For the last calculation, called ECC2K-95, we<br>
+used a new smart algorithm that solved it in a tenth of the expected<br>
+time.  The only reason it didn't cause shock-waves is luck and good<br>
+spin-control by Certicom: they independantly found a similar method<br>
+just in time, rushed out a paper about it and silently down-graded the<br>
+difficulty estimates on their Web pages.  Now everyone thinks they<br>
+invented the method even though Ari Singer (a mathematician at Pitney<br>
+Bowes) and myself found it about two months before.<br>
+</p><p>
+The reason that method worked was because the elliptic curve had a<br>
+special form that is particularly vulnerable, but Certicom kept<br>
+pushing that form because they have a few relevant patents (including<br>
+ridiculous things like "how to multiply").  However in recent<br>
+conferences they seem to have finally conceded that picking such<br>
+special curves is Probably Not A Very Good Idea.<br>
+</p><p>
+This ECC2-97 problem doesn't have the required special form but the<br>
+next one, ECC2K-108, does.  If we manage that we will be within a<br>
+hair's breadth of the 112-ish bits that Wassenaar limits you and me to<br>
+(and the NSA limits 'merkuns to).<br>
+</p><p>
+</p><p>
+The DES cracks may not have had much influence on American policy but<br>
+they sure did in other places.  I don't doubt that they played a role<br>
+in convincing Jospin to free up the use of cryptography in France and<br>
+tell French spooks to get lost.<br>
+</p><p>
+I hope that solving these elliptic curve problems will have a positive<br>
+effect on policy in at least some enlightened countries.<br>
+</p><p>
+</p><p>
+Plus, the Free Software Foundation gets to collect a bunch of cash.<br>
+</p><p>
+Bye,<br>
+  Rob.<br>
+</p><p>
+PS: Plus, it helps me get my thesis done.<br>
+<!-- body="end" -->
+</p><hr>
+<p>
+</p><ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="http://www.xent.com/FoRK-archive/sept99/0001.html">Lana Lou: "(no subject)"</a>
+<!-- nextthread="start" -->
+</li><li> <b>Next in thread:</b> <a href="http://www.xent.com/FoRK-archive/sept99/0007.html">Robert Harley: "Re: Big calculations"</a>
+</li></ul>
+</body></html>

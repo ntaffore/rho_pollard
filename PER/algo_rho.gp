@@ -1,3 +1,16 @@
+func_V2(E,W2,P,Q,a,b,n) = {
+
+                my(c);
+				c = Mod(lift(W2[1])+lift(W2[2]),3);
+
+                if ( c == 0, W2 = elladd(E,W2,Q); b=(b+1)%n;);
+                if ( c == 1, W2 = elladd(E,W2,W2); a=(a+a)%n;b=(b+b)%n;);
+                if ( c == 2, W2 = elladd(E,W2,P); a=(a+1)%n;);
+
+                return([W2,P,Q,a,b]);
+}
+
+
 func(E,W2,P,Q,a,b,n) = {
 
                 my(c);

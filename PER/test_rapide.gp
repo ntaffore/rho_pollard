@@ -1,8 +1,8 @@
-\r algo_pollard_multiple_group.gp
+\r algo_rho.gp
 \r initiation_courbe.gp
 
 /* création de la courbe elliptique */
-n = prem_n_bit(25);
+n = prem_n_bit(38);
 E = courbe_ell_Fp(n);
 
 /* prise d'un point aleatoire sur E */
