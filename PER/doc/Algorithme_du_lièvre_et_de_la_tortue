@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" dir="ltr" class="client-nojs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Algorithme du lièvre et de la tortue - Wikipédia</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.18wmf1" />
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit" />
+<link rel="edit" title="Modifier" href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit" />
+<link rel="apple-touch-icon" href="//fr.wikipedia.org/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="//fr.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wikipédia" href="/w/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="//bits.wikimedia.org/fr.wikipedia.org/load.php?debug=false&amp;lang=fr&amp;modules=ext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" type="text/css" media="all" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/fr.wikipedia.org/load.php?debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" type="text/css" media="all" />
+<style type="text/css" media="all">a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: frwiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+<script src="//bits.wikimedia.org/fr.wikipedia.org/load.php?debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Algorithme_du_lièvre_et_de_la_tortue", "wgTitle": "Algorithme du lièvre et de la tortue", "wgCurRevisionId": 63704287, "wgArticleId": 1328512, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["Portail:Algorithmique/Articles liés", "Projet:Mathématiques/Articles", "Portail:Programmation informatique/Articles liés", "Portail:Informatique/Articles liés", "Algorithme"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0], "wgVectorEnabledModules": {"collapsiblenav": true, "collapsibletabs": true, "editwarning": true, "expandablesearch": false, "footercleanup": false, "sectioneditlinks": false, "simplesearch": true, "experiments": true}, "wgWikiEditorEnabledModules": {"toolbar": true, "dialogs": true, "hidesig": true, "templateEditor": false, "templates": false, "preview": false, "previewDialog": false, "publish": false, "toc": false}, "Geo": {"city": "", "country": ""}, "wgNoticeProject": "wikipedia"});
+}
+</script><script type="text/javascript">if ( window.mediaWiki ) {
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins-1.18/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithme_du_lièvre_et_de_la_tortue action-view skin-vector">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- sitenotice -->
+			<div id="siteNotice"><!-- centralNotice loads here --><script type="text/javascript">
+/* <![CDATA[ */
+document.writeln("\x3cdiv id=\"localNotice\" lang=\"fr\" dir=\"ltr\"\x3e\x3cp\x3e\x3c/p\x3e\n\x3c/div\x3e");
+/* ]]> */
+</script></div>
+			<!-- /sitenotice -->
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">Algorithme du lièvre et de la tortue</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Un article de Wikipédia, l'encyclopédie libre.</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav">
+					Aller à : <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">rechercher</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div lang="fr" dir="ltr" class="mw-content-ltr"><div class="homonymie"><a href="/wiki/Aide:Homonymie" title="Aide:Homonymie"><img alt="Page d'aide sur l'homonymie" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disambig_colour.svg/20px-Disambig_colour.svg.png" width="20" height="15" /></a> Pour les articles homonymes, voir <a href="/wiki/Le_Li%C3%A8vre_et_la_Tortue" title="Le Lièvre et la Tortue">Le Lièvre et la Tortue</a>.</div>
+<p><b>L'algorithme de Floyd de détection de cycle</b>, encore connu sous le nom d'<b>algorithme du lièvre et de la tortue</b>, est un <a href="/wiki/Algorithmique" title="Algorithmique">algorithme</a> pour détecter les cycles dans des séquences arbitraires, qu'il s'agisse de structures de données ou de séquences générées à la volée (et notamment les séquences <a href="/wiki/Pseudo-al%C3%A9atoire" title="Pseudo-aléatoire">pseudo-aléatoires</a>), en espace <a href="/wiki/Domin%C3%A9_(math%C3%A9matiques)" title="Dominé (mathématiques)" class="mw-redirect">O</a>(1).</p>
+<p>Cet algorithme fut énoncé par <a href="/wiki/Robert_Floyd" title="Robert Floyd">Robert Floyd</a> en 1967<sup id="cite_ref-0" class="reference"><a href="#cite_note-0"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.</p>
+<p>Il ne doit pas être confondu avec l'<a href="/wiki/Algorithme_de_Floyd-Warshall" title="Algorithme de Floyd-Warshall">algorithme de Floyd-Warshall</a> (tous les plus courts chemins dans un graphe).</p>
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Sommaire</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Algorithme"><span class="tocnumber">1</span> <span class="toctext">Algorithme</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Visualisation"><span class="tocnumber">1.1</span> <span class="toctext">Visualisation</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Pseudo-code"><span class="tocnumber">1.2</span> <span class="toctext">Pseudo-code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Complexit.C3.A9"><span class="tocnumber">2</span> <span class="toctext">Complexité</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Variantes"><span class="tocnumber">3</span> <span class="toctext">Variantes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#R.C3.A9f.C3.A9rences"><span class="tocnumber">4</span> <span class="toctext">Références</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Liens_externes"><span class="tocnumber">5</span> <span class="toctext">Liens externes</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit&amp;section=1" title="Modifier la section : Algorithme">modifier</a>]</span> <span class="mw-headline" id="Algorithme">Algorithme</span></h2>
+<p>Soit</p>
+<dl>
+<dd><img class="tex" alt="f\colon S\mapsto S" src="//upload.wikimedia.org/wikipedia/fr/math/3/4/d/34deb12bd121ec9d68db1feab8955444.png" /></dd>
+</dl>
+<p>une <a href="/wiki/Application_(math%C3%A9matiques)" title="Application (mathématiques)">fonction</a>, et <i>S</i> un ensemble fini de cardinal <i>n</i>. On considère la suite <span class="texhtml" dir="ltr">(<i>a</i><sub><i>i</i></sub>)</span> définie par <img class="tex" alt="a_0\in S" src="//upload.wikimedia.org/wikipedia/fr/math/e/1/b/e1bb4b1fabb906a4c86e69e612cba22d.png" /> et</p>
+<dl>
+<dd><span class="texhtml" dir="ltr"><i>a</i><sub><i>i</i> + 1</sub> = <i>f</i>(<i>a</i><sub><i>i</i></sub>)</span></dd>
+</dl>
+<p>Il est clair que cette suite aboutit nécessairement à un cycle, le nombre de ses valeurs possibles étant limité à <i>n</i>. Une manière naïve de déterminer la longueur de ce cycle consiste à stocker chaque élément de la séquence et, à chaque étape, de vérifier si le nouvel élément fait partie des éléments déjà rencontrés. L'espace utilisé est en O(μ + λ), où μ est la longueur du cycle et λ le nombre d'éléments à l'extérieur du cycle.</p>
+<p>Si l'on parvient à trouver deux éléments de la séquence <span class="texhtml" dir="ltr"><i>a</i><sub><i>i</i></sub></span> et <span class="texhtml" dir="ltr"><i>a</i><sub><i>j</i></sub></span> tels que</p>
+<dl>
+<dd><span class="texhtml" dir="ltr"><i>a</i><sub><i>i</i></sub> = <i>a</i><sub><i>j</i></sub></span></dd>
+</dl>
+<p>alors <span class="texhtml" dir="ltr">| <i>i</i> − <i>j</i> |</span> est un multiple de la longueur du cycle. L'algorithme de Floyd de détection de cycle détermine une telle égalité en parcourant la séquence simultanément à deux vitesses différentes, respectivement 1 et 2. L'algorithme aboutit nécessairement sur deux valeurs égales, i.e. détermine <i>m</i> tel que</p>
+<dl>
+<dd><span class="texhtml" dir="ltr"><i>a</i><sub><i>m</i></sub> = <i>a</i><sub>2<i>m</i></sub></span></dd>
+</dl>
+<p>Dès lors, <span class="texhtml" dir="ltr">2<i>m</i> − <i>m</i> = <i>m</i></span> est un multiple de la longueur du cycle, μ. Pour déterminer la valeur exacte de μ, il suffit de refaire tourner l'algorithme à partir de m+1, jusqu'à trouver un autre nombre <span class="texhtml" dir="ltr"><i>m</i><sub>1</sub></span> tel que <img class="tex" alt="a_{m_1}=a_{2{m_1}}" src="//upload.wikimedia.org/wikipedia/fr/math/f/e/c/fec21fc690f56c003bcf1a87b8325ea1.png" />. Dès lors on a d'une part <img class="tex" alt="m_1\le m+\mu" src="//upload.wikimedia.org/wikipedia/fr/math/0/d/7/0d7322740982467854792aa65b8da5ab.png" /> (car on retombe alors sur <span class="texhtml" dir="ltr"><i>a</i><sub><i>m</i></sub></span>) et d'autre part μ qui divise <span class="texhtml" dir="ltr"><i>m</i><sub>1</sub> − <i>m</i></span> (car il divise <span class="texhtml" dir="ltr"><i>m</i></span> et <span class="texhtml" dir="ltr"><i>m</i><sub>1</sub></span>), donc <span class="texhtml" dir="ltr">μ = <i>m</i><sub>1</sub> − <i>m</i></span>.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit&amp;section=2" title="Modifier la section : Visualisation">modifier</a>]</span> <span class="mw-headline" id="Visualisation">Visualisation</span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="/wiki/Fichier:CycleFindingNew.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/CycleFindingNew.png/200px-CycleFindingNew.png" width="200" height="224" class="thumbimage" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Fichier:CycleFindingNew.png" class="internal" title="Agrandir"><img src="//bits.wikimedia.org/skins-1.18/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Exemple de cycle de μ=6 nœuds obtenu après être passé sur λ=2 nœuds</div>
+</div>
+</div>
+<p>La meilleure façon de visualiser l'algorithme consiste à représenter la séquence. Le dessin obtenu ressemble à la lettre grecque <a href="/wiki/Rho" title="Rho">ρ</a>. La séquence démarre en bas, monte et emprunte le cycle dans le sens des aiguilles d'une montre. Suivant l'algorithme de Floyd, les deux parcours se rencontrent en <span class="texhtml" dir="ltr"><i>a</i><sub>6</sub></span> après 6 itérations. Un deuxième tour de l'algorithme amène les deux parcours à se rencontrer après 6 nouvelles itérations, d'où la valeur <span class="texhtml" dir="ltr">μ = 6</span>.</p>
+<table class="wikitable">
+<tr>
+<th>Parcours</th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>0</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>1</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>2</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>3</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>4</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>5</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>6</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>7</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>8</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>9</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>10</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>11</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>t</i><sub>12</sub></span></th>
+</tr>
+<tr>
+<th>Lent</th>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>0</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>1</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>2</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>3</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>4</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>5</sub></span></td>
+<td bgcolor="#FF6666"><span class="texhtml" dir="ltr"><i>a</i><sub>6</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>7</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>2</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>3</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>4</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>5</sub></span></td>
+<td bgcolor="#FF6666"><span class="texhtml" dir="ltr"><i>a</i><sub>6</sub></span></td>
+</tr>
+<tr>
+<th>Rapide</th>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>0</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>2</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>4</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>6</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>2</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>4</sub></span></td>
+<td bgcolor="#FF6666"><span class="texhtml" dir="ltr"><i>a</i><sub>6</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>2</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>4</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>6</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>2</sub></span></td>
+<td><span class="texhtml" dir="ltr"><i>a</i><sub>4</sub></span></td>
+<td bgcolor="#FF6666"><span class="texhtml" dir="ltr"><i>a</i><sub>6</sub></span></td>
+</tr>
+</table>
+<h3><span class="editsection">[<a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit&amp;section=3" title="Modifier la section : Pseudo-code">modifier</a>]</span> <span class="mw-headline" id="Pseudo-code">Pseudo-code</span></h3>
+<pre>
+ m := 1; x := f(<span class="texhtml" dir="ltr"><i>a</i><sub>0</sub></span>); y := f(x);
+ <b>tant que</b> x &lt;&gt; y <b>faire</b>
+    m := m + 1;
+    x := f(x);
+    y := f(f(y));
+ { la valeur de m est telle que <span class="texhtml" dir="ltr"><i>a</i><sub><i>m</i></sub> = <i>a</i><sub>2<i>m</i></sub></span> }
+</pre>
+<p>Si on souhaite obtenir la valeur de <span class="texhtml" dir="ltr">μ</span>, il suffit d'ajouter à la suite le code suivant&#160;:</p>
+<pre>
+ mu := 0;
+ <b>répéter</b>
+    mu := mu+1;
+    x := f(x);
+    y := f(f(y));
+ <b>tant que</b> x &lt;&gt; y
+</pre>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit&amp;section=4" title="Modifier la section : Complexité">modifier</a>]</span> <span class="mw-headline" id="Complexit.C3.A9">Complexité</span></h2>
+<p>L'algorithme effectue au minimum λ comparaisons, étant donné que le parcours lent de la séquence doit au moins atteindre le cycle pour rencontrer le parcours rapide. Le nombre maximum de comparaisons est <span class="texhtml" dir="ltr">λ + μ</span>, étant donné que le parcours lent ne peut effectuer plus d'un tour du cycle avant d'être rattrapé par le parcours rapide. L'algorithme utilise un espace O(1).</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit&amp;section=5" title="Modifier la section : Variantes">modifier</a>]</span> <span class="mw-headline" id="Variantes">Variantes</span></h2>
+<p>La variante la plus connue de l'algorithme de Floyd de détection de cycle est l'<a href="/wiki/Algorithme_rho_de_Pollard" title="Algorithme rho de Pollard">algorithme rho de Pollard</a>, un algorithme de <a href="/wiki/D%C3%A9composition_en_produit_de_facteurs_premiers" title="Décomposition en produit de facteurs premiers">décomposition en produit de facteurs premiers</a> qui utilise les séquences <a href="/wiki/Pseudo-al%C3%A9atoire" title="Pseudo-aléatoire">pseudo-aléatoires</a> pour factoriser les entiers. Il existe également un algorithme de calcul du logarithme discret basé sur l'algorithme de Floyd de détection de cycle.</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit&amp;section=6" title="Modifier la section : Références">modifier</a>]</span> <span class="mw-headline" id="R.C3.A9f.C3.A9rences">Références</span></h2>
+<div style="font-size: 85%">
+<ol class="references">
+<li id="cite_note-0"><span class="noprint renvois_vers_le_texte"><a href="#cite_ref-0">↑</a></span> <span class="ouvrage" id="Floyd1967">R.W. Floyd, «&#160;<cite style="font-style:normal;">Non-deterministic Algorithms</cite>&#160;», dans <i>J. ACM</i>, octobre&#160;1967, <abbr class="abbr" title="page(s)">p.</abbr>&#160;pp. 636-644 <small>[<a rel="nofollow" class="external text" href="http://doi.acm.org/10.1145/321420.321422">texte intégral</a>]</small></span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.aulast=Floyd&amp;rft.au=Floyd&amp;rfr_id=info:sid/fr.wikipedia.org:Algorithme_du_li%C3%A8vre_et_de_la_tortue"><span style="display: none;">&#160;</span></span></li>
+</ol>
+</div>
+<ul>
+<li><span style="font-family:monospace;font-weight:bold;font-size:small">(<abbr class="abbr" title="Langue&#160;: anglais">en</abbr>)</span> Cet article est partiellement ou en totalité issu de l’article de Wikipédia en <a href="/wiki/Anglais" title="Anglais">anglais</a> intitulé «&#160;<span class="plainlinks" lang="en" xml:lang="en"><a class="external text" href="//en.wikipedia.org/wiki/Floyd%27s_cycle-finding_algorithm?oldid=106032853">Floyd's cycle-finding algorithm</a></span>&#160;» <small>(voir <span class="plainlinks"><a class="external text" href="//en.wikipedia.org/wiki/Floyd%27s_cycle-finding_algorithm?action=history">la liste des auteurs</a></span>)</small></li>
+</ul>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit&amp;section=7" title="Modifier la section : Liens externes">modifier</a>]</span> <span class="mw-headline" id="Liens_externes">Liens externes</span></h2>
+<ul>
+<li><a href="http://en.literateprograms.org/Category:Floyd%27s_cycle_finding_algorithm" class="extiw" title="literateprograms:Category:Floyd's cycle finding algorithm">Algorithme de Floyd de détection de cycle</a> sur LiteratePrograms</li>
+</ul>
+<ul id="bandeau-portail" class="bandeau-portail">
+<li><span class="bandeau-portail-element"><span class="bandeau-portail-icone"><a href="/wiki/Portail:Algorithmique" title="Portail de l’algorithmique"><img alt="Portail de l’algorithmique" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Konigsburg_graph.svg/30px-Konigsburg_graph.svg.png" width="30" height="24" /></a></span> <span class="bandeau-portail-texte"><a href="/wiki/Portail:Algorithmique" title="Portail:Algorithmique">Portail de l’algorithmique</a></span></span></li>
+<li><span class="bandeau-portail-element"><span class="bandeau-portail-icone"><a href="/wiki/Portail:Informatique" title="Portail de l’informatique"><img alt="Portail de l’informatique" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Crystal_mycomputer.png/24px-Crystal_mycomputer.png" width="24" height="24" /></a></span> <span class="bandeau-portail-texte"><a href="/wiki/Portail:Informatique" title="Portail:Informatique">Portail de l’informatique</a></span></span></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1810/1000000
+Post-expand include size: 10415/2048000 bytes
+Template argument size: 963/2048000 bytes
+Expensive parser function count: 2/500
+-->
+
+<!-- Saved in parser cache with key frwiki:pcache:idhash:1328512-0!1!0!!fr!4!* and timestamp 20120112083954 generated by mw28 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Ce document provient de « <a href="http://fr.wikipedia.org/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;oldid=63704287">http://fr.wikipedia.org/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;oldid=63704287</a> ».				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Cat%C3%A9gorie:Accueil" title="Catégorie:Accueil">Catégorie</a> : <ul><li><a href="/wiki/Cat%C3%A9gorie:Algorithme" title="Catégorie:Algorithme">Algorithme</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Catégories cachées : <ul><li><a href="/wiki/Cat%C3%A9gorie:Portail:Algorithmique/Articles_li%C3%A9s" title="Catégorie:Portail:Algorithmique/Articles liés">Portail:Algorithmique/Articles liés</a></li><li><a href="/wiki/Cat%C3%A9gorie:Projet:Math%C3%A9matiques/Articles" title="Catégorie:Projet:Mathématiques/Articles">Projet:Mathématiques/Articles</a></li><li><a href="/wiki/Cat%C3%A9gorie:Portail:Programmation_informatique/Articles_li%C3%A9s" title="Catégorie:Portail:Programmation informatique/Articles liés">Portail:Programmation informatique/Articles liés</a></li><li><a href="/wiki/Cat%C3%A9gorie:Portail:Informatique/Articles_li%C3%A9s" title="Catégorie:Portail:Informatique/Articles liés">Portail:Informatique/Articles liés</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Outils personnels</h5>
+	<ul>
+		<li id="pt-login"><a href="/w/index.php?title=Sp%C3%A9cial:Connexion&amp;returnto=Algorithme+du+li%C3%A8vre+et+de+la+tortue" title="Vous êtes encouragé(e) à vous identifier ; ce n’est cependant pas obligatoire. [o]" accesskey="o">Créer un compte ou se connecter</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Espaces de noms</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithme_du_li%C3%A8vre_et_de_la_tortue"  title="Voir la page de contenu [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Discussion:Algorithme_du_li%C3%A8vre_et_de_la_tortue"  title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+		<h5><span>Variantes</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Affichages</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Algorithme_du_li%C3%A8vre_et_de_la_tortue" >Lire</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=edit"  title="Vous pouvez modifier cette page ! [e]" accesskey="e">Modifier</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;action=history"  title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Afficher l’historique</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Rechercher</label></h5>
+	<form action="/w/index.php" id="searchform">
+		<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<div id="simpleSearch">
+						<input type="text" name="search" value="" title="Rechercher dans Wikipédia [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Rechercher les pages comportant ce texte." id="searchButton"><img src="//bits.wikimedia.org/skins-1.18/vector/images/search-ltr.png?303-4" alt="Rechercher" /></button>					</div>
+			</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(//upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia-logo-v2-fr.png);" href="/wiki/Wikip%C3%A9dia:Accueil_principal"  title="Page principale"></a></div>
+				<!-- /logo -->
+				
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Accueil"><a href="/wiki/Wikip%C3%A9dia:Accueil_principal">Accueil</a></li>
+			<li id="n-thema"><a href="/wiki/Portail:Accueil">Portails thématiques</a></li>
+			<li id="n-alphindex"><a href="/wiki/Sp%C3%A9cial:Toutes_les_pages">Index alphabétique</a></li>
+			<li id="n-randompage"><a href="/wiki/Sp%C3%A9cial:Page_au_hasard" title="Affiche un article au hasard [x]" accesskey="x">Article au hasard</a></li>
+			<li id="n-contact"><a href="/wiki/Wikip%C3%A9dia:Contact">Contacter Wikipédia</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Contribuer -->
+<div class="portal" id='p-Contribuer'>
+	<h5>Contribuer</h5>
+	<div class="body">
+		<ul>
+			<li id="n-aboutwp"><a href="/wiki/Aide:Premiers_pas">Premiers pas</a></li>
+			<li id="n-help"><a href="/wiki/Aide:Sommaire" title="Aide">Aide</a></li>
+			<li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Accueil_de_la_communaut%C3%A9" title="À propos du projet">Communauté</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Sp%C3%A9cial:Modifications_r%C3%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+			<li id="n-sitesupport"><a href="//wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&amp;language=fr&amp;utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20101204SB002" title="Aidez-nous">Faire un don</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Contribuer -->
+
+<!-- coll-print_export -->
+<div class="portal" id='p-coll-print_export'>
+	<h5>Imprimer / exporter</h5>
+	<div class="body">
+		<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Sp%C3%A9cial:Livre&amp;bookcmd=book_creator&amp;referer=Algorithme+du+li%C3%A8vre+et+de+la+tortue" title="Créer un livre ou une collection d’articles" rel="nofollow">Créer un livre</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Sp%C3%A9cial:Livre&amp;bookcmd=render_article&amp;arttitle=Algorithme+du+li%C3%A8vre+et+de+la+tortue&amp;oldid=63704287&amp;writer=rl" title="Télécharge une version PDF de cette page wiki" rel="nofollow">Télécharger comme PDF</a></li><li id="t-print"><a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;printable=yes" title="Version imprimable de cette page [p]" accesskey="p">Version imprimable</a></li></ul>	</div>
+</div>
+
+<!-- /coll-print_export -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Boîte à outils</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Sp%C3%A9cial:Pages_li%C3%A9es/Algorithme_du_li%C3%A8vre_et_de_la_tortue" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Sp%C3%A9cial:Suivi_des_liens/Algorithme_du_li%C3%A8vre_et_de_la_tortue" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+			<li id="t-upload"><a href="/wiki/Aide:Importer_un_fichier" title="Envoyer une image ou fichier média sur le serveur [u]" accesskey="u">Importer un fichier</a></li>
+			<li id="t-specialpages"><a href="/wiki/Sp%C3%A9cial:Pages_sp%C3%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;oldid=63704287" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Sp%C3%A9cial:Citer&amp;page=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;id=63704287" title="Informations sur comment citer cette page">Citer cette page</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+<div class="portal" id='p-lang'>
+	<h5>Autres langues</h5>
+	<div class="body">
+		<ul>
+			<li class="interwiki-de"><a href="//de.wikipedia.org/wiki/Hase-Igel-Algorithmus">Deutsch</a></li>
+			<li class="interwiki-en"><a href="//en.wikipedia.org/wiki/Cycle_detection">English</a></li>
+			<li class="interwiki-id"><a href="//id.wikipedia.org/wiki/Algoritma_pencari-siklus_Floyd">Bahasa Indonesia</a></li>
+			<li class="interwiki-ja"><a href="//ja.wikipedia.org/wiki/%E3%83%95%E3%83%AD%E3%82%A4%E3%83%89%E3%81%AE%E5%BE%AA%E7%92%B0%E6%A4%9C%E5%87%BA%E6%B3%95">日本語</a></li>
+			<li class="interwiki-pt"><a href="//pt.wikipedia.org/wiki/Algoritmo_busca-ciclos_de_Floyd">Português</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Dernière modification de cette page le 26 mars 2011 à 17:23.<br /></li>
+											<li id="footer-info-copyright"><span style="white-space: normal"><a class="internal" href="/wiki/Wikip%C3%A9dia:Citation_et_r%C3%A9utilisation_du_contenu_de_Wikip%C3%A9dia" title="Droit d'auteur">Droit d'auteur</a> : les textes sont disponibles sous <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr" title="Licence Creative Commons paternité partage des conditions initiales à l’identique 3.0 unported">licence Creative Commons paternité partage à l’identique</a> ; d’autres conditions peuvent s’appliquer. Voyez les <a href="//wikimediafoundation.org/wiki/Conditions_d%27utilisation" title="Conditions d’utilisation de la Wikimedia Foundation">conditions d’utilisation</a> pour plus de détails, ainsi que les <a class="internal" href="/wiki/Wikip%C3%A9dia:Cr%C3%A9dits_graphiques" title="Droit d'auteur de certaines icônes">crédits graphiques</a>. En cas de réutilisation des textes de cette page, voyez <a class="internal" href="/wiki/Sp%C3%A9cial:Citer/Algorithme_du_li%C3%A8vre_et_de_la_tortue" title="Citer ou réutiliser cette page">comment citer les auteurs et mentionner la licence</a>.<br />
+Wikipedia® est une marque déposée de la <a href="//wikimediafoundation.org/wiki/Accueil" title="Wikimedia Foundation">Wikimedia Foundation, Inc.</a>, organisation de bienfaisance régie par le paragraphe <a class="internal" href="/wiki/501c" title="501c">501(c)(3)</a> du code fiscal des États-Unis.</span><br /></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Politique_de_confidentialit%C3%A9" title="wikimedia:Politique de confidentialité">Politique de confidentialité</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:%C3%80_propos" title="Wikipédia:À propos">À propos de Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Avertissements_g%C3%A9n%C3%A9raux" title="Wikipédia:Avertissements généraux">Avertissements</a></li>
+											<li id="footer-places-mobileview"><a href='/w/index.php?title=Algorithme_du_li%C3%A8vre_et_de_la_tortue&amp;useformat=mobile' class='noprint'>Affichage mobile</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/skins-1.18/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<!-- fixalpha -->
+		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+		<!-- /fixalpha -->
+		<script src="//bits.wikimedia.org/fr.wikipedia.org/load.php?debug=false&amp;lang=fr&amp;modules=skins.vector&amp;only=scripts&amp;skin=vector&amp;*" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest", "ext.vector.collapsibleNav", "ext.vector.collapsibleTabs", "ext.vector.editWarning", "ext.vector.simpleSearch"]);
+}
+</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-BoutonPlus.js&amp;action=raw&amp;ctype=text/javascript&amp;71255689" type="text/javascript"></script>
+<script src="/w/index.php?title=Sp%C3%A9cial:BannerController&amp;cache=/cn.js&amp;303-4" type="text/javascript"></script>
+<script src="//bits.wikimedia.org/fr.wikipedia.org/load.php?debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"useeditwarning":1,"vector-collapsiblenav":1,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"gadget-BoutonPlus":1});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: frwiki:resourceloader:filter:minify-js:4:68344568d72b986730c5589367295cb6 */
+}
+</script><script src="//geoiplookup.wikimedia.org/" type="text/javascript"></script><!-- Served by mw20 in 0.095 secs. -->
+	</body>
+</html>
