@@ -1,7 +1,7 @@
 /* fichier de test pour avoir les donné du temps*/
 
 /*fichier a charger */
-\r algo_rho_test.gp
+\r algo_rho_negation.gp
 \r initiation_courbe.gp
 
 i = 0;

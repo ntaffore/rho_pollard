@@ -56,9 +56,7 @@ func_negation(E,W,P,Q,a,b,n,list,r) = {
 rho_p_V5(E,P,Q) = {
 
 		my(tmp,n,W1,W2,a0,a1,b0,b1,i=0);
-		my(l1 = [],l2 = []);
 
-	
 		r = 2000;
 		list = table(E,P,Q,r);
 
@@ -72,113 +70,42 @@ rho_p_V5(E,P,Q) = {
 		while(W1 != W2 ,
 	/*		print(W1,W2);			 */
 
-			 if ( i > 1,
-				if( l2[i-1] == W1,
-					tmp = double_min(E,l2,a0,b0,2); 
-					W1 = tmp[1]; 
-					a0 = tmp[2];
-					b0 = tmp[3];
-
-					 l1 = concat(l1,[W1]);
-
-				,
-				 	tmp = func_negation(E,W1,P,Q,a0,b0,n,list,r);
-				 	W1 = tmp[1];
-				 	a0 = tmp[4];
-				 	b0 = tmp[5];
-			
-					 l1 = concat(l1,[W1]);
-					 if (  elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0) ) == W1,
-					/*	print("check");*/
-					 ,
-						print("erreur ------------------------ ");
-					 );
-				);
-			,			
-				 tmp = func_negation(E,W1,P,Q,a0,b0,n,list,r);
-				 W1 = tmp[1];
-				 a0 = tmp[4];
-				 b0 = tmp[5];
-			
-				 l1 = concat(l1,[W1]);
-				 if (  elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0) ) == W1,
-				/*	print("check");*/
-				 ,
-					print("erreur ------------------------ ");
-				 );
-			);
-
-			 if ( i > 1,
-			 	if ( l2[i-1] == W2, 
-					tmp = double_min(E,l2,a1,b1,2); 
-					W2 = tmp[1]; 
-					a1 = tmp[2];
-					b1 = tmp[3];
-					
-					 i = i+1;
+			 tmp = func_negation(E,W1,P,Q,a0,b0,n,list,r);
+			 W1 = tmp[1];
+			 a0 = tmp[4];
+			 b0 = tmp[5];
 		
-					 l2 = concat(l2,[[W2,a1,b1]]);
-	
-				,
-				 	tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r);
-					 W2 = tmp[1];
-					 a1 = tmp[4];	
-					 b1 = tmp[5];
-					 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
-					/*		print("check");*/
-					 ,
-						print("erreur ------------------------ ");
-					 );
-			
-					 tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r);
-					 W2 = tmp[1];
-					 a1 = tmp[4];	
-					 b1 = tmp[5];
-					 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
-					/*	print("check");*/
-					 ,
-						print("erreur ------------------------ ");
-					 );
-		
-					 i = i+1;
-		
-					 l2 = concat(l2,[[W2,a1,b1]]);
-	
-				
-				);
+			 if (  elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0) ) == W1,
+			/*	print("check");*/
 			 ,
-			 	tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r);
-				 W2 = tmp[1];
-				 a1 = tmp[4];	
-				 b1 = tmp[5];
+				print("erreur ------------------------ ");
+			 );
+
+			 tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r);
+			 W2 = tmp[1];
+			 a1 = tmp[4];	
+			 b1 = tmp[5];
 			 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
-			/*		print("check");*/
-				 ,
-					print("erreur ------------------------ ");
-				 );
-		
-				 tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r);
-				 W2 = tmp[1];
-				 a1 = tmp[4];	
-				 b1 = tmp[5];
-				 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
-				/*	print("check");*/
-				 ,
-					print("erreur ------------------------ ");
-				 );
+		/*		print("check");*/
+			 ,
+				print("erreur ------------------------ ");
+			 );
 	
-				 i = i+1;
-	
-				 l2 = concat(l2,[[W2,a1,b1]]);
-	
-/*				print("-_-_-_-_-_-_-_-_-_-_-_-__-"); 	*/
-			);
+			 tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r);
+			 W2 = tmp[1];
+			 a1 = tmp[4];	
+			 b1 = tmp[5];
+			 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
+			/*	print("check");*/
+			 ,
+				print("erreur ------------------------ ");
+			 );
+
+			 i = i+1;
+/*			print("-_-_-_-_-_-_-_-_-_-_-_-__-"); 	*/
 		);
 
-/*		print(l1);
-		print(l2);
-*/
-/*		print(i);*/
+	/*	print(i);*/
 
 /*		print("------");
 		print(W1,W2);
@@ -196,31 +123,12 @@ rho_p_V5(E,P,Q) = {
 							/*return(	(lift(Mod(a0-a1,l)))*c^-1);*/
 			if (ellpow(E,P,lift((a0-a1)*c^-1)) == Q,
 			   	print("reussit i = ",i/sqrt(n));
-				return((i/sqrt(n)));
+				return(i);
 			,
 				print("failled ellpow -----------------------------	")
 			);
 		);		
 }		
-
-/* eviter les cycles courts */
-
-double_min(E,l,a,b,n) = {
-
-	my(s=#l,mini,W);
-	mini = l[s-1][1];
-	for(i = s-1, s,
-		if ( lift(mini[1][1]) > lift(l[i][1][1]),
-			if ( lift(mini[2][1]) > lift(l[i][2][1]),
-				mini = l[i];
-			);
-		);
-	);
-	W = ellpow(E,mini[1],2);
-	a = 2*mini[2];
-	b = 2*mini[3];
-	return([W,a,b]); 
-}
 
 /* retourne les coefficient a0,b0,a1,b1 avec leur bon signe */
 
