@@ -1,0 +1,4 @@
+set logscale y 2
+set logscale x 2
+unset key
+plot './graph2.txt' using 1:2,'./graph2.txt' using 1:3,'./graph2.txt' using 1:4,'./graph2.txt' using 1:5,'./graph2.txt' using 1:6,'./graph2.txt' using 1:7,'./graph2.txt' using 1:8,'./graph2.txt' using 1:9,'./graph2.txt' using 1:10,'./graph2.txt' using 1:11,'./graph2.txt' using 1:12,'./graph2.txt' using 1:13,'./graph2.txt' using 1:14,'./graph2.txt' using 1:15,'./graph2.txt' using 1:16,'./graph2.txt' using 1:17,'./graph2.txt' using 1:18,'./graph2.txt' using 1:19,'./graph2.txt' using 1:20
