@@ -57,18 +57,16 @@ rho_p_V5(E,P,Q) = {
 			 b1 = tmp[5];
 			 i = i+1;
 		);
-/*		print(W1,W2,n);
-		print(i);
-		print([a0,b0,a1,b1,n]);*/
+
 		if ( (b0 - b1) % n == 0 ,
 		
 			print("failled");
 		,
 			c = Mod(b1-b0,n);
-							/*return(	(lift(Mod(a0-a1,l)))*c^-1);*/
+						/*return(	(lift(Mod(a0-a1,l)))*c^-1);*/
 			if (ellpow(E,P,lift((a0-a1)*c^-1)) == Q,
-			   	print("reussit i = ");
-				return(i);
+			   	print("reussit ");
+				return(i/sqrt(n));
 			,
 				print("failled ellpow -----------------------------	")
 			);

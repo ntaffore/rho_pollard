@@ -51,23 +51,30 @@ func_negation(E,W,P,Q,a,b,n,list,r) = {
                 return([W2,P,Q,a,b]);
 }
 */
+
 /* on obtient a la fin de la boubel un relation +- */
 
 rho_p_V5(E,P,Q) = {
 
 		my(tmp,n,W1,W2,a0,a1,b0,b1,i=0);
+		my(list_W1 = [],list_W2 = [],len);
 
-		r = 2000;
+		
+		len = 4;
+		r = 3;
+
 		list = table(E,P,Q,r);
-
-       	n = ellorder(E,P);
+   	n = ellorder(E,P);
 		a0 = random(n);
 		b0 = random(n);
 		W1 = elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0));
+
 		tmp = func_negation(E,W1,P,Q,a0,b0,n,list,r);		
 		W2 = tmp[1];
-		a1 = tmp[4]; b1 = tmp[5];
-		while(W1 != W2 ,
+		a1 = tmp[4];
+	  b1 = tmp[5];
+
+		while( (W1 != W2 || b0 == b1 ) /*&& i < 50*/,
 	/*		print(W1,W2);			 */
 
 			 tmp = func_negation(E,W1,P,Q,a0,b0,n,list,r);
@@ -75,10 +82,22 @@ rho_p_V5(E,P,Q) = {
 			 a0 = tmp[4];
 			 b0 = tmp[5];
 		
+			 list_W1 = stockage_list(len,list_W1,W1,a0,b0);
+			 if ( # list_W1 > 3,
+/*					affiche_list(list_W1);*/
+					tmp = fruitless_cycles(2,list_W1);
+ 				  W1 = tmp[1];
+			 	  a0 = tmp[2];
+			 	 	b0 = tmp[3];
+/*					print(lift(W1));*/
+			 		
+/*				  list_W1 = stockage_list(len,list_W1,W1);*/
+			 );
+
 			 if (  elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0) ) == W1,
 			/*	print("check");*/
 			 ,
-				print("erreur ------------------------ ");
+				print("erreur 1 ------------------------ ");
 			 );
 
 			 tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r);
@@ -88,7 +107,7 @@ rho_p_V5(E,P,Q) = {
 			 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
 		/*		print("check");*/
 			 ,
-				print("erreur ------------------------ ");
+				print("erreur 2 ------------------------ ");
 			 );
 	
 			 tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r);
@@ -98,20 +117,31 @@ rho_p_V5(E,P,Q) = {
 			 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
 			/*	print("check");*/
 			 ,
-				print("erreur ------------------------ ");
+				print("erreur 3 ------------------------ ");
+			 );
+
+			 list_W2 = stockage_list(len,liste_W2,W2,a1,b1);
+			 if ( # list_W2 > 3,
+ 				 tmp = fruitless_cycles(2,list_W2);
+				  W2 = tmp[1];
+	 			  a1 = tmp[2];	
+		 		  b1 = tmp[3];
+
+/*				 list_W2 = stockage_list(len,liste_W2,W2);*/
 			 );
 
 			 i = i+1;
+			 if( b0 == b1 && W1 == W2, print("----W1 = W2 && b0 = b1 -------------> ",i));
 /*			print("-_-_-_-_-_-_-_-_-_-_-_-__-"); 	*/
 		);
 
-	/*	print(i);*/
+		print(i);
 
-/*		print("------");
+		print("------");
 		print(W1,W2);
 		print([a0,b0,a1,b1,n]);
-*/
-		tmp = good_rel(E,P,Q,a0,b0,a1,b1);
+
+		tmp = good_rel(E,P,Q,a0,b0,a1,b1,n);
 /*		print([a0,b0,a1,b1,n]);*/
 
 
@@ -130,8 +160,87 @@ rho_p_V5(E,P,Q) = {
 		);		
 }		
 
-/* retourne les coefficient a0,b0,a1,b1 avec leur bon signe */
 
+/* fonction affichage dbg */
+/* liste type element : [W,a,b] on veut que les W */
+
+affiche_list(list) = 
+{
+	my(n,i);
+	n = # list;
+	for (i = 1, n ,
+		printf(lift(list[i][1]));
+	);
+	printf("\n");
+}
+
+/* fonction qui stocke les n derniers elememts de la suite */
+/* ainsi que leur coeff a et b */
+stockage_list(n,list,W,a,b) = 
+{
+	my(i);
+	if( # list < n,
+		list = concat(list,[[W,a,b]]); 
+		return(list)
+	,
+		for( i = 1, n-1,
+			list[i] = list[i+1];
+		);
+		list[n] = [W,a,b];
+		return(list);
+	);
+}
+
+/* minimun lexicographic sur les courbes elliptiques */
+/* prend une liste d'element : [W,a,b] non vide comme argument */
+minimun_lex(list) = 
+{
+	my(i,n,mini);
+	n = # list;
+	mini = list[1];
+	for( i = 1,n,
+		if( lift(list[i][1][1]) < lift(mini[1][1]),
+			mini = list[i];
+		,
+			if ( lift(list[i][1][1]) == lift(mini[1][1]),
+				if ( lift(list[i][1][2]) < lift(mini[1][2]),
+					mini = list[i];
+				);
+			);
+		);
+	);
+	return(mini);
+}
+
+/* détection et correction des cycles court de longueurs n */
+
+fruitless_cycles(n,list) = 
+{
+	my(l,elements = [],i,tmp,tmp_el,a,b);
+	l = # list;
+	/*print(lift(list));*/
+	if ( list[l][1] == list[l-n][1],
+		print("fruitless detect");
+		affiche_list(list);
+		print("<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		for( i = 0, n-1,
+			elements = concat(elements,[list[l-i]]);
+		);
+		tmp =  minimun_lex(elements);
+		W = ellpow(E,tmp[1],2);
+		if (lift(W[2]) % 2 == 1, W = [W[1],W[2]] );
+		a = 2*tmp[2];
+		b = 2*tmp[3];
+		tmp_el = [W,a,b];
+	,
+/*		print("no fruitless");*/
+		tmp_el = list[l];
+		
+	);
+	return(tmp_el);
+}
+
+/* retourne les coefficient a0,b0,a1,b1 avec leur bon signe */
 good_rel(E,P,Q,a0,b0,a1,b1,n) = {
 
 	if ( elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0)) == elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1)),
