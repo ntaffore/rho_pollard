@@ -40,18 +40,19 @@ test(fun, nbits, npoints, ncurves) =
 	/* [t_bis,pow_ex];*/
 }
 
-do(fun, file) = 
-{ my(FILE = Str("/tmp/", file));
+do_1(fun, file, borninf, bornsup, nbcurve, nbtest) = 
+{ my(FILE = Str("../test/", file));
   system(Str("rm -f ", FILE));
-  for (n = 35, 35,
+  for (n = borninf, bornsup,
     my(v,pow_ex,T,N);
-    v = test(fun, n, 4, 10);
+    v = test(fun, n, nbcurve, nbtest);
     pow_ex = v[2];
     T      = v[1]; if (!T, next);
-    N      = 4. * 10; 
+    N      = nbcurve * nbtest; 
     printf("n = %d, pow_ex = %.1f\n", n, pow_ex / N);
     /*write(FILE, n, " ", Strprintf("%.2f", log(T)/log(2) / N));*/
-		write(FILE, n, " ", Strprintf("%.2f", T / N));
+	write(FILE, n, " ", Strprintf("%.2f", log(T / N)/log(2)));
+
 		/*		write(FILE, n, " ");
 		for (j = 1, #T,
 			if ( T[j] == 0 ,
@@ -63,4 +64,4 @@ do(fun, file) =
   );
 }
 
-do(rho_p_V5, "temptest-3");
+/*do_1(rho_p_V5, "temptest-3",6,35,4,8);*/
