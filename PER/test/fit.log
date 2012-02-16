@@ -90,3 +90,325 @@ correlation matrix of the fit parameters:
                a      b      
 a               1.000 
 b              -0.949  1.000 
+
+
+*******************************************************************************
+Wed Feb 15 18:22:14 2012
+
+
+FIT:    data read from './111temp-10-35_curve-4_test-8-normal_v-1'
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 8754.1            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 16.7854
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.16596
+rel. change during last iteration : -1.57777e-11
+
+degrees of freedom    (FIT_NDF)                        : 24
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.300414
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0902484
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.4732           +/- 0.007855     (1.66%)
+b               = -5.06354         +/- 0.1863       (3.679%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.949  1.000 
+
+
+*******************************************************************************
+Wed Feb 15 18:23:16 2012
+
+
+FIT:    data read from './temp-10-30_curve-4_test-8-multi_v-1'
+        format = z
+        #datapoints = 21
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6259.73           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 14.793
+
+initial set of free parameter values
+
+c               = 1
+d               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.13872
+rel. change during last iteration : -1.82115e-11
+
+degrees of freedom    (FIT_NDF)                        : 19
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.335506
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.112564
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 0.435649         +/- 0.01209      (2.775%)
+d               = -4.63346         +/- 0.2527       (5.453%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.957  1.000 
+
+
+*******************************************************************************
+Wed Feb 15 23:27:55 2012
+
+
+FIT:    data read from './temp-10-30_curve-4_test-8-multi_v-1'
+        format = z
+        #datapoints = 21
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6259.73           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 14.793
+
+initial set of free parameter values
+
+c               = 1
+d               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.13872
+rel. change during last iteration : -1.82115e-11
+
+degrees of freedom    (FIT_NDF)                        : 19
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.335506
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.112564
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 0.435649         +/- 0.01209      (2.775%)
+d               = -4.63346         +/- 0.2527       (5.453%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.957  1.000 
+
+
+*******************************************************************************
+Wed Feb 15 23:28:11 2012
+
+
+FIT:    data read from './111temp-10-35_curve-4_test-8-normal_v-1'
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 8754.1            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 16.7854
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.16596
+rel. change during last iteration : -1.57777e-11
+
+degrees of freedom    (FIT_NDF)                        : 24
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.300414
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0902484
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.4732           +/- 0.007855     (1.66%)
+b               = -5.06354         +/- 0.1863       (3.679%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.949  1.000 
+
+
+*******************************************************************************
+Wed Feb 15 23:34:25 2012
+
+
+FIT:    data read from './courbe_version_normal_machine_008_corot.txt'
+        format = z
+        #datapoints = 42
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 17417.2           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 20.6175
+
+initial set of free parameter values
+
+q               = 1
+s               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.35831
+rel. change during last iteration : -1.84184e-12
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.242812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0589577
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+q               = 0.502748         +/- 0.003091     (0.6148%)
+s               = -5.27305         +/- 0.09008      (1.708%)
+
+
+correlation matrix of the fit parameters:
+
+               q      s      
+q               1.000 
+s              -0.909  1.000 
+
+
+*******************************************************************************
+Thu Feb 16 13:04:04 2012
+
+
+FIT:    data read from './temp-6-35_curve-4_test-8-normal_v-1'
+        format = z
+        #datapoints = 27
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 8355.27           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 15.8535
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 3.27664
+rel. change during last iteration : -2.37967e-12
+
+degrees of freedom    (FIT_NDF)                        : 25
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.36203
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.131066
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.477009         +/- 0.008945     (1.875%)
+b               = -5.12681         +/- 0.2004       (3.908%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.938  1.000 
+
+
+*******************************************************************************
+Thu Feb 16 13:16:34 2012
+
+
+FIT:    data read from './temp-10-35_curve-4_test-8-multi_v-1'
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 8525.74           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 16.386
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.20114
+rel. change during last iteration : -1.59416e-11
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.309357
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.095702
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.454292         +/- 0.00858      (1.889%)
+b               = -5.03483         +/- 0.1986       (3.945%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.950  1.000 

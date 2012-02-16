@@ -23,6 +23,9 @@ func(E,W2,P,Q,a,b,n) = {
                 return([W2,P,Q,a,b]);
 }
 
+/* cette algo rithme renvoit un point remarcable de la courbe */
+/* def point remarquable : x à p/3 0 de poids faible */
+
 rho_p_V5(E,P,Q) = {
 
 		my(tmp,n,W1,W2,a0,a1,b0,b1,i=0);
@@ -30,39 +33,40 @@ rho_p_V5(E,P,Q) = {
 		a0 = random(n);
 		b0 = random(n);
 		W1 = elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0));
-		tmp = func(E,W1,P,Q,a0,b0,n);		
-		W2 = tmp[1];
-		a1 = tmp[4]; b1 = tmp[5];
-		while(W1 != W2,
+		while( test_remarquable(E,W1) != 1,
 			 
 			 tmp = func(E,W1,P,Q,a0,b0,n);
 			 W1 = tmp[1];
 			 a0 = tmp[4];
 			 b0 = tmp[5];
 
-			 tmp = func(E,W2,P,Q,a1,b1,n);
-			 W2 = tmp[1];
-			 a1 = tmp[4];	
-			 b1 = tmp[5];
-			 tmp = func(E,W2,P,Q,a1,b1,n);
-			 W2 = tmp[1];
-			 a1 = tmp[4];	
-			 b1 = tmp[5];
 			 i = i+1;
 		);
 
-		if ( (b0 - b1) % n == 0 ,
-		
-			print("failled");
-		,
-			c = Mod(b1-b0,n);
-							/*return(	(lift(Mod(a0-a1,l)))*c^-1);*/
-			if (ellpow(E,P,lift((a0-a1)*c^-1)) == Q,
-			   	print("check ");
-				return(i/sqrt(n));
-			,
-				print("failled ellpow -----------------------------	")
-			);
-		);		
+		return([W1,a0,b0,i]);
 }		
 
+/* test pour voir si on a un point remarquable */
+test_remarquable(E,W) = {
+	
+	my(p,n);
+	p = floor(log(E[4].mod)/log(2)) + 1;
+	n = floor(p/3);
+	if ( lift(W[1]) % 2^n == 0, return(1), return(0));
+
+}
+
+/* probabilité de trouver un point remarquable */
+/* avec test */
+proba_remarquable(E,P) = {
+
+	my(o,count = 0);
+	o = ellorder(E,P);
+	W = [0];
+	for(i = 1, o,
+		W = elladd(E,W,P);
+		if( test_remarquable(E,W) == 1, count++);
+	);
+
+	return(count);
+}

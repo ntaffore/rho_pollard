@@ -65,7 +65,7 @@ rho_p_V5(E,P,Q) = {
 			c = Mod(b1-b0,n);
 						/*return(	(lift(Mod(a0-a1,l)))*c^-1);*/
 			if (ellpow(E,P,lift((a0-a1)*c^-1)) == Q,
-			   	print("reussit ");
+			   	print("check ");
 				return(i/sqrt(n));
 			,
 				print("failled ellpow -----------------------------	")
