@@ -42,34 +42,43 @@
 
 \chapter{Rapel sur les courbes elliptique}
 % 2 pages
-\begin{description}
-  \item[définition]
+% \begin{description}
+%   \item[définition]
 
-    Soit un un corp Fp (p premier) de caractéristique différente de 2 ou 3, soit a, b app Fp. Un courbe elliptique est définit par
-    le point à l'infini et l'ensemble des points (x,y) tel que soit satifait l'equation suivante :
+    Soit un un corp Fp (p premier) de caractéristique différente de 2 ou 3, soit a, b app Fp. On peut avoir aussi la courbe définit sur $Fq$ avec $q = p^n$, certaines propriétés sont un peut différentes.
+    Un courbe elliptique est définit par le point à l'infini et l'ensemble des points (x,y) tel que soit satifait l'equation suivante :
   \begin{center}
     $y^2 = x^3 + a*x + b$.   
   \end{center}
-  Ces points forme un groupe abélien avec comme zero le point à l'infini et un loi de groupe.
-  Soit P, Q app F, $ P = (x_1,y_1)$, $Q = (x_2,y_2)$ alors $P+Q = (x_3,y_3)$ tel que 
+  Ces points forment un groupe abélien avec comme zero : le point à l'infini et un loi de groupe.
+  Soit P, $Q \in F$, $ P = (x_1,y_1)$, $Q = (x_2,y_2)$ alors $P+Q = (x_3,y_3)$ tel que 
     \begin{center}
       $x_3 = \mu^2 -x_1 - x_2$, $y_3 = \mu(x_1-x_3)$
-      \newline
+    \end{center}
+    \begin{center}
       $\mu = \frac{y_2 - y_1}{x_2 - x_1}$ si $P <> Q$
-      \newline
+    \end{center}
+    \begin{center}
       $\mu = \frac{3*x_1^2 + a}{2*y_1}$ si $P = Q$
     \end{center}
 
-\end{description}
+% \end{description}
 
-propriété importante pour les inverse pour la loi d'addition sur Fp. Si $P = (x_1,y_1)$ alors $-P = (x_1,-y_1)$.
-
-(sur Fq)  à detailler aussi.
+Une propriété importante sur les courbes elliptiques est le calcule de l'inverse d'un point pour la loi d'addition sur Fp. Si $P = (x_1,y_1)$ alors $-P = (x_1,-y_1)$.
+Pour une courbe elliptique sur $Fq$, on a une propriété identique. Si $P = (x_1,y_1)$ alors $-P = (x_1,y_1+x_1)$.
 
 \chapter{Algorithme rho de Pollard}
 
-L'algorithme rho de pollard est basé sur le paradoxe des anniversaire. Dans un groupe finit si on prend des éléments de façon aléatoire,
+L'algorithme rho de pollard est basé sur le paradoxe des anniversaires. Dans un groupe finit si on prend des éléments de façon aléatoire,
 il faut en moyenne tirer $\sqrt{n}$ éléments pour obtenir un élément que l'on à déjà tiré, ou n est le nombre d'élément de notre ensemble.
+
+La formule générale pour obtenir une probabilité d'intersection ($I(n)$) est 1-$p(n)$ où $p(n)$ est la probabilité d'avoir aucune intersetion sur n tirage avec remise dans un groupe de $m$ elements
+\begin{center}
+    $p(n) = \frac{m!}{(m - n)!}*\frac{1}{m^n}$
+    $I(n) = 1 - \frac{m!}{(m - n)!}*\frac{1}{m^n}$
+\end{center}
+
+
 Le nom de cette algorithme est dû à la forme que prend la suite aléatoire, on a d'abord un pré-cycle puis le cycle.
 % \includegraphics{image de la lettre rho}
 
@@ -86,6 +95,7 @@ Ici P est un generateur du groupe et Q est l'element dont on veut connaitre le l
 \begin{algorithmic}
  \REQUIRE n,P,Q
  \ENSURE x tel que $Q = P^x mod n$
+
 \end{algorithmic}
 \end{algorithm}
 
@@ -115,11 +125,19 @@ donc $a_1 = 1, a_2 = 2, a_3 = 5 .....$
 
 \section{methode general}
 
-sur une courbe elliptique sur Fp l'inverse de P = (x,y,z), simplifié à (x,y) est -P = (x,-y). le but de cette méthode est de reduire le groupe de moitier,
+Sur une courbe elliptique sur Fp l'inverse de P = (x,y,z), simplifié à (x,y) est -P = (x,-y). le but de cette méthode est de reduire le groupe de moitier,
 donc de faire une recherche de log discret dans <P>/<H>. On obtient donc une relation du type $\pm[a]P \pm[b]Q = \pm[a']P \pm[b']Q$. Il nous suffit donc de retrouver exactement 
 la relation avec les bon signe pour retrouver le logarithme discret.
 
-premier problème on retombe très rapidement sur le meme point avec les meme scalaires	
+Premier problème on retombe très rapidement sur le meme point avec les meme scalaires, si on évite ses point et que l'on continue la boucle, elle continue indéfiniment.
+En plaçant des prints sur l'égalité et un compteur générale de boucle, on remarque que comme décrit dans l'article on a l'apparition de cycle court de longueur 2.
+
+La méthode décrite dans l'article \" ...\" nous dis de garder en mémoire quelque points de la marche aléatoire, puis de faire un comparaison pour detecter si on entre dans un cycle
+longueur 2, cette comparaison s'effectue entre le terme que l'on vient de calculer et celui qui était deux crant avant.
+S'ils sont différents alors on continue la marche comme elle était, mais s'ils sont identiques alors le point suivant est $2*min(W_{-1},W_{-2})$ où le min est le minimun lexicographique et
+la multiplication par 2 est l'oppération de doublement sur la courbe elliptique.
+
+Après enlèvement de ces cycle infructueux de taille 2, on retombe dans des cycles de taille 4.
 
 \section{cycle infructueux}
 
@@ -127,8 +145,25 @@ apppartition très fréquente de cycle de taille 2 n'important pas d'information
 
 \chapter{nombre de groupe r}
 
-declaration d'un fonction qui trie dans r groupe different.
+Dans l'article de \textit{Bernstein}, il est fait référence au fait que \textit{Pollard} n'utilisait que trois groupes pour faire sa marche aléatoire, 
+alors que Teske dans son papier \textit{On random walks for pollard's rho method} nous dis qu'il est beaucoup plus efficase d'utilisé plus de groupe 
+pour faire une marche aléatoire.
 
+Dans son article \textit{Teske} introduit un indice L :
+\begin{center}
+ $ L = \frac{nombre d'iteration avant de trouver une collision}{sqrt(|G)} $
+\end{center}
+
+j'ai donc implémenté une fonction qui au lieu d'utiliser une marche aléatoire sur 3 groupe en faisant soit $+P$, $+Q$, ou un doublement,
+utilise r groupe où on ajoute à notre élément un élément spécifique du groupe. Ces différents éléments sont au préalable tiré aléatoirement.
+Je fais donc une marche additive, pour chaque $W_i$ je lui ajoute un $R_j$ où j est un hash de i. On a donc la formule suivante : 
+$ W_{i+1} = W_{i} + R_{h(i)} $.
+
+Pour connaître à quel groupe appartient l'élément, je regarde sa première composante modulo r.
+
+\textit{Teske} après expérimentation trouve que pour la valeur $r >= 20$ ont atteint un bien meilleur ratio pour l'indice L.
+
+En refaisant les test j'obtient une valeurs identique, au dela de 20 on fait beaucoup de precalcule pour peu d'amélioration.
 
 \chapter{random walk}
 
@@ -144,6 +179,8 @@ $W1 = [2]P \oplus [3]Q$ et $W2 = [4]P \oplus [5]Q$ avec W1 = W2 alors il n'avait
 point important : plus trop une marche alléatoire pour 3 groupes donc plus pour r groupes r > 19.
 
 \chapter{endomorphisme}
+ 
+ ????
 
 \chapter{parrallelisation}
 
@@ -151,17 +188,41 @@ pour parralelisé le log discret on definie une règle pour avoir des point rema
 a chaque fois que l'on a après une marche un point remarquable on le transmet a un serveur central ainsi que les donné de départ
 quand on  a deux intersection de point remarquable on a une collision.
 
-\section(choix des points remarquables)
+\section{choix des points remarquables}
 
 Mon choix est de prendre des point dont la première variable (x) possède un certain nombre de bit de poids faible à zeros.
 J'ai fait différents tests : prendre $log(p)/log(2)/3$ ou $log(p)/log(2)/4$ appartition de pallier entre le nombre de point remarquable et le cardinal du groupe.
+groupe de 3 avec même poucentage d'elements remarquables dans le groupe .
+\begin{verbatim}
+ ? for( p = 15,30, n = prem_n_bit(p); E = courbe_ell_Fp(n); P = random(E); w = proba_remarquable(E,P);o = ellorder(E,P)+0.1; print(w/o));
+0.0340
+0.0312
+0.0307
+0.0155
+0.0155
+0.0157
+0.0079
+0.0078
+0.0078
+0.0039
+0.0039
+0.0039
+0.0020
+0.0020
+0.0020
+
+\end{verbatim}
+
+
 
 calcule à faire en se basant sur le paradoxe des anniversaire pour tomber sur un point remarquable et pour avoir deux point remarquables identique.
 
 detail de l'algorithme.
 
 \chapter{bibliograpie}
-Teske, on a random walk.
-Bernstein, on the correct use of pollard's rho method for discret logarithme.
-Pollard, monte carlo method mod p.
+Edlyn Teske, on a random walks for pollard's rho method.
+
+Daniel J. Bernstein, Tanja Lange, Peter Schwabe, On the correct use of negationmap in the pollard's rho method.
+
+John M.Pollard, monte carlo method for index computation mod p.
 \end{document}          

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.12)  8 FEB 2012 16:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.12)  17 FEB 2012 14:59
 entering extended mode
  %&-line parsing enabled.
 **rapport-rho-pollard.tex
@@ -192,7 +192,7 @@ Chapitre 8.
 ] (./rapport-rho-pollard.aux) )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 77 ({)
+### simple group (level 1) entered at line 83 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  2239 strings out of 494790
@@ -215,7 +215,7 @@ x2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/
 public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1000.pfb>
-Output written on rapport-rho-pollard.pdf (11 pages, 211055 bytes).
+Output written on rapport-rho-pollard.pdf (11 pages, 211754 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
