@@ -1,3 +1,4 @@
+/* fichier de test qui permet de voir le deroulement algo de floyd */
 /* algoithme de floyd poyur comprendre la collision rapide a(i) = a(2i) */
 
 /* fonction f */
@@ -17,6 +18,7 @@ func(E,W2,P,Q,a,b) = {
 
 
 /* foncion qui ecrit les cycle */
+/* permet de regarder ce qui se passe*/
 cycle_floyd(E,P,Q) = {
 		 
 		 my(tab,n);

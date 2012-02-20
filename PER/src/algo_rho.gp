@@ -10,7 +10,8 @@ func_V2(E,W2,P,Q,a,b,n) = {
                 return([W2,P,Q,a,b]);
 }
 
-/* fonction qui fait l'operation en fonction de x */
+/* fonction qui interprète une marche aléatoire */
+
 func(E,W2,P,Q,a,b,n) = {
 
                 my(c);
@@ -23,7 +24,10 @@ func(E,W2,P,Q,a,b,n) = {
                 return([W2,P,Q,a,b]);
 }
 
-rho_p_V5(E,P,Q) = {
+/* fonciton qui retourve le logarithme discret sur E de Q avec P comme 
+   generateur. */
+
+rho(E,P,Q) = {
 
 		my(tmp,n,W1,W2,a0,a1,b0,b1,i=0);
        	n = ellorder(E,P);

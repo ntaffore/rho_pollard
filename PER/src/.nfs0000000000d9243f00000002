@@ -1,0 +1,4 @@
+\r newban.gp
+ for(i=1,148,random(););
+name = "temp-60-60_curve-1_test-1-normal_v-10";
+do_1(rho_p_V5,name,60,60,1,1);
