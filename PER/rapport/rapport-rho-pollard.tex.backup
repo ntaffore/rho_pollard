@@ -3,7 +3,7 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{latexsym}
-\usepackage{algorithm,algorithmic}
+  \usepackage{algorithm,algorithmic}
 
 
 %%% francisation des algorithmes
@@ -39,75 +39,105 @@
 \begin{document}
 \maketitle
 \tableofcontents
+\chapter{Introduction}
 
-\chapter{Rapel sur les courbes elliptique}
+\section{Rapel sur les courbes elliptique}
 % 2 pages
-% \begin{description}
-%   \item[définition]
 
-    Soit un un corp Fp (p premier) de caractéristique différente de 2 ou 3, soit a, b app Fp. On peut avoir aussi la courbe définit sur $Fq$ avec $q = p^n$, certaines propriétés sont un peut différentes.
-    Un courbe elliptique est définit par le point à l'infini et l'ensemble des points (x,y) tel que soit satifait l'equation suivante :
+    Soit un un corp Fp (p premier) de caractéristique différente de 2 ou 3, soit $a, b \in Fp$.
+    Un courbe elliptique est définit par l'ensemble des points (x,y,z) tel que soit satifait l'equation suivante :
   \begin{center}
-    $y^2 = x^3 + a*x + b$.   
+    $E : z*y^2 = x^3 + a*x*z^2 + b*z^3$.   \\
+    où $ 4*a^3 + 27*b^2 \ne 0$
   \end{center}
-  Ces points forment un groupe abélien avec comme zero : le point à l'infini et un loi de groupe.
+
+  remarque : si $ 4*a^3 + 27*b^2 \ne 0$ alors  $x^3 + a*x*z^2 + b*z^3$ n'a pas de racine double.
+  
+  Si z = 0 alors x = 0 et donc on obtient $(0,k,0)$ qui est un élément inversible donc peut être réduit à $(0,1,0)$, ce point scpécifique est appelé le point à l'infini.
+
+  L'ensemble de ces points forment un groupe abélien avec comme zero, le point à l'infini et possède un loi de groupe.
   Soit P, $Q \in F$, $ P = (x_1,y_1)$, $Q = (x_2,y_2)$ alors $P+Q = (x_3,y_3)$ tel que 
     \begin{center}
       $x_3 = \mu^2 -x_1 - x_2$, $y_3 = \mu(x_1-x_3)$
     \end{center}
     \begin{center}
-      $\mu = \frac{y_2 - y_1}{x_2 - x_1}$ si $P <> Q$
+      $\mu = \frac{y_2 - y_1}{x_2 - x_1}$ si $P \ne Q$
     \end{center}
     \begin{center}
       $\mu = \frac{3*x_1^2 + a}{2*y_1}$ si $P = Q$
     \end{center}
 
-% \end{description}
 
 Une propriété importante sur les courbes elliptiques est le calcule de l'inverse d'un point pour la loi d'addition sur Fp. Si $P = (x_1,y_1)$ alors $-P = (x_1,-y_1)$.
-Pour une courbe elliptique sur $Fq$, on a une propriété identique. Si $P = (x_1,y_1)$ alors $-P = (x_1,y_1+x_1)$.
 
-\chapter{Algorithme rho de Pollard}
+On peut avoir aussi la courbe définit sur $Fq$ avec $q = p^n$, certaines propriétés sont un peut différentes.
+Pour une courbe elliptique sur $Fq$, si $P = (x_1,y_1)$ alors $-P = (x_1,y_1+x_1)$.
 
-L'algorithme rho de pollard est basé sur le paradoxe des anniversaires. Dans un groupe finit si on prend des éléments de façon aléatoire,
+\section{Algorithme rho de Pollard}
+
+\subsection{Dans un groupe du type Fp}
+
+Dans un groupe du type Fp, Pollard a choisit comme marche aléatoire un fonction qui ne tient compte que de l'élément précédent.\\
+
+\begin{itemize}
+\item{marche aléatoire}\\
+{
+$ f(x) = x*P$ si $x \in [0;p/3[$\\
+$ f(x) = x*x$ si $x \in [p/3;2p/3[$\\
+$ f(x) = x*Q$ si $x \in [2p/3;p[$\\
+}
+\end{itemize}
+
+En utilisant cette marche aléatoire il en a deduit un algorithme en se basant sur l'algorithme de floyd pour trouver rapidement la longueur d'un cycle.
+
+Ici P est un generateur du groupe et Q est l'élément dont on veut connaitre le logarithme en base P.
+
+{
+ \begin{algorithm}
+ \caption{rho pollard}
+ \begin{algorithmic}
+  \REQUIRE n,P,Q
+  \ENSURE x tel que Q = $P^x$ mod n
+    \STATE $[W1,a,b] \leftarrow$ combinaision aleatoire de $P$ et $Q$
+    \STATE $[W2,a',b'] \leftarrow$  marche aléatoire à partir de $W1$
+    \WHILE{$ W1 \ne W2$}
+      \STATE $[W1,a,b] \leftarrow$ marche aléatoire à partir de $W1$
+      \STATE $[W2,a',b'] \leftarrow$ marche aléatoire à partir de $W2$
+      \STATE $[W2,a',b'] \leftarrow$ marche aléatoire à partir de $W2$
+    \ENDWHILE
+  \IF{ $b-b' = 0$ $modulo$ $n$}
+    \STATE echec pour trouver le logarithme discret
+  \ELSE
+    \STATE $ x = \frac{a'-a}{b-b'}$ $modulo$ $n$
+  \ENDIF
+ 
+ \end{algorithmic}
+ \end{algorithm}
+ }
+
+
+L'algorithme rho de pollard est identique sur les courbes elliptiques sauf que l'on se place dans un cas plus générale,
+seul la marche aléatoire change. On applique des additions et de scalaires sur la courbe elliptique au lieu de la multiplication modulaire et du carré modulaire.
+
+Le nom de cette algorithme est dû à la forme que prend la suite aléatoire, on a d'abord un pré-cycle puis le cycle.
+% \includegraphics{image de la lettre rho}
+
+\subsection{Paradoxe des Anniversaire}
+L'algorithme rho de pollard est basé sur le paradoxe des anniversaires.
+
+ Dans un groupe fini si on prend des éléments de façon aléatoire,
 il faut en moyenne tirer $\sqrt{n}$ éléments pour obtenir un élément que l'on à déjà tiré, ou n est le nombre d'élément de notre ensemble.
 
-La formule générale pour obtenir une probabilité d'intersection ($I(n)$) est 1-$p(n)$ où $p(n)$ est la probabilité d'avoir aucune intersetion sur n tirage avec remise dans un groupe de $m$ elements
+La formule générale pour obtenir une probabilité d'intersection ($I(n)$) est 1-$p(n)$ où $p(n)$ est la probabilité d'avoir aucune intersetion sur n tirages avec remise dans un groupe de $m$ éléments
 \begin{center}
     $p(n) = \frac{m!}{(m - n)!}*\frac{1}{m^n}$
     $I(n) = 1 - \frac{m!}{(m - n)!}*\frac{1}{m^n}$
 \end{center}
 
 
-Le nom de cette algorithme est dû à la forme que prend la suite aléatoire, on a d'abord un pré-cycle puis le cycle.
-% \includegraphics{image de la lettre rho}
-
-\section{dans un groupe du type Fp}
-
-Dans un groupe du type Fp, Pollard a choisit comme fonction de tirage aléatoire un fonction qui ne tient compte que de l'élément précédent.\\
-$ f(x) = x+P$ si $x \in [0;p/3[$\\
-$ f(x) = x+x$ si $x \in [p/3;2p/3[$\\
-$ f(x) = x+Q$ si $x \in [2p/3;p[$\\
-Ici P est un generateur du groupe et Q est l'element dont on veut connaitre le logarithme en base P.
-{
-\begin{algorithm}
-\caption{rho pollard}
-\begin{algorithmic}
- \REQUIRE n,P,Q
- \ENSURE x tel que $Q = P^x mod n$
-
-\end{algorithmic}
-\end{algorithm}
 
 
-\section{sur les courbe elliptique}
-
-L'algorithme rho de pollard est identique sur les courbes elliptiques sauf que l'on se place dans un cas plus générale
-avec en utilisant l'addition et des scalaires.
-
-// ecriture de l'algo sur les courbe elliptique ?
-
-\section{algorithme de floyd}
+\subsection{algorithme de floyd}
 
 Il existe différent moyen pour trouver une collision dans un cycle, le meilleur algorithme pour en trouver
 une est l'agorithme de floyd qui permet de calculer de façon très rapide la longueur d'un cycle en se basant sur des collisions.
@@ -119,6 +149,23 @@ exemple sur le groupe Z/17Z, avec la mache aléatoire $f(x) = x^x + 1 mod 17$.
 si x = 1 -> 2 -> 5 -> 9 -> 13 -> 16 -> 0 -> 1
 donc $a_1 = 1, a_2 = 2, a_3 = 5 .....$
 // mauvais choix puissance de 2
+
+\chapter{verification de la comlpexité de l'algorithme rho de pollard}
+
+L'algorithme rho de pollard est estimé, d'après le papier de Stephen D. Miller et Ramarathnam Venkatesan, \textit{Spectral Analysis of Pollard Rho Collisions} en $O(\sqrt{n}(\log{n})^3)$. 
+Quand n temps vers l'infini c'est le logarithme est négligeable par rapport à la racine de n. On peut donc approximé cette complexité en $O(\sqrt{n})$.
+
+Pour montrer que l'algorithme est bien dans une complexité s'approchant de la racine de n, j'ai effectué des tests de résolutions du logarithme discret avec la methode initiale
+de Pollard. La marche aléatoire que j'ai pris est définie par : \\
+\begin{itemize}
+ \item {marche aléatoire}\\
+  $ f(W) = W+P$ si $x = 0$ $modulo$ $3$ \\
+  $ f(W) = 2*W$ si $x = 1$ $modulo$ $3$ \\
+  $ f(W) = W+Q$ si $x = 2$  $modulo$ $3$ \\
+  $ W = [x,y] $ \\
+\end{itemize}
+
+Ici le $+$ est l'addition sur la courbe elliptique et le $2*W$ est l'oppération de doublement sur la courbe elliptique.
 
 
 \chapter{Negation map}
@@ -156,9 +203,14 @@ Dans son article \textit{Teske} introduit un indice L :
 
 j'ai donc implémenté une fonction qui au lieu d'utiliser une marche aléatoire sur 3 groupe en faisant soit $+P$, $+Q$, ou un doublement,
 utilise r groupe où on ajoute à notre élément un élément spécifique du groupe. Ces différents éléments sont au préalable tiré aléatoirement.
-Pour connaître à quel groupe appartient l'élément, on regarde sa première composante modulo r.
+Je fais donc une marche additive, pour chaque $W_i$ je lui ajoute un $R_j$ où j est un hash de i. On a donc la formule suivante : 
+$ W_{i+1} = W_{i} + R_{h(i)} $.
 
-\textit{Teske} après expérimentation trouve que pour la valeur $r  20$
+Pour connaître à quel groupe appartient l'élément, je regarde sa première composante modulo r.
+
+\textit{Teske} après expérimentation trouve que pour la valeur $r >= 20$ ont atteint un bien meilleur ratio pour l'indice L.
+
+En refaisant les test j'obtient une valeurs identique, au dela de 20 on fait beaucoup de precalcule pour peu d'amélioration.
 
 \chapter{random walk}
 

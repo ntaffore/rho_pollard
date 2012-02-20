@@ -1,16 +1,5 @@
-func_V2(E,W2,P,Q,a,b,n) = {
+/* fonction qui interprète une marche aléatoire */
 
-                my(c);
-				c = Mod(lift(W2[1])+lift(W2[2]),3);
-
-                if ( c == 0, W2 = elladd(E,W2,Q); b=(b+1)%n;);
-                if ( c == 1, W2 = elladd(E,W2,W2); a=(a+a)%n;b=(b+b)%n;);
-                if ( c == 2, W2 = elladd(E,W2,P); a=(a+1)%n;);
-
-                return([W2,P,Q,a,b]);
-}
-
-/* fonction qui fait l'operation en fonction de x */
 func(E,W2,P,Q,a,b,n) = {
 
                 my(c);
@@ -23,10 +12,10 @@ func(E,W2,P,Q,a,b,n) = {
                 return([W2,P,Q,a,b]);
 }
 
-/* cette algo rithme renvoit un point remarcable de la courbe */
-/* def point remarquable : x à p/3 0 de poids faible */
+/* cette algorithme renvoit un point remarcable de la courbe */
+/* 1ère def point remarquable : x à p/3 0 de poids faible */
 
-rho_p_V5(E,P,Q) = {
+rho(E,P,Q) = {
 
 		my(tmp,n,W1,W2,a0,a1,b0,b1,i=0);
        	n = ellorder(E,P);

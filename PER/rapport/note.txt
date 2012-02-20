@@ -1,0 +1,31 @@
+note
+# temp pour casser un log sur un corp fp avec p premier de 112 bit
+%1 = 2005418.6636210333050435223566884115322
+? exp(log(2)*47.3)/1000/60/60/24/365
+%2 = 5494.2977085507761782014311142148261156
+? exp(log(2)*49.7)/1000/60/60/24/365
+%3 = 28999.077162296539848027944880691634615
+
+# nombre de point distingueshed sur  nombre total de point 
+? for( p = 15,30, n = prem_n_bit(p); E = courbe_ell_Fp(n); P = random(E); w = proba_remarquable(E,P);o = ellorder(E,P)+0.1; print(w/o));
+0.0340
+0.0312
+0.0307
+0.0155
+0.0155
+0.0157
+0.0079
+0.0078
+0.0078
+0.0039
+0.0039
+0.0039
+0.0020
+0.0020
+0.0020
+
+
+% \begin{verbatim}
+% Intel(R) Core(TM) i7 CPU         860  @ 2.80GHz
+% \end{verbatim}
+

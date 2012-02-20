@@ -54,17 +54,17 @@ func_negation(E,W,P,Q,a,b,n,list,r) = {
 
 /* on obtient a la fin de la boubel un relation +- */
 
-rho_p_V5(E,P,Q) = {
+rho(E,P,Q) = {
 
 		my(tmp,n,W1,W2,a0,a1,b0,b1,i=0);
 		my(list_W1 = [],list_W2 = [],len);
 
 		
-		len = 4;
+		len = 10;
 		r = 3;
 
 		list = table(E,P,Q,r);
-   	n = ellorder(E,P);
+   		n = ellorder(E,P);
 		a0 = random(n);
 		b0 = random(n);
 		W1 = elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0));
@@ -72,7 +72,7 @@ rho_p_V5(E,P,Q) = {
 		tmp = func_negation(E,W1,P,Q,a0,b0,n,list,r);		
 		W2 = tmp[1];
 		a1 = tmp[4];
-	  b1 = tmp[5];
+		b1 = tmp[5];
 
 		while( (W1 != W2 || b0 == b1 ) /*&& i < 50*/,
 	/*		print(W1,W2);			 */
@@ -93,6 +93,39 @@ rho_p_V5(E,P,Q) = {
 			 		
 /*				  list_W1 = stockage_list(len,list_W1,W1);*/
 			 );
+			 if ( # list_W1 > 4,
+/*					affiche_list(list_W1);*/
+					tmp = fruitless_cycles(3,list_W1);
+ 				  W1 = tmp[1];
+			 	  a0 = tmp[2];
+			 	 	b0 = tmp[3];
+/*					print(lift(W1));*/
+			 		
+/*				  list_W1 = stockage_list(len,list_W1,W1);*/
+			 );
+
+			 if ( # list_W1 > 5,
+/*					affiche_list(list_W1);*/
+					tmp = fruitless_cycles(4,list_W1);
+ 				  W1 = tmp[1];
+			 	  a0 = tmp[2];
+			 	 	b0 = tmp[3];
+/*					print(lift(W1));*/
+			 		
+/*				  list_W1 = stockage_list(len,list_W1,W1);*/
+			 );
+			 if ( # list_W1 > 6,
+/*					affiche_list(list_W1);*/
+					tmp = fruitless_cycles(5,list_W1);
+ 				  W1 = tmp[1];
+			 	  a0 = tmp[2];
+			 	 	b0 = tmp[3];
+/*					print(lift(W1));*/
+			 		
+/*				  list_W1 = stockage_list(len,list_W1,W1);*/
+			 );
+
+
 
 			 if (  elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0) ) == W1,
 			/*	print("check");*/
@@ -120,7 +153,7 @@ rho_p_V5(E,P,Q) = {
 				print("erreur 3 ------------------------ ");
 			 );
 
-			 list_W2 = stockage_list(len,liste_W2,W2,a1,b1);
+			 list_W2 = stockage_list(len,list_W2,W2,a1,b1);
 			 if ( # list_W2 > 3,
  				 tmp = fruitless_cycles(2,list_W2);
 				  W2 = tmp[1];
@@ -129,6 +162,32 @@ rho_p_V5(E,P,Q) = {
 
 /*				 list_W2 = stockage_list(len,liste_W2,W2);*/
 			 );
+			 if ( # list_W2 > 4,
+ 				 tmp = fruitless_cycles(3,list_W2);
+				  W2 = tmp[1];
+	 			  a1 = tmp[2];	
+		 		  b1 = tmp[3];
+
+/*				 list_W2 = stockage_list(len,liste_W2,W2);*/
+			 );
+
+			 if ( # list_W2 > 5,
+ 				 tmp = fruitless_cycles(4,list_W2);
+				  W2 = tmp[1];
+	 			  a1 = tmp[2];	
+		 		  b1 = tmp[3];
+
+/*				 list_W2 = stockage_list(len,liste_W2,W2);*/
+			 );
+			 if ( # list_W2 > 6,
+ 				 tmp = fruitless_cycles(5,list_W2);
+				  W2 = tmp[1];
+	 			  a1 = tmp[2];	
+		 		  b1 = tmp[3];
+
+/*				 list_W2 = stockage_list(len,liste_W2,W2);*/
+			 );
+
 
 			 i = i+1;
 			 if( b0 == b1 && W1 == W2, print("----W1 = W2 && b0 = b1 -------------> ",i));
@@ -220,7 +279,7 @@ fruitless_cycles(n,list) =
 	l = # list;
 	/*print(lift(list));*/
 	if ( list[l][1] == list[l-n][1],
-		print("fruitless detect");
+		print("fruitless detect ",n);
 		affiche_list(list);
 		print("<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		for( i = 0, n-1,

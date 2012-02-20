@@ -60,20 +60,26 @@ courbe_ell_Fp_V2(n)  = {
 /* generateur de la courbe */
 /* utilisation de la borne de hasse */
 /* fonction ellordinate */
-random_point_curve(E) = {
-	
-	my(P,n,x,y,u,check);
-	n = E[4].mod;
-	x = random(n);
-	Y = Mod( x^3 + lift(E[4]) * x + lift(E[5]) , n);
+random_point_curve_V3(E) = {
+
+	my(P,n,x,check,i=0);
+	n = E[5].mod;
+	x = Mod(random(n),n);
 	check = 0;
-	while( issquare(Y,&u) != 1 || check != 1,
-        check = 0;
-		x = random(n);
-		Y = Mod( x^3 + lift(E[4]) * x + lift(E[5]) , n);
-		P = [Mod(x,n),Mod(lift(u),n)];
-		if ( ellorder(E,P) > (n - 2*sqrt(n)), check = 1);
+	while( #ellordinate(E,x) == 0 || check != 1,
+		if ( #ellordinate(E,x) != 0,
+			P = [x,ellordinate(E,x)[1]];
+			print("p");
+			if ( ellorder(E,P) > (n - 2*sqrt(n)),
+				check = 1
+			,
+				x = Mod(random(n),n);
+			);
+		,
+			x = Mod(random(n),n);
+			print(i);
+			i++;
+		);
 	);
-	P = [Mod(x,n),Mod(lift(u),n)];
-	return(P);    
+	return(P);
 }
