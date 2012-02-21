@@ -2,7 +2,7 @@
 /* verification que la methode rho de pollard est en racine de p */
 
 \r algo_pollard_multiple_group.gp
-\r initiation_courbe.gp
+\r initialisation_courbe.gp
 
 dummytest(nbits, npoints, ncurves) = 
 { 

@@ -29,3 +29,13 @@ note
 % Intel(R) Core(TM) i7 CPU         860  @ 2.80GHz
 % \end{verbatim}
 
+
+-----------------------------------------------------------------------
+
+Mon premier choix de marche aléatoire était de prendre les scalaires a et b puis de les regarder modulo 3 pour les séparer dans les 
+trois groupe différent et donc faire l'oppération que d'ajout de P ou de Q, ou le doublement.
+La première remarque avec les différents test que je faisait était que je mettait plus de temps à trouver le logarithme discret
+qu'une recherche exaustive. J'ai donc remarquer que la plupart du temps la fonction qui prenait un point de la courbe comme argument,
+ainsi que les scalaires a et b, ne retournait pas à chaque fois la même image pour un point donné. Concretement si 
+$W1 = [2]P \oplus [3]Q$ et $W2 = [4]P \oplus [5]Q$ avec W1 = W2 alors il n'avait pas le même resulta par f.
+

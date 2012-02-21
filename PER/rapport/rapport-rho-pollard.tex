@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{latexsym}
   \usepackage{algorithm,algorithmic}
-
+\usepackage{graphicx}
 
 %%% francisation des algorithmes
 \renewcommand{\algorithmicrequire} {\textbf{\textsc{Entrées:}}}
@@ -100,6 +100,7 @@ Ici P est un generateur du groupe et Q est l'élément dont on veut connaitre le
   \ENSURE x tel que Q = $P^x$ mod n
     \STATE $[W1,a,b] \leftarrow$ combinaision aleatoire de $P$ et $Q$
     \STATE $[W2,a',b'] \leftarrow$  marche aléatoire à partir de $W1$
+	\STATE ($W2 = P^{a'} + Q^{b'}$)
     \WHILE{$ W1 \ne W2$}
       \STATE $[W1,a,b] \leftarrow$ marche aléatoire à partir de $W1$
       \STATE $[W2,a',b'] \leftarrow$ marche aléatoire à partir de $W2$
@@ -120,9 +121,12 @@ L'algorithme rho de pollard est identique sur les courbes elliptiques sauf que l
 seul la marche aléatoire change. On applique des additions et de scalaires sur la courbe elliptique au lieu de la multiplication modulaire et du carré modulaire.
 
 Le nom de cette algorithme est dû à la forme que prend la suite aléatoire, on a d'abord un pré-cycle puis le cycle.
-% \includegraphics{image de la lettre rho}
 
-\subsection{Paradoxe des Anniversaire}
+\begin{center}
+ \includegraphics[width=4cm]{dessin_rho_pollard_bon.png}
+\end{center}
+
+\subsection{Paradoxe des Anniversaires}
 L'algorithme rho de pollard est basé sur le paradoxe des anniversaires.
 
  Dans un groupe fini si on prend des éléments de façon aléatoire,
@@ -159,19 +163,21 @@ Pour montrer que l'algorithme est bien dans une complexité s'approchant de la r
 de Pollard. La marche aléatoire que j'ai pris est définie par : \\
 \begin{itemize}
  \item {marche aléatoire}\\
-  $ f(W) = W+P$ si $x = 0$ $modulo$ $3$ \\
+  $ f(W) = W \oplus P$ si $x = 0$ $modulo$ $3$ \\
   $ f(W) = 2*W$ si $x = 1$ $modulo$ $3$ \\
-  $ f(W) = W+Q$ si $x = 2$  $modulo$ $3$ \\
+  $ f(W) = W \oplus Q$ si $x = 2$  $modulo$ $3$ \\
   $ W = [x,y] $ \\
 \end{itemize}
 
-Ici le $+$ est l'addition sur la courbe elliptique et le $2*W$ est l'oppération de doublement sur la courbe elliptique.
+Ici le $\oplus$ est l'addition sur la courbe elliptique et le $2*W$ est l'oppération de doublement sur la courbe elliptique.
 
 Pour obtenir des valeurs facile pour faire une comparaison, il est plus simple de changer l'échelle et de regarder avec une echelle logarithmique.\\
 \begin{center}
  $\sqrt{n} = n^{\frac{1}{2}}$
+ Si $n=2^x$ alors en échelle logarithimque (base 2) $\log{n} = x$ et $\log{\sqrt{n}} = \frac{x}{2}$
 \end{center}
 
+Donc si on fait une régression linéaire des différents valeurs trouvées, on devrait obtenir une droite avec un coefficient de 0,5.
 
 
 \chapter{Negation map}
@@ -196,7 +202,7 @@ Après enlèvement de ces cycle infructueux de taille 2, on retombe dans des cyc
 
 apppartition très fréquente de cycle de taille 2 n'important pas d'information sur le log discret on les elimine donc en ......
 
-\chapter{nombre de groupe r}
+\chapter{random walk}
 
 Dans l'article de \textit{Bernstein}, il est fait référence au fait que \textit{Pollard} n'utilisait que trois groupes pour faire sa marche aléatoire, 
 alors que Teske dans son papier \textit{On random walks for pollard's rho method} nous dis qu'il est beaucoup plus efficase d'utilisé plus de groupe 
@@ -204,7 +210,7 @@ pour faire une marche aléatoire.
 
 Dans son article \textit{Teske} introduit un indice L :
 \begin{center}
- $ L = \frac{nombre d'iteration avant de trouver une collision}{sqrt(|G)} $
+ $ L = \frac{nombre d'iteration avant de trouver une collision}{\sqrt(|G|)} $
 \end{center}
 
 j'ai donc implémenté une fonction qui au lieu d'utiliser une marche aléatoire sur 3 groupe en faisant soit $+P$, $+Q$, ou un doublement,
@@ -218,16 +224,6 @@ Pour connaître à quel groupe appartient l'élément, je regarde sa première c
 
 En refaisant les test j'obtient une valeurs identique, au dela de 20 on fait beaucoup de precalcule pour peu d'amélioration.
 
-\chapter{random walk}
-
------attention choix stupide ne pas laisser --------
-
-Mon premier choix de marche aléatoire était de prendre les scalaires a et b puis de les regarder modulo 3 pour les séparer dans les 
-trois groupe différent et donc faire l'oppération que d'ajout de P ou de Q, ou le doublement.
-La première remarque avec les différents test que je faisait était que je mettait plus de temps à trouver le logarithme discret
-qu'une recherche exaustive. J'ai donc remarquer que la plupart du temps la fonction qui prenait un point de la courbe comme argument,
-ainsi que les scalaires a et b, ne retournait pas à chaque fois la même image pour un point donné. Concretement si 
-$W1 = [2]P \oplus [3]Q$ et $W2 = [4]P \oplus [5]Q$ avec W1 = W2 alors il n'avait pas le même resulta par f.
 
 point important : plus trop une marche alléatoire pour 3 groupes donc plus pour r groupes r > 19.
 
@@ -245,7 +241,8 @@ quand on  a deux intersection de point remarquable on a une collision.
 
 Mon choix est de prendre des point dont la première variable (x) possède un certain nombre de bit de poids faible à zeros.
 J'ai fait différents tests : prendre $log(p)/log(2)/3$ ou $log(p)/log(2)/4$ appartition de pallier entre le nombre de point remarquable et le cardinal du groupe.
-groupe de 3 avec même poucentage d'elements remarquables dans le groupe .
+groupe de 3 avec même poucentage d'éléments remarquables dans le groupe.
+
 \begin{verbatim}
  ? for( p = 15,30, n = prem_n_bit(p); E = courbe_ell_Fp(n); P = random(E); w = proba_remarquable(E,P);o = ellorder(E,P)+0.1; print(w/o));
 0.0340
@@ -268,7 +265,7 @@ groupe de 3 avec même poucentage d'elements remarquables dans le groupe .
 
 
 
-calcule à faire en se basant sur le paradoxe des anniversaire pour tomber sur un point remarquable et pour avoir deux point remarquables identique.
+calcule à faire en se basant sur le paradoxe des anniversaire pour tomber sur un point remarquable et pour avoir deux points remarquables identiques.
 
 detail de l'algorithme.
 
@@ -278,4 +275,6 @@ Edlyn Teske, on a random walks for pollard's rho method.
 Daniel J. Bernstein, Tanja Lange, Peter Schwabe, On the correct use of negationmap in the pollard's rho method.
 
 John M.Pollard, monte carlo method for index computation mod p.
+
+Wikipedia.
 \end{document}          

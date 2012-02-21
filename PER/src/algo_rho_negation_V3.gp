@@ -23,6 +23,8 @@ table(E,P,Q,r) = {
    r la taille de la list
    mod le p premier*/
 
+/* fonction paire */
+
 func_negation( E, W, P, Q, a, b, n, list, r, mod ) = {
 
                 my(c);
@@ -32,31 +34,12 @@ func_negation( E, W, P, Q, a, b, n, list, r, mod ) = {
 				a = (a + list[c][2] ) % n;
 				b = (b + list[c][3] ) % n;
 				if ( W != [0],
-					if ( lift(W[2]) > ( lift( - W[2]) % mod), W[2]= -W[2]; a = -a %n; b = -b %n;/* print("fait");*/);
+					if ( lift(W[2]) %2 == 1, W[2]= -W[2]; a = -a %n; b = -b %n;/* print("fait");*/);
 				);
-				print(lift(W));
+/*				print(lift(W));*/
                 return([W,P,Q,a,b]);
 }
 
-
-
-/*func_negation(E,W2,P,Q,a,b,n) = {
-
-                my(c);
-				c = Mod(lift(W2[1]),3);
-
-                if ( c == 0, W2 = elladd(E,W2,Q); b=(b+1)%n;);
-                if ( c == 1, W2 = elladd(E,W2,W2); a=(a+a)%n;b=(b+b)%n;);
-                if ( c == 2, W2 = elladd(E,W2,P); a=(a+1)%n;);
-				print(W2);
-				print([a,b]);
-				if ( W2 != [0],
-					if ( lift(W2[2]) > ( lift( - W2[2]) % n), W2[2]= -W2[2]; a = -a %n; b = -b %n);
-				);
-				print([a,b]);
-                return([W2,P,Q,a,b]);
-}
-*/
 
 /* on obtient a la fin de la boubel un relation +- */
 
@@ -66,8 +49,8 @@ rho(E,P,Q) = {
 		my(list_W1 = [],list_W2 = [],len);
 
 		
-		len = 10;
-		r = 3;
+		len = 100;
+		r = 500;
 
 		mod = P[1].mod;
 		list = table(E,P,Q,r);
@@ -81,113 +64,82 @@ rho(E,P,Q) = {
 		a1 = tmp[4];
 		b1 = tmp[5];
 
-		while( (W1 != W2 || b0 == b1 ) /*&& i < 50*/,
-	/*		print(W1,W2);			 */
+		while( (W1 != W2 || b0 == b1 ) && i < (3*sqrt(P[1].mod))  ,
 
+	/*		print(lift([W1,W2]));*/
+
+			 /* W1 */
 			 tmp = func_negation(E,W1,P,Q,a0,b0,n,list,r,mod);
 			 W1 = tmp[1];
 			 a0 = tmp[4];
 			 b0 = tmp[5];
 		
 			 list_W1 = stockage_list(len,list_W1,W1,a0,b0);
-			 if ( # list_W1 > 3,
-			 	tmp = fruitless_cycles(2,list_W1);
- 				W1 = tmp[1];
+			
+			 cycle = fruitless_cycles_inf( (#list_W1) -1,list_W1);
+			 if (cycle != 0 ,
+				tmp = fruitless_cycles(cycle,list_W1);
+				W1 = tmp[1];
 			 	a0 = tmp[2];
 			 	b0 = tmp[3];
-				,
-				if ( # list_W1 > 4,
-					tmp = fruitless_cycles(3,list_W1);
- 					W1 = tmp[1];
-			 		a0 = tmp[2];
-			 	 	b0 = tmp[3];
-					,
-					if ( # list_W1 > 5,
-						tmp = fruitless_cycles(4,list_W1);
-		 				W1 = tmp[1];
-					    a0 = tmp[2];
-				 	 	b0 = tmp[3];
-						,
-						if ( # list_W1 > 6,
-							tmp = fruitless_cycles(5,list_W1);
-		 					W1 = tmp[1];
-					 		a0 = tmp[2];
-					 	 	b0 = tmp[3];
-						);
-					);
-			 	);
+/*				verif(E,P,Q,W1,a0,b0);*/
+				list_W1 = stockage_list(len,list_W1,W1,a0,b0);
+/*				print(lift(list_W1));*/
 			 );
-
-			 if (  elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0) ) == W1,
-			/*	print("check");*/
-			 ,
-				print("erreur 1 ------------------------ ");
-			 );
-
+/*			 affiche_list(list_W1);*/
+	
+			 /* W2 */
 			 tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r, mod);
 			 W2 = tmp[1];
 			 a1 = tmp[4];	
 			 b1 = tmp[5];
-			 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
-		/*		print("check");*/
-			 ,
-				print("erreur 2 ------------------------ ");
-			 );
 	
 			 tmp = func_negation(E,W2,P,Q,a1,b1,n,list,r, mod);
 			 W2 = tmp[1];
 			 a1 = tmp[4];	
 			 b1 = tmp[5];
-			 if (  elladd(E,ellpow(E,P,a1),ellpow(E,Q,b1) ) == W2,
-			/*	print("check");*/
-			 ,
-				print("erreur 3 ------------------------ ");
-			 );
 
 			 list_W2 = stockage_list(len,list_W2,W2,a1,b1);
-			 if ( # list_W2 > 3,
- 				 tmp = fruitless_cycles(2,list_W2);
-				  W2 = tmp[1];
-	 			  a1 = tmp[2];	
-		 		  b1 = tmp[3];
-
-				,
-				if ( # list_W2 > 4,
- 					 tmp = fruitless_cycles(3,list_W2);
-					 W2 = tmp[1];
-		 			 a1 = tmp[2];	
-					 b1 = tmp[3];
-
-				,
-					if ( # list_W2 > 5,
- 						tmp = fruitless_cycles(4,list_W2);
-						W2 = tmp[1];
-		 				a1 = tmp[2];	
+		 	
+			 cycle = fruitless_cycles_inf( (# list_W2) -1,list_W2);
+			
+				/* cas chanceux ou on a une bonne intercetion dans W2 */
+			 if (cycle != 0, 
+				 if ( (list_W2[#list_W2][3] - list_W2[#list_W2 - cycle][3]) % n != 0 ,		
+					/*print(lift(list_W2));*/
+					W1 = list_W2[#list_W2 - cycle][1];
+					a0 = list_W2[#list_W2 - cycle][2] % n;
+					b0 = list_W2[#list_W2 - cycle][3] % n;
+					W2 = list_W2[#list_W2][1];
+					a1 = list_W2[#list_W2][2] % n;
+					b1 = list_W2[#list_W2][3] % n;
+					/*verif(E,P,Q,W1,a0,b0);
+					verif(E,P,Q,W2,a1,b1);
+					print([W1,W2,a0,b0,a1,b1,n]);
+					print("---------------------------------------------------------> vicotry");*/
+				 ,
+				 	if ( W1 != W2,
+						tmp = fruitless_cycles(cycle,list_W2);
+ 						W2 = tmp[1];
+				 		a1 = tmp[2];
 				 		b1 = tmp[3];
-					,
-						if ( # list_W2 > 6,
-		 					tmp = fruitless_cycles(5,list_W2);
-							W2 = tmp[1];
-				 			a1 = tmp[2];
-					 		b1 = tmp[3];
-						 );
-
-					);
-			 
+/*						verif(E,P,Q,W2,a1,b1);
+						print(lift(list_W2));*/
+						list_W2 = stockage_list(len,list_W2,W2,a1,b1);
+				 	);	
 				 );
+			);		
+			/* affiche_list(list_W2);*/
 
-			 );
-			 
 			 i = i+1;
 			 if( b0 == b1 && W1 == W2, print("----W1 = W2 && b0 = b1 -------------> ",i));
-			/*print("-_-_-_-_-_-_-_-_-_-_-_-__-"); 	*/
 		);
 
 		print(i);
 
-		print("------");
+/*		print("------");
 		print(W1,W2);
-		print([a0,b0,a1,b1,n]);
+		print([a0,b0,a1,b1,n]);*/
 
 		tmp = good_rel(E,P,Q,a0,b0,a1,b1,n);
 /*		print([a0,b0,a1,b1,n]);*/
@@ -201,12 +153,25 @@ rho(E,P,Q) = {
 							/*return(	(lift(Mod(a0-a1,l)))*c^-1);*/
 			if (ellpow(E,P,lift((a0-a1)*c^-1)) == Q,
 			   	print("reussit i = ",i/sqrt(n));
-				return(i);
+				return(i/sqrt(n));
 			,
-				print("failled ellpow -----------------------------	")
+				print("------------------------------------------failled ellpow -----------------------------	");
+				return(0);
 			);
 		);		
 }		
+
+/* fonction de verification de W = [a]P + [b]Q */
+
+verif(E,P,Q,W,a,b) = {
+
+	if ( elladd(E,ellpow(E,P,a),ellpow(E,Q,b)) == W,
+		print("verifiée");
+		,
+		print("ereur------------------------------------------------------------------------------------------");
+	);
+
+}
 
 
 /* fonction affichage dbg */
@@ -242,6 +207,8 @@ stockage_list(n,list,W,a,b) =
 /* minimun lexicographic sur les courbes elliptiques */
 /* prend une liste d'element : [W,a,b] non vide comme argument */
 /* respectele negation map */
+
+/* point a l'infini le plus grand */
 minimun_lex(list,o) = 
 {
 	my(i,n,mini);
@@ -252,21 +219,18 @@ minimun_lex(list,o) =
 			mini = list[i];
 		,
 			if ( lift(list[i][1][1]) == lift(mini[1][1]) ,
-				if ( list[i][1] == [0],
-					mini = list[i];
-				,
-					if (mini[1] != [0],
+				if ( list[i][1] != [0] && mini[1] != [0],
 						if ( lift(list[i][1][2]) < lift(mini[1][2]),
 							mini = list[i];
 						);
-					);
+					
 				);
 			);
 		);
 	);
 	if (mini[1] != [0],
-		if ( lift(mini[1][2]) > lift( - mini[1][2]),
-			mini[1] = - mini[1];
+		if ( lift(mini[1][2]) % 2 == 1,
+			mini[1][2] = - mini[1][2];
 			mini[2] = - mini[2];
 			mini[3] = - mini[3];
 		);
@@ -278,11 +242,12 @@ minimun_lex(list,o) =
 
 fruitless_cycles(n,list) = 
 {
-	my(l,elements = [],i,tmp,tmp_el,a,b);
+	my(l,elements = [],i,tmp,tmp_el,a,b,detect = 0);
 	l = # list;
 	/*print(lift(list));*/
 	if ( list[l][1] == list[l-n][1],
-		print("fruitless detect ",n);
+	/*	print("fruitless detect ",n);*/
+		detect = 1;
 	/*	affiche_list(list);*/
 		/*print("<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");*/
 		for( i = 0, n-1,
@@ -303,8 +268,24 @@ fruitless_cycles(n,list) =
 		tmp_el = list[l];
 		
 	);
+	/*print(tmp_el);*/
 	return(tmp_el);
 }
+
+/* fonciton plus general qui detect un le plus grand cylce de taille <= n*/
+fruitless_cycles_inf(n,list) = 
+{
+	my(l, i, maxi = 0);
+	l = # list;
+	for (i = 2,n,
+	/*	print( list[l][1]," ---- " list[l-i][1]);*/
+		if ( list[l][1] == list[l-i][1],
+			maxi = i;
+		);
+	);
+	return(maxi);
+}
+
 
 /* retourne les coefficient a0,b0,a1,b1 avec leur bon signe */
 good_rel(E,P,Q,a0,b0,a1,b1,n) = {

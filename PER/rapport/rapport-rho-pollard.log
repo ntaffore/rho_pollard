@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.12)  20 FEB 2012 16:43
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.12)  21 FEB 2012 08:52
 entering extended mode
  %&-line parsing enabled.
 **rapport-rho-pollard.tex
@@ -112,6 +112,27 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip43
 \algorithmicindent=\skip44
 )
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count98
+))
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
 (./rapport-rho-pollard.aux)
 \openout1 = `rapport-rho-pollard.aux'.
 
@@ -133,6 +154,19 @@ File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 LaTeX Info: Redefining \degres on input line 39.
 LaTeX Info: Redefining \dots on input line 39.
 LaTeX Info: Redefining \up on input line 39.
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count99
+\scratchdimen=\dimen108
+\scratchbox=\box28
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen109
+\MPnumerator=\count103
+\everyMPtoPDFconversion=\toks24
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -171,20 +205,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--89
 
 [2
 
-] [3] [4]
+] <dessin_rho_pollard_bon.png, id=26, 392.21532pt x 552.56438pt>
+File: dessin_rho_pollard_bon.png Graphic file (type png)
+
+<use dessin_rho_pollard_bon.png> [3 <./dessin_rho_pollard_bon.png>] [4]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--166
+Underfull \hbox (badness 10000) in paragraph at lines 165--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
@@ -204,36 +241,32 @@ Chapitre 5.
 
 ]
 Chapitre 6.
-[9
-
-]
-Chapitre 7.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 249.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 246.
 
 (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (374.0744pt too wide) in paragraph at lines 267--267
+Overfull \hbox (374.0744pt too wide) in paragraph at lines 264--264
 [] \T1/cmtt/m/n/10 ? for( p = 15,30, n = prem_n_bit(p); E = courbe_ell_Fp(n); P
  = random(E); w = proba_remarquable(E,P);o = ellorder(E,P)+0.1; print(w/o));[] 
 
  []
 
-[10
+[9
 
 ]
-Chapitre 8.
-[11
+Chapitre 7.
+[10
 
 ] (./rapport-rho-pollard.aux) ) 
 Here is how much of TeX's memory you used:
- 2266 strings out of 494790
- 28735 string characters out of 1177464
- 89550 words of memory out of 3000000
- 5443 multiletter control sequences out of 15000+50000
+ 2919 strings out of 494790
+ 37289 string characters out of 1177464
+ 97974 words of memory out of 3000000
+ 6073 multiletter control sequences out of 15000+50000
  17186 words of font info for 43 fonts, out of 3000000 for 9000
  212 hyphenation exceptions out of 8191
- 24i,6n,24p,345b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,6n,24p,345b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-su
 per-t1.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/
@@ -251,9 +284,9 @@ onts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1000.pfb>
-Output written on rapport-rho-pollard.pdf (12 pages, 312041 bytes).
+Output written on rapport-rho-pollard.pdf (11 pages, 331116 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

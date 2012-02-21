@@ -3,15 +3,14 @@
 \contentsline {section}{\numberline {1.1}Rapel sur les courbes elliptique}{2}
 \contentsline {section}{\numberline {1.2}Algorithme rho de Pollard}{2}
 \contentsline {subsection}{\numberline {1.2.1}Dans un groupe du type Fp}{2}
-\contentsline {subsection}{\numberline {1.2.2}Paradoxe des Anniversaire}{3}
-\contentsline {subsection}{\numberline {1.2.3}algorithme de floyd}{3}
+\contentsline {subsection}{\numberline {1.2.2}Paradoxe des Anniversaires}{4}
+\contentsline {subsection}{\numberline {1.2.3}algorithme de floyd}{4}
 \contentsline {chapter}{\numberline {2}verification de la comlpexit\IeC {\'e} de l'algorithme rho de pollard}{5}
 \contentsline {chapter}{\numberline {3}Negation map}{6}
 \contentsline {section}{\numberline {3.1}methode general}{6}
 \contentsline {section}{\numberline {3.2}cycle infructueux}{6}
-\contentsline {chapter}{\numberline {4}nombre de groupe r}{7}
-\contentsline {chapter}{\numberline {5}random walk}{8}
-\contentsline {chapter}{\numberline {6}endomorphisme}{9}
-\contentsline {chapter}{\numberline {7}parrallelisation}{10}
-\contentsline {section}{\numberline {7.1}choix des points remarquables}{10}
-\contentsline {chapter}{\numberline {8}bibliograpie}{11}
+\contentsline {chapter}{\numberline {4}random walk}{7}
+\contentsline {chapter}{\numberline {5}endomorphisme}{8}
+\contentsline {chapter}{\numberline {6}parrallelisation}{9}
+\contentsline {section}{\numberline {6.1}choix des points remarquables}{9}
+\contentsline {chapter}{\numberline {7}bibliograpie}{10}
