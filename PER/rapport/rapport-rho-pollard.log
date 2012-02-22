@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.12)  21 FEB 2012 08:52
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.12)  22 FEB 2012 16:58
 entering extended mode
  %&-line parsing enabled.
 **rapport-rho-pollard.tex
@@ -225,45 +225,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
+<regresion_rho_normal_bon.png, id=38, 1255.69125pt x 706.13812pt>
+File: regresion_rho_normal_bon.png Graphic file (type png)
+
+<use regresion_rho_normal_bon.png>
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 183--184
+ [] 
+ []
+
 [5
 
-]
+] [6 <./regresion_rho_normal_bon.png>]
 Chapitre 3.
-[6
-
-]
-Chapitre 4.
 [7
 
 ]
-Chapitre 5.
+Chapitre 4.
 [8
 
 ]
+Chapitre 5.
+[9
+
+]
 Chapitre 6.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 246.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 296.
 
 (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (374.0744pt too wide) in paragraph at lines 264--264
+Overfull \hbox (374.0744pt too wide) in paragraph at lines 314--314
 [] \T1/cmtt/m/n/10 ? for( p = 15,30, n = prem_n_bit(p); E = courbe_ell_Fp(n); P
  = random(E); w = proba_remarquable(E,P);o = ellorder(E,P)+0.1; print(w/o));[] 
 
  []
 
-[9
+[10
 
 ]
 Chapitre 7.
-[10
+[11
 
 ] (./rapport-rho-pollard.aux) ) 
 Here is how much of TeX's memory you used:
- 2919 strings out of 494790
- 37289 string characters out of 1177464
+ 2924 strings out of 494790
+ 37448 string characters out of 1177464
  97974 words of memory out of 3000000
- 6073 multiletter control sequences out of 15000+50000
+ 6077 multiletter control sequences out of 15000+50000
  17186 words of font info for 43 fonts, out of 3000000 for 9000
  212 hyphenation exceptions out of 8191
  25i,6n,24p,345b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -284,9 +292,9 @@ onts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1000.pfb>
-Output written on rapport-rho-pollard.pdf (11 pages, 331116 bytes).
+Output written on rapport-rho-pollard.pdf (12 pages, 363509 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

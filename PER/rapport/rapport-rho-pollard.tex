@@ -179,6 +179,58 @@ Pour obtenir des valeurs facile pour faire une comparaison, il est plus simple d
 
 Donc si on fait une régression linéaire des différents valeurs trouvées, on devrait obtenir une droite avec un coefficient de 0,5.
 
+\begin{center}
+ \includegraphics[width = 15cm]{regresion_rho_normal_bon.png}
+\end{center}
+
+
+% \begin{center}
+% \begin{verbatim}
+%  Mon Feb 20 14:32:17 2012
+% 
+% 
+% FIT:    data read from './temp_moyen_courbe_normal.txt'
+%         format = z
+%         #datapoints = 36
+%         residuals are weighted equally (unit weight)
+% 
+% function used for fitting: f(x)
+% fitted parameters initialized with current variable values
+% 
+% 
+% 
+%  Iteration 0
+%  WSSR        : 17090.3           delta(WSSR)/WSSR   : 0
+%  delta(WSSR) : 0                 limit for stopping : 1e-05
+%  lambda	  : 21.8908
+% 
+% initial set of free parameter values
+% 
+% a               = 1
+% b               = 1
+% 
+% After 5 iterations the fit converged.
+% final sum of squares of residuals : 1.32396
+% rel. change during last iteration : -4.13064e-11
+% 
+% degrees of freedom    (FIT_NDF)                        : 34
+% rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.197332
+% variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0389399
+% 
+% Final set of parameters            Asymptotic Standard Error
+% =======================            ==========================
+% 
+% a               = 0.48823          +/- 0.002987     (0.6118%)
+% b               = -5.24743         +/- 0.09242      (1.761%)
+% 
+% 
+% correlation matrix of the fit parameters:
+% 
+%                a      b      
+% a               1.000 
+% b              -0.935  1.000 
+% \end{verbatim}
+% \end{center}
 
 \chapter{Negation map}
 
@@ -213,7 +265,7 @@ Dans son article \textit{Teske} introduit un indice L :
  $ L = \frac{nombre d'iteration avant de trouver une collision}{\sqrt(|G|)} $
 \end{center}
 
-j'ai donc implémenté une fonction qui au lieu d'utiliser une marche aléatoire sur 3 groupe en faisant soit $+P$, $+Q$, ou un doublement,
+J'ai donc implémenté une fonction qui au lieu d'utiliser une marche aléatoire sur 3 groupe en faisant soit $+P$, $+Q$, ou un doublement,
 utilise r groupe où on ajoute à notre élément un élément spécifique du groupe. Ces différents éléments sont au préalable tiré aléatoirement.
 Je fais donc une marche additive, pour chaque $W_i$ je lui ajoute un $R_j$ où j est un hash de i. On a donc la formule suivante : 
 $ W_{i+1} = W_{i} + R_{h(i)} $.
