@@ -1,6 +1,6 @@
 
-# ifndef PARALLELISATION_RHO.H
-# define PARALLELISATION_RHO.H
+# ifndef PARALLELISATION_RHO_H
+# define PARALLELISATION_RHO_H
 
 /* le point [x,y] = [a]P+ [b]Q */
 typedef struct node {

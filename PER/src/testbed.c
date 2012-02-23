@@ -171,21 +171,16 @@ int main (int argc, char *argv[])
 	/* alea au lancement de gp */
 	a = rand() % 200;
 	
-	switch (tmp) {
-		case 1 :
-			fprintf(file,"\\r %s.gp\n for(i=1,%d,random(););\nname = \"temp-%d-%d_curve-%d_test-%d-%s_v-%d\";\ndo_1(rho,name,%d,%d,%d,%d);\n"
-			,prog,a,min,max,nbcurves,nbtests,prog,vers,min,max,nbcurves,nbtests);
-			fclose(file);
-			break;
-		case 2 :
-			fprintf(file,"\\r %s.gp\n for(i=1,%d,random(););\nname = \"temp-%d-%d_curve-%d_test-%d-%s_v-%d\";\ndo_1(rho,name,%d,%d,%d,%d,%d);\n"
-			,prog,a,min,max,nbcurves,nbtests,prog,vers,min,max,nbcurves,nbtests,nbgroupe);
-			fclose(file);
-			break;
-		default :	
-			fprintf(stderr,"probleme");
-	}
-
+	fprintf(file,"\\r %s.gp\n",prog);
+	fprintf(file,"for(i=1,%d,random(););\n",a);
+	fprintf(file,"name = \"temp-%d-%d_curve-%d_test-%d-%s_v-%d\";\n",
+						min, max, nbcurves, nbtests, prog, vers);
+	fprintf(file,"do_1(rho,name,%d,%d,%d,%d,%d);\n", 
+						min, max, nbcurves ,nbtests, nbgroupe );
+	fprintf(file,"quit;\n");
+	
+	fclose(file);
+	
 	system("./gp testbed.gp");
 
 return(EXIT_SUCCESS);

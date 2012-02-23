@@ -42,7 +42,7 @@ clean :
 help :
 	@echo  "Usage:"
 	@echo  "	make all\t\t Launch compilation of testbed"
-	@echo  "	make sudoku\t\t Compilation of testbed"
+	@echo  "	make testbed\t\t Compilation of testbed"
 	@echo  "	make paralle\t\t Compilation of parallele prog"
 	@echo  "	make clean\t\t Remove all file generate by make"
 	@echo  "	make help\t\t Display this help"

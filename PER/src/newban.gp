@@ -36,7 +36,7 @@ test(fun, nbits, npoints, ncurves) =
  [gettime() - T0, pow_ex];
 }
 
-do_1(fun, file, borninf, bornsup, nbcurve, nbtest) = 
+do_1(fun, file, borninf, bornsup, nbcurve, nbtest,nbgroup) = 
 {
   my(FILE = Str("../test/", file));
   system(Str("rm -f ", FILE));

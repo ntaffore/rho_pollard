@@ -3,8 +3,10 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#
 
 #include"parallelisation_rho.h"
+
 
 int main(){
 
@@ -186,9 +188,13 @@ int adding_node(tree T, tree T2 )
 				/* action à definir */	
 				if ( T2->b == tmp->b ){
 					printf("echec------------------------------------\n");
-					free(*T2);
+					free(T2);
 					return(0);
 				} else {
+					printf("%lld %lld\n",tmp->x, tmp->y);
+					printf("%lld %lld\n",tmp->a, tmp->b);
+					printf("%lld %lld\n",T2->x, T2->y);
+					printf("%lld %lld\n",T2->a, T2->b);
 					printf("reussi------------------------------------\n");
 					return(1);
 				}

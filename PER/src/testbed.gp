@@ -1,4 +1,5 @@
-\r newban.gp
- for(i=1,155,random(););
-name = "temp-29-30_curve-3_test-5-newban_v-101";
-do_1(rho,name,29,30,3,5);
+\r newban_multi.gp
+for(i=1,135,random(););
+name = "temp-15-15_curve-10_test-10-newban_multi_v-101";
+do_1(rho,name,15,15,10,10,10);
+quit;
