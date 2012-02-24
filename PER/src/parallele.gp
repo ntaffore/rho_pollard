@@ -19,6 +19,6 @@ print(E);
 print(P,Q);
 /*system("rm -f ../test/points_remarquables.txt");*/
 
-for( i = 1, 10000000000,	tmp = rho(E,P,Q);verif(E,P,Q,tmp[1],tmp[2],tmp[3]);printf(ellisoncurve(E,tmp[1]));write("../test/points_remarquables.txt",lift(tmp)););
+for( i = 1, 10000000000,	tmp = rho(E,P,Q);if(tmp != [] ,verif(E,P,Q,tmp[1],tmp[2],tmp[3]);printf(ellisoncurve(E,tmp[1]));write("../test/points_remarquables.txt",tmp);););
 
 	
