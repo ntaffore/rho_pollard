@@ -28,12 +28,10 @@ rho(E,P,Q) = {
 			 W1 = tmp[1];
 			 a0 = tmp[4];
 			 b0 = tmp[5];
-/*			 print("i ",i," n ",n);*/
 			 i = i+1;
 		);
 		if( i > n ,
 			return([]);
-			/*print("many");*/
 		,
 			return([W1,a0,b0,i]);
 		);
@@ -45,24 +43,21 @@ test_remarquable(E,W) = {
 	my(p,n);
 	p = floor(log(E[4].mod)/log(2)) + 1;
 	n = floor(p/3);
-	n = 8;
-	if ( lift(W[1]) % 2^n == 123456789 % 2^n, return(1), return(0));
-
+	n = 15;
+	if ( lift(W[1]) % (2^n) == 123456789 % 2^n, return(1), return(0));
 }
 
-point_ramarquable_x(E,P,n,prop) = {
+point_remarquable_x(E,P,n,prop) = {
 	my(p,count = 0, x,i,tmp);
 	p = P[1].mod;
 	i = 0;
 	x = ( prop % 2^n) +i*2^n;
-	while ( x < p,
+	liste = [];
+	while ( x <= p,
 		tmp = ellordinate(E,x);
-/*		print(tmp);
-		print(count);
-		system("sleep 5");*/
 		count += #tmp;
 		i++;
-		x = ( prop % 2^n) +i*2^n;
+		x = (( prop % 2^n) +i*2^n) ;
 	);
 	return(count);
 }
@@ -74,9 +69,10 @@ proba_remarquable(E,P) = {
 	my(o,count = 0);
 	o = ellorder(E,P);
 	W = [0];
+	tmp = [];
 	for(i = 1, o,
 		W = elladd(E,W,P);
-		if( test_remarquable(E,W) == 1, count++);
+		if( test_remarquable(E,W) == 1, count++;);
 	);
 
 	return(count);
