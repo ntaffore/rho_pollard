@@ -1,4 +1,4 @@
-/* fonction qui interprète une marche aléatoire */
+/* function that sumulate the random walks */
 
 func(E,W2,P,Q,a,b,n) = {
 
@@ -12,17 +12,16 @@ func(E,W2,P,Q,a,b,n) = {
                 return([W2,P,Q,a,b]);
 }
 
-/* cette algorithme renvoit un point remarcable de la courbe */
-/* 1ère def point remarquable : x à p/3 0 de poids faible */
+/* this algorithm return a distingueshed point of the curve E */
 
-rho(E,P,Q) = {
+rho(E,P,Q,p) = {
 
 		my(tmp,n,W1,W2,a0,a1,b0,b1,i=0);
-       	n = ellorder(E,P);
+		n = ellorder(E,P);
 		a0 = random(n);
 		b0 = random(n);
 		W1 = elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0));
-		while( test_remarquable(E,W1) != 1 && i < n ,
+		while( test_remarquable(E,W1,p) != 1 && i < n ,
 			 
 			 tmp = func(E,W1,P,Q,a0,b0,n);
 			 W1 = tmp[1];
@@ -37,15 +36,15 @@ rho(E,P,Q) = {
 		);
 }		
 
-/* test pour voir si on a un point remarquable */
-test_remarquable(E,W) = {
+/* test if the point is a distingueshed point */
+test_remarquable(E,W,n) = {
 	
-	my(p,n);
+	my(p);
 	p = floor(log(E[4].mod)/log(2)) + 1;
-	n = floor(p/3);
-	n = 15;
 	if ( lift(W[1]) % (2^n) == 123456789 % 2^n, return(1), return(0));
 }
+
+/* count the number of distingueshed points with the property 'prop' */
 
 point_remarquable_x(E,P,n,prop) = {
 	my(p,count = 0, x,i,tmp);
@@ -62,18 +61,3 @@ point_remarquable_x(E,P,n,prop) = {
 	return(count);
 }
 
-/* probabilité de trouver un point remarquable */
-/* avec test */
-proba_remarquable(E,P) = {
-
-	my(o,count = 0);
-	o = ellorder(E,P);
-	W = [0];
-	tmp = [];
-	for(i = 1, o,
-		W = elladd(E,W,P);
-		if( test_remarquable(E,W) == 1, count++;);
-	);
-
-	return(count);
-}

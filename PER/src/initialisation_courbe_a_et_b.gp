@@ -1,7 +1,7 @@
-	/* fonction permettant de faire des courbe elliptique */
+/* function for initialization of elliptic curve */
+/* the equation is y^2 = x^3 + a*x + b with a,b in Fp */
 
-/* sur Fp de la forme y^2 = x^3 + a*x +b */
-
+/* function return a prime number between 2^n and 2^(n-1) */
 prem_n_bit(n) = {
 
 	my(p);
@@ -12,6 +12,8 @@ prem_n_bit(n) = {
 	return(p);
 }
 
+/* this function generate a elliptic curve on Fp and the order of this curve
+	is a prime number */
 courbe_ell_Fp(n)  = {
 	
 	my(a,b,E,prem);
@@ -19,7 +21,7 @@ courbe_ell_Fp(n)  = {
 	b =random(n);
 
 	prem = 0;
-	while(prem != 1,	 /* pour avoir une courbe de card prem */
+	while(prem != 1,	 /* for a prime order of elliptic curve */ 
 		while ( -16*(4*(a)^3 + 27 * b^2)	 % n == 0,
 			b = random(n)
 		);
@@ -30,21 +32,7 @@ courbe_ell_Fp(n)  = {
 	return(E);
 }
 
-random_point_curve_V2(E) = {
-	
-	my(n,x,y);
-	n = E[4].mod;
-	x = random(n);
-	y = random(n);
-	P = [Mod(x,n),Mod(y,n)];
-	while(ellisoncurve(E,P)!=1,
-		x = random(n);
-	        y = random(n);
-	        P = [Mod(x,n),Mod(y,n)];
-	);
-	return(P);    
-}
-
+/* this function generate a elliptic curve on Fp */
 courbe_ell_Fp_V2(n)  = {
 	
 	my(b,E);
@@ -57,10 +45,8 @@ courbe_ell_Fp_V2(n)  = {
 	return(E);
 }
 
-/* generateur de la courbe */
-/* utilisation de la borne de hasse */
-/* fonction ellordinate */
-random_point_curve_V3(E) = {
+/* this function search a generator of elliptic curve */
+random_point_curve(E) = {
 
 	my(P,n,x,check,i=0);
 	n = E[5].mod;

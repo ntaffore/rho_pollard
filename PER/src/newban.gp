@@ -10,7 +10,7 @@ dummytest(nbits, npoints, ncurves) =
   n = prem_n_bit(nbits);
   for (i = 1, ncurves,
     E = courbe_ell_Fp(n);
-    P = random_point_curve(E);
+    P = random(E);
     for(j = 1, npoints,
       pow = random(n);
       Q = ellpow(E,P,pow);
@@ -26,7 +26,7 @@ test(fun, nbits, npoints, ncurves) =
   for (i = 1, ncurves,
     my(E, P);
     E = courbe_ell_Fp(n);
-    P = random_point_curve(E);
+    P = random(E);
     for(j = 1, npoints,
       my(Q);
       Q = ellpow(E, P, random(n));

@@ -13,25 +13,20 @@ CPPFLAGS =$(INCLUDE)
 
 # Rules and targets
 
-all : testbed parallele multi
+all : testbed multi
 
 testbed : testbed.o
 	$(CC) -o testbed testbed.o
 
-testbed.o : testbed.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c testbed.c 
-
-parallele : parallelisation_rho.o
-	$(CC) -o parallele parallelisation_rho.o
-
-parallelisation_rho.o : parallelisation_rho.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c parallelisation_rho.c
+# old version
+#parallele : parallelisation_rho.o
+#	$(CC) -o parallele parallelisation_rho.o
 
 multi : mutli_parallele.o
 	$(CC) -o multi mutli_parallele.o
 
-mutli_parallele.o : mutli_parallele.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c mutli_parallele.c
+%.o : %.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c mutli_parallele.c testbed.c 
 
 clean :
 	rm -f testbed
@@ -39,10 +34,12 @@ clean :
 	rm -f multi
 	rm -f *~
 	rm -f *.o
+
 help :
 	@echo  "Usage:"
 	@echo  "	make all\t\t Launch compilation of testbed"
 	@echo  "	make testbed\t\t Compilation of testbed"
 	@echo  "	make paralle\t\t Compilation of parallele prog"
+	@echo  "	make mutli\t\t Compilation of multi_parallele prog"
 	@echo  "	make clean\t\t Remove all file generate by make"
 	@echo  "	make help\t\t Display this help"

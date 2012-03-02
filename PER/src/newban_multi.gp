@@ -1,16 +1,16 @@
-/* fichier de test pour avoir les données du temps*/
-/* verification que la methode rho de pollard est en racine de p */
+/* test file for data time */
+/* check the multi group method for random walk in methode of pollard's rho */
 
 \r algo_pollard_multiple_group.gp
 \r initialisation_courbe.gp
-
+/* this function is empty for compare it time with a function is not empry */
 dummytest(nbits, npoints, ncurves) = 
 { 
 	my(n, E, P, Q);
   n = prem_n_bit(nbits);
   for (i = 1, ncurves,
     E = courbe_ell_Fp(n);
-    P = random_point_curve(E);
+    P = random(E);
     for(j = 1, npoints,
       pow = random(n);
       Q = ellpow(E,P,pow);
@@ -18,10 +18,11 @@ dummytest(nbits, npoints, ncurves) =
   );
 }
 
-/* fun est le nom de l'algorithme 
-	 nbit est le nombre de bits de p pour connaitre Fp
-	 npoint est le nombre de points que l'on test par courbe
-   r est le nombre de groupes pour la marche aléatoire */
+/* fun is the name of the algorithm 
+   nbit is the bit's nummber of p for know Fp 
+   npoint is the number of point that we test for each curve 
+   ncurves is the number of curve that we test
+   r is the number of group for the random walks */
 
 test(fun, nbits, npoints, ncurves,r) = 
 { 
@@ -31,7 +32,7 @@ test(fun, nbits, npoints, ncurves,r) =
   for (i = 1, ncurves,
     my(E, P);
     E = courbe_ell_Fp(n);
-    P = random_point_curve(E);
+    P = random(E);
     for(j = 1, npoints,
       my(Q);
       Q = ellpow(E, P, random(n));
@@ -40,6 +41,8 @@ test(fun, nbits, npoints, ncurves,r) =
   );
   [gettime() - T0, pow_ex];
 }
+
+/* borninf and bornsup are the bound of bit of p */
 
 do_1(fun, file, borninf, bornsup, nbcurve, nbtest, nbgroupe) = 
 {
@@ -52,7 +55,7 @@ do_1(fun, file, borninf, bornsup, nbcurve, nbtest, nbgroupe) =
     T      = v[1]; if (!T, next);
     N      = nbcurve * nbtest; 
     printf("n = %d, pow_ex = %.1f\n", n, pow_ex / N);
-		write(FILE, n, " ", Strprintf("%.2f", log(T / N)/log(2)));
+	write(FILE, n, " ", Strprintf("%.2f", log(T / N)/log(2)));
   );
 }
 
