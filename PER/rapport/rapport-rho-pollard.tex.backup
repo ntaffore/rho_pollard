@@ -3,8 +3,9 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{latexsym}
-  \usepackage{algorithm,algorithmic}
+\usepackage{algorithm,algorithmic}
 \usepackage{graphicx}
+\usepackage{amssymb, amsmath}
 
 %%% francisation des algorithmes
 \renewcommand{\algorithmicrequire} {\textbf{\textsc{Entrées:}}}
@@ -26,6 +27,9 @@
 \renewcommand{\algorithmicrepeat}  {\textbf{répéter}}
 \renewcommand{\algorithmicuntil}   {\textbf{jusqu'à}}
 
+\newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Pp}{\mathbb{P}_1(\Fp)}
+\newcommand{\article}{\textit{On the correct use of the negation map in the Pollard rho method}}
 
 % Title Page
 \title{Algorithme rho de pollard}
@@ -40,65 +44,75 @@
 \maketitle
 \tableofcontents
 \chapter{Introduction}
-
-\section{Rapel sur les courbes elliptique}
+Dans une première partie je montrerai de manière expérimenatale la complexité de l'algorithme rho de pollard. Dans une seconde partie j'introduirai une première amelioration par un facteur constant de cette methode, en utilisant 
+une marche aléatoire différente de celle initiale de pollard. Ma troisième partie constitue une parallélisation de la methode de pollard. Ma partie finale parlera de la methode de 'negation map' introduit dans 
+'\textit{On the correct use of the negation map in the Pollard rho method}' qui permet de reduire le temps de la methode par une facteur $\sqrt{2}$.
+\section{Rappel sur les courbes elliptique}
 % 2 pages
 
-    Soit un un corp Fp (p premier) de caractéristique différente de 2 ou 3, soit $a, b \in Fp$.
-    Un courbe elliptique est définit par l'ensemble des points (x,y,z) tel que soit satifait l'equation suivante :
-  \begin{center}
-    $E : z*y^2 = x^3 + a*x*z^2 + b*z^3$.   \\
-    où $ 4*a^3 + 27*b^2 \ne 0$
-  \end{center}
+%
+Soit $\mathcal{E}:(YZ^2+a_1XYZ+a_3YZ^2)-(X^3+a_2X^2Z+a_4XZ^2+a_6Z^3)$ avec $(a_1,a_2,a_3,a_4,a_6) \in K $.\\
 
-  remarque : si $ 4*a^3 + 27*b^2 \ne 0$ alors  $x^3 + a*x*z^2 + b*z^3$ n'a pas de racine double.
-  
+
+La forme courte de Weierstass est définie par : $a_1=a_2=a_3=0 $. La courbe a donc l'équation suivante :
+$$ \mathcal{E} : Y^2Z=X^3+aXZ^2+bZ^3 $$
+$$ -4a^3+27b^2 \neq 0 $$
+
+% 
+   Soit un corps $\Fp$ ($p > 3$ premier), et soit $a, b \in \Fp$
+tels que $4 a^3 + 27 b^2 \ne 0$.
+La courbe elliptique $E/\Fp: Y^2 = X^3 + aX + b$ est définie par l'ensemble
+des points $(x:y:z)\in \Pp$ tel que soit satifaite l'équation 
+$$ z y^2 = x^3 + a x z^2 + b z^3.$$
+
   Si z = 0 alors x = 0 et donc on obtient $(0,k,0)$ qui est un élément inversible donc peut être réduit à $(0,1,0)$, ce point scpécifique est appelé le point à l'infini.
 
   L'ensemble de ces points forment un groupe abélien avec comme zero, le point à l'infini et possède un loi de groupe.
   Soit P, $Q \in F$, $ P = (x_1,y_1)$, $Q = (x_2,y_2)$ alors $P+Q = (x_3,y_3)$ tel que 
     \begin{center}
-      $x_3 = \mu^2 -x_1 - x_2$, $y_3 = \mu(x_1-x_3)$
-    \end{center}
-    \begin{center}
-      $\mu = \frac{y_2 - y_1}{x_2 - x_1}$ si $P \ne Q$
-    \end{center}
-    \begin{center}
-      $\mu = \frac{3*x_1^2 + a}{2*y_1}$ si $P = Q$
-    \end{center}
-
+      $x_3 = \mu^2 -x_1 - x_2$, $y_3 = \mu(x_1-x_3)$ \\
+$ \mu =  \left\{
+    \begin{array}{ll}
+        \displaystyle \frac{y_2 - y_1}{x_2 - x_1} & $si $P \ne Q  \\
+        \\      
+        \displaystyle \frac{3*x_1^2 + a}{2*y_1} & $si $P = Q
+    \end{array}
+\right.$ \\
+\end{center}
 
 Une propriété importante sur les courbes elliptiques est le calcule de l'inverse d'un point pour la loi d'addition sur Fp. Si $P = (x_1,y_1)$ alors $-P = (x_1,-y_1)$.
 
-On peut avoir aussi la courbe définit sur $Fq$ avec $q = p^n$, certaines propriétés sont un peut différentes.
-Pour une courbe elliptique sur $Fq$, si $P = (x_1,y_1)$ alors $-P = (x_1,y_1+x_1)$.
-
 \section{Algorithme rho de Pollard}
+
+Dans une suite d'éléments $S(n)$, un cycle est un ensemble d'éléments fini tel que ces éléments réaparaisse de façon périodique dans la suite $S(n)$, on peut avoir avant un cycle un pré-cycle de longueur finie.
+Si $\lambda$ est la longueur du pré-cycle et $\mu$ la longueur du cycle on aura pour tout $i > 0$, $S_{\lambda+i} = S_{\lambda+\mu+i}$ .
+
+Une marche aléatoire discrète est une suite où 
 
 \subsection{Dans un groupe du type Fp}
 
 Dans un groupe du type Fp, Pollard a choisit comme marche aléatoire un fonction qui ne tient compte que de l'élément précédent.\\
 
-\begin{itemize}
-\item{marche aléatoire}\\
+\begin{description}
+\item{Marche aléatoire}\\
 {
 $ f(x) = x*P$ si $x \in [0;p/3[$\\
 $ f(x) = x*x$ si $x \in [p/3;2p/3[$\\
 $ f(x) = x*Q$ si $x \in [2p/3;p[$\\
 }
-\end{itemize}
+\end{description}
 
 En utilisant cette marche aléatoire il en a deduit un algorithme en se basant sur l'algorithme de floyd pour trouver rapidement la longueur d'un cycle.
 
 Ici P est un generateur du groupe et Q est l'élément dont on veut connaitre le logarithme en base P.
-
+ 
 {
  \begin{algorithm}
  \caption{rho pollard}
  \begin{algorithmic}
   \REQUIRE n,P,Q
   \ENSURE x tel que Q = $P^x$ mod n
-    \STATE $[W1,a,b] \leftarrow$ combinaision aleatoire de $P$ et $Q$
+  \STATE $[W1,a,b] \leftarrow$ combinaision aleatoire de $P$ et $Q$
     \STATE $[W2,a',b'] \leftarrow$  marche aléatoire à partir de $W1$
 	\STATE ($W2 = P^{a'} + Q^{b'}$)
     \WHILE{$ W1 \ne W2$}
@@ -139,109 +153,248 @@ La formule générale pour obtenir une probabilité d'intersection ($I(n)$) est 
 \end{center}
 
 
-
-
-\subsection{algorithme de floyd}
-
-Il existe différent moyen pour trouver une collision dans un cycle, le meilleur algorithme pour en trouver
-une est l'agorithme de floyd qui permet de calculer de façon très rapide la longueur d'un cycle en se basant sur des collisions.
-La propriété qu'il a énoncé est que dans un groupe cyclyque si on a une marche aléatoire cyclique, alors au lieu de stocké chaque 
-éléments et de vérifier si il n'est pas dans la liste. il calcule l'élément i et 2i de cette marche aléatoire juqu'à avoir une 
-collision.
-
-exemple sur le groupe Z/17Z, avec la mache aléatoire $f(x) = x^x + 1 mod 17$.
-si x = 1 -> 2 -> 5 -> 9 -> 13 -> 16 -> 0 -> 1
-donc $a_1 = 1, a_2 = 2, a_3 = 5 .....$
-// mauvais choix puissance de 2
-
-\chapter{verification de la comlpexité de l'algorithme rho de pollard}
+\chapter{Comlpexité de l'algorithme rho de pollard}
 
 L'algorithme rho de pollard est estimé, d'après le papier de Stephen D. Miller et Ramarathnam Venkatesan, \textit{Spectral Analysis of Pollard Rho Collisions} en $O(\sqrt{n}(\log{n})^3)$. 
-Quand n temps vers l'infini c'est le logarithme est négligeable par rapport à la racine de n. On peut donc approximé cette complexité en $O(\sqrt{n})$.
+Quand n temps vers l'infini le logarithme est négligeable par rapport à la racine de n. On peut donc approximé cette complexité en $O(\sqrt{n})$.
 
 Pour montrer que l'algorithme est bien dans une complexité s'approchant de la racine de n, j'ai effectué des tests de résolutions du logarithme discret avec la methode initiale
 de Pollard. La marche aléatoire que j'ai pris est définie par : \\
-\begin{itemize}
- \item {marche aléatoire}\\
+
+\begin{description}
+\item{Marche aléatoire}\\
   $ f(W) = W \oplus P$ si $x = 0$ $modulo$ $3$ \\
   $ f(W) = 2*W$ si $x = 1$ $modulo$ $3$ \\
   $ f(W) = W \oplus Q$ si $x = 2$  $modulo$ $3$ \\
   $ W = [x,y] $ \\
-\end{itemize}
+\end{description}
+
+Dans '\article', Bernstein, Lange et Schwabe prenne des courbes elliptiques avec $a = -3$, en faisant des tests sur d'autre courbe avec un $a$a tiré aléatoirement j'obtient les même temps pour
+retrouver le logarithmes discret. J'ai donc pour plus de simplicité garder le $a=-3$ dans mes tests généraux.
+Pour ne pas avoir de problème d'inversement lors de la dernière étape de l'algorithme de pollard j'ai pris seulement des courbes avec une cardinalité première.
 
 Ici le $\oplus$ est l'addition sur la courbe elliptique et le $2*W$ est l'oppération de doublement sur la courbe elliptique.
 
-Pour obtenir des valeurs facile pour faire une comparaison, il est plus simple de changer l'échelle et de regarder avec une echelle logarithmique.\\
-\begin{center}
- $\sqrt{n} = n^{\frac{1}{2}}$
+Pour obtenir des valeurs faciles pour faire une comparaison, il est plus simple de changer l'échelle et de regarder en echelle logarithmique.
+( $\sqrt{n} = n^{\frac{1}{2}}$ )
  Si $n=2^x$ alors en échelle logarithimque (base 2) $\log{n} = x$ et $\log{\sqrt{n}} = \frac{x}{2}$
-\end{center}
 
-Donc si on fait une régression linéaire des différents valeurs trouvées, on devrait obtenir une droite avec un coefficient de 0,5.
+Donc si on fait une régression linéaire des différents valeurs trouvées, on devrait obtenir une droite avec un coefficient de $0,5$.
+
+\newpage
+$$f(x) = ax + b $$
+
+
+\begin{verbatim}
+degrees of freedom    (FIT_NDF)                        : 34
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.197332
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0389399
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.48823          +/- 0.002987     (0.6118%)
+b               = -5.24743         +/- 0.09242      (1.761%)
+\end{verbatim}
+
+On otient donc une valeur pour $a$ proche de $0,5$.\\
+
+On peut donc grâce à cette régrssion linéaire prévoir le temps de calcule pour des logarithmes sur courbes elliptiques de plus grande cardinalité.
 
 \begin{center}
- \includegraphics[width = 15cm]{regresion_rho_normal_bon.png}
+ \includegraphics[width=13cm]{rho_normal.png}
+ Temps d'execution (échelle logarithmique) de la methode rho de pollard en fonction du nombre de bit de la courbe.
 \end{center}
-% \begin{center}
-% \begin{verbatim}
-%  Mon Feb 20 14:32:17 2012
-% 
-% 
-% FIT:    data read from './temp_moyen_courbe_normal.txt'
-%         format = z
-%         #datapoints = 36
-%         residuals are weighted equally (unit weight)
-% 
-% function used for fitting: f(x)
-% fitted parameters initialized with current variable values
-% 
-% 
-% 
-%  Iteration 0
-%  WSSR        : 17090.3           delta(WSSR)/WSSR   : 0
-%  delta(WSSR) : 0                 limit for stopping : 1e-05
-%  lambda	  : 21.8908
-% 
-% initial set of free parameter values
-% 
-% a               = 1
-% b               = 1
-% 
-% After 5 iterations the fit converged.
-% final sum of squares of residuals : 1.32396
-% rel. change during last iteration : -4.13064e-11
-% 
-% degrees of freedom    (FIT_NDF)                        : 34
-% rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.197332
-% variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0389399
-% 
-% Final set of parameters            Asymptotic Standard Error
-% =======================            ==========================
-% 
-% a               = 0.48823          +/- 0.002987     (0.6118%)
-% b               = -5.24743         +/- 0.09242      (1.761%)
-% 
-% 
-% correlation matrix of the fit parameters:
-% 
-%                a      b      
-% a               1.000 
-% b              -0.935  1.000 
-% \end{verbatim}
-% \end{center}
+
+Dans l'article \article, Bernstein prend l'exemple du logarithme discret sur courbe elliptique secp112r1 qui est un log discret sur 112 bits. En regardant la courbe on peut voir qu'il faudrait environs 25 millénaires 
+($\exp{((\log{2})*49.5)}$) pour résoudre le logarithme discret.
+
+
+\chapter{Marche aléatoire avec plusieurs groupes}
+
+\section{Indice de}
+Dans l'article de \textit{Bernstein}, il est fait référence au fait que \textit{Pollard} n'utilisait que trois groupes pour faire sa marche aléatoire, 
+alors que Teske dans son papier \textit{On random walks for pollard's rho method}, nous dit qu'il est beaucoup plus efficase d'utiliser plus de groupe pour faire une marche aléatoire.
+\newline
+
+Dans son article \textit{Teske} introduit l'indice L :
+\begin{center}
+ $ L = \frac{\text{nombre d'iteration avant de trouver une collision}}{\sqrt(|G|)} $
+\end{center}
+
+Après plusieurs tests expérimetales la valeur que j'ai pour cette indice, en utlisant la méthode normale est environs $1,3$.\\
+
+\section{Amélioration multi-groupe}
+
+J'ai donc implémenté une fonction qui au lieu d'utiliser une marche aléatoire sur trois groupes en faisant soit $\oplus P$, $\oplus Q$, ou un doublement,
+utilise r groupes. Cette marche ajoute donc à chaque menbre de la suite entrante un élément spécifique du groupe en fonction d'une propriété du menbre entrant. Ces différents éléments sont au préalable tiré aléatoirement
+à partir d'une combinaison de $P$ et $Q$. Je fais donc une marche additive, pour chaque $W_i$ je lui ajoute un $R_j$ où j est un hash de i. On a donc la formule suivante : 
+\begin{center}
+$ W_{i+1} = W_{i} + R_{h(i)} $.
+\end{center}
+
+Chaque éléments $R_{h(i)}$ est de la forme $ [a_{h(i)}]P + [b_{h(i)}]Q$, où $a_{h(i)}$ et $b_{h(i)}$ sont des scalaires qui ont été tiré aléatoirement lors de l'initialisation du groupe.\\
+
+la fonction  de hachage que je prend pour séparer les different élements dans les différent groupes est de prendre l'abscisse du point de la courbe elliptique modulo r.
+
+\textit{Teske} après expérimentation trouve que pour la valeur $r >= 20$ ont atteint un bien meilleur ratio pour l'indice L.
+
+En refaisant les tests j'obtient une zone de valeurs pour lesquel la valeur de L est petite. On peut dire que pour $ r > 18$ on obtient une faible valeur pour L et qu'elle ne change pas trop.
+On remarque que pour la variation du temps en fonction du nombre de groupe, elle admet un pic minimun au alentour de la même valeur $18$. Le temps recommence à augmenter de manière linéaire
+car on le temps de calcule des points pour créer les differents groupes qui n'est plus négligeable par rapport au reste de l'algorithme.
+\begin{center}
+  \includegraphics[width = 9cm]{variation_L.png}\\
+  Variation de L en fonction du normbre de groupe\\
+    pour la marche aléatoire.
+\end{center}
+
+\begin{center}
+  \includegraphics[width = 9cm]{variation_temps_en_fct_nbre_groupe.png}\\
+  Variation du temps en fonction du normbre de groupe\\
+    pour la marche aléatoire.
+\end{center}
+
+En refaisant une serie de tests avec cette première évaluation, j'obtient de nouveau temps inféreieur à la methode normale de Pollard.
+\begin{center}
+  \includegraphics[width = 13cm]{rho_multi.png}
+  Regresion linéaire de la methode rho avec\\
+ une marche aléatoire avec 20 groupes
+\end{center}
+
+On obtient une regression linéaire avec un coefficient $a$ plus petit que la methode normale.
+
+\begin{verbatim}
+ degrees of freedom    (FIT_NDF)                        : 29
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.255346
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0652014
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 0.466206         +/- 0.004165     (0.8935%)
+d               = -4.979           +/- 0.1176       (2.362%)
+\end{verbatim}
+
+
+\newpage
+On peut donc comparer les deux courbes et voir une légère différence.
+\begin{center}
+  \includegraphics[width = 13cm]{compa_normal_multi.png}
+   Comparaison entre le temps de l'algorithme normale\\
+   et le temps de l'algorithme utilisant une marche aléatoire de 20 groupes.
+\end{center}
+
+
+Pour comparer toujours avec le logarithme sur une courbe elliptique d'un corps de $112$ bits,  on mettrait un peu plus de 5 millénaires ($\exp{((\log{2})*47.2)}$) pour résoudre le logarithme discret.
+
+On a donc diviser le temps par un facteur 5.
+
+\chapter{Parrallelisation de la méthode}
+
+Pour pouvoir parraleliser le logarithme discret on a besoin de que de changer un peu le procedé de calcule. On n'a plus une unique boucle qui cherche directement le logarithme, mais plusieurs boucles qui cherche indépendament 
+les une des autres des point de la courbes ayant une propriétés définie à l'avance et d'une boucle principale qui cherche les intercetions des points trouver par les autres boucle.
+
+On a donc un serveur centrale qui s'occupe de faire la boucle principale en cherchant des collisions et plusieurs processeurs independants qui font une marche aléatoire pour trouver des points distingués de la courbe puis qui envoient
+leurs points au serveur.
+
+\section{Choix des points distingués}
+
+Mon choix est de prendre des points dont la première variable (x) possède une certaine propriété tel que être congrue à un
+ certain nombre pris aléatoirement. J'ai choisie de manière arbitraire que la coordonnée x devrait avoir ces n bits de poid 
+faible égaux aux n bits de poid faible de $123456789$.
+
+J'ai fait différents tests pour voir la proportion de points distingués dans une courbe elliptique en faisant soit varié la 
+taille de la courbe elliptique, soit le nombre de bits pris.
+
+\begin{center}
+  \includegraphics[width = 6.5cm]{courbe_pourcentage_different_point_distingue.png}\\
+Proportion des points distingués en fonction \\
+ de la taille de la courbe (échelle logarithmique).
+\end{center}
+
+ Avec ce premier graphique, on voit que la proportion de points distingués ne varie pas en fonction de la taille du groupe.\\
+
+Maintenant regardons comment évolue cette proportion lorsqu'on change le nombre de bit observé.
+
+\begin{verbatim}
+# cardinalité courbe 20 bits
+1 0.500522796 ~ 1/2^1 = 0.5
+2 0.249615775 ~ 1/2^2 = 0.25
+3 0.124589751 ~ 1/2^3 = 0.125
+4 0.062905762 ~ 1/2^4 = 0.0625
+5 0.031109468 ~ 1/2^5 = 0.03125
+6 0.015635578 ~ 1/2^6 = 0.015625
+7 0.007925448 ~ 1/2^7 = 0.0078125
+8 0.003887007 ~ 1/2^8 = 0.00390625
+9 0.001867395 ~ 1/2^9 = 0.001953125
+10 0.00099737 ~ 1/2^10 = 0.000976562
+11 0.00048597 ~ 1/2^11 = 0.000488281
+12 0.00022821 ~ 1/2^12 = 0.000244140
+13 0.00013557 ~ 1/2^13 = 0.000122070
+14 0.00005802 ~ 1/2^14 = 0.000061035
+15 0.00003040 ~ 1/2^15 = 0.000030517
+16 0.00001806 ~ 1/2^16 = 0.000015258
+17 0.00000262 ~ 1/2^17 = 0.000007629
+18 0.00000380 ~ 1/2^18 = 0.000003814
+19 0.00000259 ~ 1/2^19 = 0.000001907
+\end{verbatim}
+
+On remarque que les proportions sont de la forme $1/2^n$, elle diffère légèrement parfois car la cardinalité des courbes n'est pas
+totalement $2^20$ mais es compris dans la borne de Hasse.
+
+Ces résultat nous montre que notre propriété est indépendante de la courbe.
+
+\section{Amélioration programme parallèle}
+
+\subsection{Amélioration en fonction du nombre de processus}
+
+Le principe de parallelisation doit ralentir une méthode de recherche normale car on fait une double recherche au lieu d'utiliser
+un algorithme de floyd. On va donc regarder à partir de combien, en moyenne, de processeur cette methode est équivalente à une methode normale.
+
+On peut s'attendre à ce que l'évolution soit définie de façon simple car le serveur recherche de façon linéaire une collision quelque soit le nombre de prosséceur lui envoyant des données.
+Donc on aura une collision après avoir trouvés environ la racine du nombre de points distingués de la courbe elliptique. Donc plus on a de processeur qui cherchent et envoient des 
+points distingués au serveur plus rapidement on trouvera une collision, en supposant que le serveur n'a pas de problème a bouclé pour trouvé une collision. Pour éviter que le serveur n'ai trop de travail 
+et soit ralenti, on doit choisir une propriété sur les point distingués qui permet d'avoir un nombre raisonnable de points.
+
+Donc si nous avons un serveur qui ne prend qu'un temps plus petit par rapport au processeur qui doivent trouver des points, alors en augmentant le nombre de prosséceurs, le serveur recevra plus de points 
+donc trouvera plus rapidement une collision. Par exemple si on a 20 processeurs alors si on utilise 21 processeurs on trouvera en théoriquement $21/20$ fois plus rapidement le logarithme discret que avec nos 20 processeurs.
+
+\begin{center}
+%  \includegraphics[width = 13cm]{courbe_pourcentage_different_point_distingue.png}\\
+	Variation du temps en fonction du nombre\\
+	de processus cherchant des points distingués.
+\end{center}
+
+
+\subsection{Ameliration par rapport à la méthode normale}
+
+Donc avec un nombre assez élevés de processeur, on peut regarder la différence de temps entre la méthode normale de Pollard et la parallélisation.
+
+\begin{center}
+%  \includegraphics[width = 13cm]{courbe_pourcentage_different_point_distingue.png}\\
+  Comparaison entre la méthode normale de pollard\\
+ et une parallélisation de l'algorithme (avec XX processus).
+\end{center}
+
+Pour comparer avec les 
+
+\section{Amélioration parallèle et mutlti-groupe}
+
 
 \chapter{Negation map}
 
 \section{methode general}
 
-Sur une courbe elliptique sur Fp l'inverse de P = (x,y,z), simplifié à (x,y) est -P = (x,-y). le but de cette méthode est de reduire le groupe de moitier,
-donc de faire une recherche de log discret dans <P>/<H>. On obtient donc une relation du type $\pm[a]P \pm[b]Q = \pm[a']P \pm[b']Q$. Il nous suffit donc de retrouver exactement 
-la relation avec les bon signe pour retrouver le logarithme discret.
+Soit E, une courbe elliptique sur \Fp l'inverse de $P = (x,y,z)$, simplifié à $(x,y)$ est $-P = (x,-y)$. le but de cette méthode est de reduire le groupe de moitié,
+donc de faire une recherche de logarithme discret dans un sousgroupe de E(\Fp). On obtient donc une relation du type $\pm[a]P \pm[b]Q = \pm[a']P \pm[b']Q$. Il nous suffit donc de retrouver exactement 
+la relation avec les bons signes pour retrouver le logarithme discret.
 
-Premier problème on retombe très rapidement sur le meme point avec les meme scalaires, si on évite ses point et que l'on continue la boucle, elle continue indéfiniment.
-En plaçant des prints sur l'égalité et un compteur générale de boucle, on remarque que comme décrit dans l'article on a l'apparition de cycle court de longueur 2.
+On va donc avoir un algorithme qui après la marche aléatoire regarde une propriété de notre nombre pour divisé la taille du groupe en deux. La propriété utilisée dans \article est de garder seulement le minimun du point ou son 
+inverse de son inverse. D'autres propriétées peuvent être utilisée pour séparer le groupe en 2, elles sont tous basé sur l'utilisation du point et de son inverse seul el test varie.\\
 
-La méthode décrite dans l'article \" ...\" nous dis de garder en mémoire quelque points de la marche aléatoire, puis de faire un comparaison pour detecter si on entre dans un cycle
+On rencontre très rapidement un problème, o
+
+La méthode décrite dans l'article \article, nous dis de garder en mémoire quelque points de la marche aléatoire, puis de faire un comparaison pour detecter si on entre dans un cycle
 longueur 2, cette comparaison s'effectue entre le terme que l'on vient de calculer et celui qui était deux crant avant.
 S'ils sont différents alors on continue la marche comme elle était, mais s'ils sont identiques alors le point suivant est $2*min(W_{-1},W_{-2})$ où le min est le minimun lexicographique et
 la multiplication par 2 est l'oppération de doublement sur la courbe elliptique.
@@ -252,79 +405,13 @@ Après enlèvement de ces cycle infructueux de taille 2, on retombe dans des cyc
 
 apppartition très fréquente de cycle de taille 2 n'important pas d'information sur le log discret on les elimine donc en ......
 
-\chapter{random walk}
-
-Dans l'article de \textit{Bernstein}, il est fait référence au fait que \textit{Pollard} n'utilisait que trois groupes pour faire sa marche aléatoire, 
-alors que Teske dans son papier \textit{On random walks for pollard's rho method} nous dis qu'il est beaucoup plus efficase d'utilisé plus de groupe 
-pour faire une marche aléatoire.
-
-Dans son article \textit{Teske} introduit un indice L :
-\begin{center}
- $ L = \frac{nombre d'iteration avant de trouver une collision}{\sqrt(|G|)} $
-\end{center}
-
-j'ai donc implémenté une fonction qui au lieu d'utiliser une marche aléatoire sur 3 groupe en faisant soit $+P$, $+Q$, ou un doublement,
-utilise r groupe où on ajoute à notre élément un élément spécifique du groupe. Ces différents éléments sont au préalable tiré aléatoirement.
-Je fais donc une marche additive, pour chaque $W_i$ je lui ajoute un $R_j$ où j est un hash de i. On a donc la formule suivante : 
-$ W_{i+1} = W_{i} + R_{h(i)} $.
-
-Pour connaître à quel groupe appartient l'élément, je regarde sa première composante modulo r.
-
-\textit{Teske} après expérimentation trouve que pour la valeur $r >= 20$ ont atteint un bien meilleur ratio pour l'indice L.
-
-En refaisant les test j'obtient une valeurs identique, au dela de 20 on fait beaucoup de precalcule pour peu d'amélioration.
-
-
-point important : plus trop une marche alléatoire pour 3 groupes donc plus pour r groupes r > 19.
-
-\chapter{endomorphisme}
- 
- ????
-
-\chapter{parrallelisation}
-
-pour parralelisé le log discret on definie une règle pour avoir des point remarquable (tel que ....) 
-a chaque fois que l'on a après une marche un point remarquable on le transmet a un serveur central ainsi que les donné de départ
-quand on  a deux intersection de point remarquable on a une collision.
-
-\section{choix des points remarquables}
-
-Mon choix est de prendre des point dont la première variable (x) possède un certain nombre de bit de poids faible à zeros.
-J'ai fait différents tests : prendre $log(p)/log(2)/3$ ou $log(p)/log(2)/4$ appartition de pallier entre le nombre de point remarquable et le cardinal du groupe.
-groupe de 3 avec même poucentage d'éléments remarquables dans le groupe.
-
-\begin{verbatim}
- ? for( p = 15,30, n = prem_n_bit(p); E = courbe_ell_Fp(n); P = random(E); w = proba_remarquable(E,P);o = ellorder(E,P)+0.1; print(w/o));
-0.0340
-0.0312
-0.0307
-0.0155
-0.0155
-0.0157
-0.0079
-0.0078
-0.0078
-0.0039
-0.0039
-0.0039
-0.0020
-0.0020
-0.0020
-
-\end{verbatim}
-
-
-
-calcule à faire en se basant sur le paradoxe des anniversaire pour tomber sur un point remarquable et pour avoir deux points remarquables identiques.
-
-detail de l'algorithme.
 
 \chapter{bibliograpie}
-Edlyn Teske, on a random walks for pollard's rho method.
+Edlyn Teske, \textit{on a random walks for pollard's rho method}.
 
-Daniel J. Bernstein, Tanja Lange, Peter Schwabe, On the correct use of negationmap in the pollard's rho method.
+Daniel J. Bernstein, Tanja Lange, Peter Schwabe, \article.
 
-John M.Pollard, monte carlo method for index computation mod p.
+John M.Pollard, \textit{monte carlo method for index computation mod p}.
 
 Wikipedia.
 \end{document}          

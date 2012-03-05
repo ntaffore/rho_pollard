@@ -21,7 +21,7 @@ rho(E,P,Q,p) = {
 		a0 = random(n);
 		b0 = random(n);
 		W1 = elladd(E,ellpow(E,P,a0),ellpow(E,Q,b0));
-		while( test_remarquable(E,W1,p) != 1 && i < n ,
+		while( test_remarquable(E,W1,p) != 1 && i < sqrt(n) ,
 			 
 			 tmp = func(E,W1,P,Q,a0,b0,n);
 			 W1 = tmp[1];
@@ -29,9 +29,11 @@ rho(E,P,Q,p) = {
 			 b0 = tmp[5];
 			 i = i+1;
 		);
-		if( i > n ,
+		if( i >= sqrt(n) ,
 			return([]);
+			print(i);
 		,
+
 			return([W1,a0,b0,i]);
 		);
 }		

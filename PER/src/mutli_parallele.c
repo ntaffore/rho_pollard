@@ -38,9 +38,9 @@ int main (int argc, char* argv[])
 	fprintf(file,"print(\"ereur-----------------------------------------\"););}\n");
 	
 	if ( argc == 0) {
-		fprintf(file,"for( i = 1, 10000000000,	if (tmp != [], tmp = rho(E,P,Q); verif(E,P,Q,tmp[1],tmp[2],tmp		[3]);write(\"../test/points_remarquables.txt\",tmp);););\n");
+		fprintf(file,"for( i = 1, 10000000000,tmp = rho(E,P,Q);if (tmp != [], verif(E,P,Q,tmp[1],tmp[2],tmp		[3]);write(\"../test/points_remarquables.txt\",tmp);););\n");
 	} else {
-		fprintf(file,"for( i = 1, 10000000000,	if (tmp != [], tmp = rho(E,P,Q,%d); verif(E,P,Q,tmp[1],tmp[2],tmp		[3]);write(\"../test/points_remarquables_%d.txt\",tmp);););\n",p,atoi(argv[1]));
+		fprintf(file,"for( i = 1, 10000000000,tmp = rho(E,P,Q,%d); 	if (tmp != [], verif(E,P,Q,tmp[1],tmp[2],tmp		[3]);write(\"../test/points_remarquables_%d.txt\",tmp);););\n",p,atoi(argv[1]));
 	
 	}
 				

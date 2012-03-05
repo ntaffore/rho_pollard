@@ -18,14 +18,14 @@ table(E,P,Q,r) = {
 /* function that simulate a random walks */
 
 func(E,W,P,Q,a,b,n,list,r) = {
-
-                my(c);
-				c = lift(W[1]) % r;
-				c = c + 1;
-				W = elladd(E,W,list[c][1]);
-				a = (a + list[c][2] ) % n;
-				b = (b + list[c][3] ) % n;
-                return([W,P,Q,a,b]);
+	
+	my(c);
+	c = lift(W[1]) % r;
+	c = c + 1;
+	W = elladd(E,W,list[c][1]);
+	a = (a + list[c][2] ) % n;
+	b = (b + list[c][3] ) % n;
+	return([W,P,Q,a,b]);
 }
 
 /*  function that compute the discret logarithm on E of Q with P as generator.
@@ -35,7 +35,7 @@ rho(E,P,Q,r) = {
 
 		my(tmp,n,W1,W2,a0,a1,b0,b1,i=0,list);
 
-       	n = ellorder(E,P);
+		n = ellorder(E,P);
 		/* initialization of random walks elements */
 		list = table(E,P,Q,r);
 

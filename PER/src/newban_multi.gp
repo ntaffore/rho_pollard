@@ -55,7 +55,7 @@ do_1(fun, file, borninf, bornsup, nbcurve, nbtest, nbgroupe) =
     T      = v[1]; if (!T, next);
     N      = nbcurve * nbtest; 
     printf("n = %d, pow_ex = %.1f\n", n, pow_ex / N);
-	write(FILE, n, " ", Strprintf("%.2f", log(T / N)/log(2)));
+	write(FILE, n, " ", Strprintf("%.2f", log(T / N)/log(2)), " ", pow_ex / N);
   );
 }
 

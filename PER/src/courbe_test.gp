@@ -1,7 +1,7 @@
 /* this file generate a courbe sur Fp with p is fixed */
 \r initialisation_courbe.gp
 
-p = 40;
+p = 47;
 
 system("rm -f courbe.gp");
 p = prem_n_bit(p);

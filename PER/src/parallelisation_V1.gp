@@ -18,7 +18,7 @@ initialisation_vector( vect ) = {
 test_parallelisation() = {
 	
 	my(i,collision,tmp,table,l,n,E,P,Q,jk);
-	my (nbfile = 31, file_read);
+	my (nbfile = 59, file_read);
 	my (l_previous);
 
 	i = 0;
@@ -34,7 +34,7 @@ test_parallelisation() = {
 	P = tmp[2];
 	Q = tmp[3];
 	n = ellorder(E,P);
-	gettime();
+	/*gettime();*/
 
 	while( (collision != 1),
 		file_read = 1;
@@ -75,7 +75,9 @@ test_parallelisation() = {
 					/*return(	(lift(Mod(a0-a1,l)))*c^-1);*/
 		if (ellpow(E,P,lift((table[i][2] - tmp[k][2])*c^-1)) == Q,
 		   /*	write("../test/temps_parallele.txt","check -- ");*/
-			T = gettime();
+			/*T = gettime();*/
+			print("reussit");
+			T = 0;
 			if ( T != 0, write("../test/temps_parallele.txt",log(T)/log(2));print(T); return(log(T)/log(2)); );
 		,
 			write("../test/temps_parallele.txt","failled ellpow ");
@@ -83,6 +85,7 @@ test_parallelisation() = {
 	);		
 	return(0);
 }
-
-print(test_parallelisation());
+gettime();
+o = test_parallelisation();
+print(gettime());
 /*quit;*/
